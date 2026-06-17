@@ -1,42 +1,41 @@
-# 🚀 Mohamed Refky | Flutter Developer & Mobile App Engineer
+# 🚀 Eslam Ahmed | Civil Engineer & Structural Design Engineer
 
-Welcome to the repository of my personal portfolio application! This application is built with Flutter and serves as a digital resume to showcase my professional journey, technical expertise, projects, and services.
+Welcome to the repository of my personal portfolio application! This application is built with Flutter and serves as a digital resume to showcase my professional journey, structural engineering expertise, projects, and services.
 
 ## 👨‍💻 About Me
 
-**Computer Science graduate and Flutter Developer** with hands-on experience building scalable mobile applications. I am passionate about sharing knowledge as a Coding Instructor and continuously growing through professional projects. I specialize in crafting high-performance, cross-platform apps using Flutter, Clean Architecture, and AI integrations (like Gemini LLM).
+**Civil Engineer and Structural Design Engineer** with 5+ years of experience in structural design, site supervision, and technical office engineering. A smart and energetic civil engineer with wide knowledge and experience in construction supervising, structural engineering, and technical office work. Passionate about delivering high-quality structural solutions and sharing knowledge through teaching engineering courses.
 
 ---
 
 ## 🛠️ Tech Stack & Expertise
 
-* **Mobile Development:** Flutter, Dart, Clean Architecture & MVVM, BLoC / Cubit State Management, Advanced UI & Animations
-* **AI & Backend Integration:** Gemini AI (LLM Integration), REST APIs, Firebase (Auth & Firestore), Python Flask APIs
-* **Database & Storage:** Firestore, Hive, SharedPreferences, Flutter Secure Storage
-* **Software Engineering:** OOP, Design Patterns, SOLID Principles, Git & GitHub
+* **Structural Analysis:** SAP 2000, ETABS, SAFE, CSI Columns, SP Columns, ASD
+* **Design & Drafting:** AutoCAD (Structural), Shop Drawings, Reinforcement Layouts, Structural System Design
+* **Field & Management:** Site Supervision, Quantity Take-Off, Technical Office Engineering, Construction Management
+* **Office Tools:** MS Excel, MS PowerPoint, MS Word
 
 ---
 
 ## 📂 Featured Projects
 
-### 🎓 Eduon LMS
-A comprehensive learning platform featuring YouTube API integration, structured roadmaps, and a community hub for tech organizations.
-* **Tech Stack:** Flutter, Dart, YouTube API, Clean Architecture, BLoC.
-* **Source Code:** [GitHub Repository](https://github.com/MohamedRefky/Eduon)
+### 🏗️ Midor Refinery Expansion
+Site engineering supervision for main pipe rack, structures, and compressors shelter. Construction by Petrojet for Middle East Refinery Company (Technip FMC / Ennpi).
 
-### 🍏 Diety App
-An AI-powered fitness assistant using Gemini AI and Machine Learning (Decision Tree) to provide personalized diet plans based on user metrics.
-* **Tech Stack:** Flutter, Gemini AI, Python Flask, Firebase, ML.
-* **Source Code:** [GitHub Repository](https://github.com/MohamedRefky/Diety_app)
+### 🏢 High-Rise Building & Hospital (15 Repeated Floors)
+Complete structural design including system selection, structural analysis, reinforcement layouts, and detailed element design for all floors.
+
+### 🏭 Industrial Factory (2-Hinged Frame System)
+Industrial factory structural design using a 2-hinged frame system with full structural analysis and design.
 
 ---
 
 ## 💼 Experience & Services
 
-* **Mobile App Development:** Building high-performance, cross-platform apps with Flutter, focusing on scalability and user experience.
-* **AI & API Integration:** Integrating LLMs (Gemini), REST APIs, and Firebase to create smart, data-driven applications.
-* **Architecture Design:** Implementing Clean Architecture and SOLID principles to ensure maintainable and testable codebases.
-* **Coding Instruction:** Simplifying complex programming concepts for students as an Instructor at iSchool.
+* **Structural Design:** Designing structural systems for buildings including villas, high-rise buildings, hospitals, mosques, and industrial structures.
+* **Site Supervision:** Supervising construction activities, managing pipe racks, structures, and site excavation operations.
+* **Technical Office Engineering:** Preparing shop drawings, quantity take-offs, and detailed drawings for beams, columns, slabs, and footings.
+* **Engineering Courses:** Lecturing in structural design, reinforced concrete, AutoCAD, and shop drawing courses.
 
 ---
 
@@ -46,11 +45,11 @@ To run this portfolio app locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/MohamedRefky/Mohamed-Refky-Portfolio.git
+   git clone https://github.com/MohamedRefky/Eslam_Ahmed_Portfolio.git
    ```
 2. **Navigate to the directory:**
    ```bash
-   cd Mohamed-Refky-Portfolio
+   cd Eslam_Ahmed_Portfolio
    ```
 3. **Install dependencies:**
    ```bash
@@ -67,10 +66,8 @@ To run this portfolio app locally:
 
 Let's connect! Feel free to reach out for collaborations or job opportunities:
 
-* **LinkedIn:** [Mohamed Refky](https://www.linkedin.com/in/mohamedrefky/)
-* **GitHub:** [MohamedRefky](https://github.com/MohamedRefky)
-* **WhatsApp:** [+201019964918](https://wa.me/201019964918)
-* **Email:** [mohamedrifky9765@gmail.com](mailto:mohamedrifky9765@gmail.com)
+* **WhatsApp:** [+201061617649](https://wa.me/201061617649)
+* **Email:** [eslamahmed157179@gmail.com](mailto:eslamahmed157179@gmail.com)
 
 ---
 

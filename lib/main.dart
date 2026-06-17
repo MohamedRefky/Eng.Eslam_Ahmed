@@ -27,7 +27,7 @@ class PortfolioApp extends StatelessWidget {
           ],
         );
       },
-      title: 'Mohamed Refky - Portfolio',
+      title: 'Eslam Ahmed - Portfolio',
       theme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       home: const SplashPage(),

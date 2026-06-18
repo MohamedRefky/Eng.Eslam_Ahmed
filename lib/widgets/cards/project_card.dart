@@ -256,13 +256,13 @@ class _ProjectCardState extends State<ProjectCard> {
                       onTap: () {
                         Navigator.of(context).push(
                           PageRouteBuilder(
-                            pageBuilder: (_, anim, __) => ProjectGalleryPage(
+                            pageBuilder: (_, anim, _) => ProjectGalleryPage(
                               title: widget.title,
                               description: widget.description,
                               technologies: widget.technologies,
                               images: widget.galleryImages,
                             ),
-                            transitionsBuilder: (_, anim, __, child) {
+                            transitionsBuilder: (_, anim, _, child) {
                               return SlideTransition(
                                 position: Tween<Offset>(
                                   begin: const Offset(0, 1),

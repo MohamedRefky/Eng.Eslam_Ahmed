@@ -1,7 +1,9 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import '../../core/theme/app_colors.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+
+import '../../core/theme/app_colors.dart';
 import '../../pages/project_gallery_page.dart';
 
 class ProjectCard extends StatefulWidget {
@@ -33,278 +35,312 @@ class ProjectCard extends StatefulWidget {
 class _ProjectCardState extends State<ProjectCard> {
   bool isHovered = false;
 
+  void _openGallery() {
+    if (widget.galleryImages.isNotEmpty) {
+      Navigator.of(context).push(
+        PageRouteBuilder(
+          pageBuilder: (_, anim, _) => ProjectGalleryPage(
+            title: widget.title,
+            description: widget.description,
+            technologies: widget.technologies,
+            images: widget.galleryImages,
+          ),
+          transitionsBuilder: (_, anim, _, child) {
+            return FadeTransition(
+              opacity: CurvedAnimation(parent: anim, curve: Curves.easeOut),
+              child: ScaleTransition(
+                scale: Tween<double>(begin: 0.95, end: 1.0).animate(
+                  CurvedAnimation(parent: anim, curve: Curves.easeOutCubic),
+                ),
+                child: child,
+              ),
+            );
+          },
+          transitionDuration: const Duration(milliseconds: 380),
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => isHovered = true),
-      onExit: (_) => setState(() => isHovered = false),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          gradient: isHovered
-              ? const LinearGradient(
-                  colors: [AppColors.primary, AppColors.secondary],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                )
-              : null,
-          boxShadow: isHovered
-              ? [
-                  BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.25),
-                    blurRadius: 24,
-                    offset: const Offset(0, 8),
-                    spreadRadius: -2,
-                  ),
-                  BoxShadow(
-                    color: AppColors.secondary.withValues(alpha: 0.15),
-                    blurRadius: 24,
-                    offset: const Offset(0, 8),
-                    spreadRadius: -2,
-                  ),
-                ]
-              : [
-                  BoxShadow(
-                    color: ResponsiveBreakpoints.of(context).isMobile
-                        ? AppColors.primary.withValues(alpha: 0.15)
-                        : Colors.black.withValues(alpha: 0.3),
-                    blurRadius: 10,
-                    offset: const Offset(0, 5),
-                  ),
-                ],
-        ),
-        transform: isHovered
-            ? (Matrix4.identity()
-                ..setEntry(3, 2, 0.0015)
-                ..multiply(Matrix4.translationValues(0.0, -8.0, 0.0))
-                ..rotateX(-0.02)
-                ..rotateY(0.012))
-            : Matrix4.identity(),
+    return GestureDetector(
+      onTap: _openGallery,
+      child: MouseRegion(
+        onEnter: (_) => setState(() => isHovered = true),
+        onExit: (_) => setState(() => isHovered = false),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 300),
-          margin: const EdgeInsets.all(1.2), // acts as border width
           decoration: BoxDecoration(
-            color: AppColors.cardBackground,
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(16),
+            gradient: isHovered
+                ? const LinearGradient(
+                    colors: [AppColors.primary, AppColors.secondary],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  )
+                : null,
+            boxShadow: isHovered
+                ? [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.25),
+                      blurRadius: 24,
+                      offset: const Offset(0, 8),
+                      spreadRadius: -2,
+                    ),
+                    BoxShadow(
+                      color: AppColors.secondary.withValues(alpha: 0.15),
+                      blurRadius: 24,
+                      offset: const Offset(0, 8),
+                      spreadRadius: -2,
+                    ),
+                  ]
+                : [
+                    BoxShadow(
+                      color: ResponsiveBreakpoints.of(context).isMobile
+                          ? AppColors.primary.withValues(alpha: 0.15)
+                          : Colors.black.withValues(alpha: 0.3),
+                      blurRadius: 10,
+                      offset: const Offset(0, 5),
+                    ),
+                  ],
           ),
-          clipBehavior: Clip.antiAlias,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              // Image Section — fixed height
-              SizedBox(
-                height: 220,
-                width: double.infinity,
-                child: Stack(
-                  fit: StackFit.expand,
-                  children: [
-                    // The actual project image — static, no zoom
-                    widget.imageUrl.startsWith('http')
-                        ? Image.network(widget.imageUrl, fit: BoxFit.cover)
-                        : Image.asset(widget.imageUrl, fit: BoxFit.cover),
-
-                    // Subtle bottom gradient
-                    Positioned(
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      child: Container(
-                        height: 90,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                            colors: [
-                              Colors.black.withValues(alpha: 0.7),
-                              Colors.transparent,
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    // Hover overlay — semi-transparent dark with View Gallery button in center
-                    AnimatedOpacity(
-                      duration: const Duration(milliseconds: 280),
-                      opacity: isHovered ? 1.0 : 0.0,
-                      child: IgnorePointer(
-                        ignoring: !isHovered,
-                        child: Container(
-                          color: Colors.black.withValues(alpha: 0.38),
-                          child: Center(
-                            child: widget.galleryImages.isNotEmpty
-                                ? _GalleryOverlayButton(
-                                    imageCount: widget.galleryImages.length,
-                                    onTap: () {
-                                      Navigator.of(context).push(
-                                        PageRouteBuilder(
-                                          pageBuilder: (_, anim, _) => ProjectGalleryPage(
-                                            title: widget.title,
-                                            description: widget.description,
-                                            technologies: widget.technologies,
-                                            images: widget.galleryImages,
-                                          ),
-                                          transitionsBuilder: (_, anim, _, child) {
-                                            return FadeTransition(
-                                              opacity: CurvedAnimation(
-                                                parent: anim,
-                                                curve: Curves.easeOut,
-                                              ),
-                                              child: ScaleTransition(
-                                                scale: Tween<double>(begin: 0.95, end: 1.0).animate(
-                                                  CurvedAnimation(parent: anim, curve: Curves.easeOutCubic),
-                                                ),
-                                                child: child,
-                                              ),
-                                            );
-                                          },
-                                          transitionDuration: const Duration(milliseconds: 380),
-                                        ),
-                                      );
-                                    },
-                                  )
-                                : const SizedBox.shrink(),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    // Floating Glassmorphic Photo Badge (Top-Right) — always visible
-                    if (widget.galleryImages.isNotEmpty)
-                      Positioned(
-                        top: 12,
-                        right: 12,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                              decoration: BoxDecoration(
-                                color: Colors.black.withValues(alpha: 0.4),
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(
-                                  color: Colors.white.withValues(alpha: 0.12),
-                                  width: 1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  const Icon(
-                                    Icons.photo_library_rounded,
-                                    size: 13,
-                                    color: AppColors.primary,
-                                  ),
-                                  const SizedBox(width: 5),
-                                  Text(
-                                    '${widget.galleryImages.length}',
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.w600,
+          transform: isHovered
+              ? (Matrix4.identity()
+                  ..setEntry(3, 2, 0.0015)
+                  ..multiply(Matrix4.translationValues(0.0, -8.0, 0.0))
+                  ..rotateX(-0.02)
+                  ..rotateY(0.012))
+              : Matrix4.identity(),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            margin: const EdgeInsets.all(1.2), // acts as border width
+            decoration: BoxDecoration(
+              color: AppColors.cardBackground,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Image Section — fixed height
+                SizedBox(
+                  height: 220,
+                  width: double.infinity,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      // The actual project image — static, no zoom
+                      widget.imageUrl.startsWith('http')
+                          ? Image.network(
+                              widget.imageUrl,
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) =>
+                                  const Center(
+                                    child: Icon(
+                                      Icons.broken_image,
+                                      color: Colors.grey,
+                                      size: 40,
                                     ),
                                   ),
+                            )
+                          : Image.asset(
+                              widget.imageUrl,
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) =>
+                                  const Center(
+                                    child: Icon(
+                                      Icons.error_outline,
+                                      color: Colors.red,
+                                      size: 40,
+                                    ),
+                                  ),
+                            ),
+
+                      // Subtle bottom gradient
+                      Positioned(
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                          height: 90,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                              colors: [
+                                Colors.black.withValues(alpha: 0.7),
+                                Colors.transparent,
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      // Hover overlay — semi-transparent dark with View Gallery button in center
+                      AnimatedOpacity(
+                        duration: const Duration(milliseconds: 280),
+                        opacity: isHovered ? 1.0 : 0.0,
+                        child: IgnorePointer(
+                          ignoring: !isHovered,
+                          child: Container(
+                            color: Colors.black.withValues(alpha: 0.38),
+                            child: Center(
+                              child: widget.galleryImages.isNotEmpty
+                                  ? _GalleryOverlayButton(
+                                      imageCount: widget.galleryImages.length,
+                                      onTap: _openGallery,
+                                    )
+                                  : const SizedBox.shrink(),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      // Floating Glassmorphic Photo Badge (Top-Right) — always visible
+                      if (widget.galleryImages.isNotEmpty)
+                        Positioned(
+                          top: 12,
+                          right: 12,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: BackdropFilter(
+                              filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 10,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.black.withValues(alpha: 0.4),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(
+                                    color: Colors.white.withValues(alpha: 0.12),
+                                    width: 1,
+                                  ),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Icon(
+                                      Icons.photo_library_rounded,
+                                      size: 13,
+                                      color: AppColors.primary,
+                                    ),
+                                    const SizedBox(width: 5),
+                                    Text(
+                                      '${widget.galleryImages.length}',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+
+                // Info Section — natural height
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Title with sliding underline on hover
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            widget.title,
+                            style: const TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.textPrimary,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          const SizedBox(height: 6),
+                          AnimatedContainer(
+                            duration: const Duration(milliseconds: 300),
+                            curve: Curves.easeOut,
+                            height: 3,
+                            width: isHovered ? 64 : 0,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(1.5),
+                              gradient: const LinearGradient(
+                                colors: [
+                                  AppColors.primary,
+                                  AppColors.secondary,
                                 ],
                               ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
-                  ],
-                ),
-              ),
-
-              // Info Section — natural height
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    // Title with sliding underline on hover
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          widget.title,
-                          style: const TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.textPrimary,
-                          ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
+                      const SizedBox(height: 8),
+                      Text(
+                        widget.description,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: AppColors.textSecondary,
+                          height: 1.5,
                         ),
-                        const SizedBox(height: 6),
-                        AnimatedContainer(
-                          duration: const Duration(milliseconds: 300),
-                          curve: Curves.easeOut,
-                          height: 3,
-                          width: isHovered ? 64 : 0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(1.5),
-                            gradient: const LinearGradient(
-                              colors: [AppColors.primary, AppColors.secondary],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      widget.description,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        color: AppColors.textSecondary,
-                        height: 1.5,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
                       ),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 12),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: widget.technologies
-                        .map(
-                          (tech) => Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 6,
-                            ),
-                            decoration: BoxDecoration(
-                              color: AppColors.primary.withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(
-                                color: AppColors.primary.withValues(alpha: 0.3),
+                      const SizedBox(height: 12),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: widget.technologies
+                            .map(
+                              (tech) => Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 6,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: AppColors.primary.withValues(
+                                    alpha: 0.1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(
+                                    color: AppColors.primary.withValues(
+                                      alpha: 0.3,
+                                    ),
+                                  ),
+                                ),
+                                child: Text(
+                                  tech,
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    color: AppColors.secondary,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
                               ),
-                            ),
-                            child: Text(
-                              tech,
-                              style: const TextStyle(
-                                fontSize: 12,
-                                color: AppColors.secondary,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        )
-                        .toList(),
+                            )
+                            .toList(),
+                      ),
+                    ],
                   ),
-
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -315,10 +351,7 @@ class _GalleryOverlayButton extends StatefulWidget {
   final VoidCallback onTap;
   final int imageCount;
 
-  const _GalleryOverlayButton({
-    required this.onTap,
-    required this.imageCount,
-  });
+  const _GalleryOverlayButton({required this.onTap, required this.imageCount});
 
   @override
   State<_GalleryOverlayButton> createState() => _GalleryOverlayButtonState();
@@ -364,7 +397,9 @@ class _GalleryOverlayButtonState extends State<_GalleryOverlayButton> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
-                    _hovered ? Icons.photo_library_rounded : Icons.photo_library_outlined,
+                    _hovered
+                        ? Icons.photo_library_rounded
+                        : Icons.photo_library_outlined,
                     size: 14,
                     color: Colors.white,
                   ),
@@ -380,9 +415,14 @@ class _GalleryOverlayButtonState extends State<_GalleryOverlayButton> {
                   ),
                   const SizedBox(width: 8),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 6,
+                      vertical: 2,
+                    ),
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: _hovered ? 0.28 : 0.2),
+                      color: Colors.white.withValues(
+                        alpha: _hovered ? 0.28 : 0.2,
+                      ),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
@@ -400,9 +440,6 @@ class _GalleryOverlayButtonState extends State<_GalleryOverlayButton> {
           ),
         ),
       ),
-
     );
   }
 }
-
-

@@ -2,7 +2,7 @@
   "personalInfo": {
     "name": "Eslam Ahmed",
     "title": "Civil Engineer | Structural Design Engineer",
-    "description": "SCE Certified Civil Engineer with 5+ years of experience in structural design, site supervision, and technical office engineering.",
+    "description": "SCE Certified Civil Engineer with 6+ years of experience in structural design, site supervision, and technical office engineering.",
     "about": "A smart and energetic civil engineer with wide knowledge and experience in construction supervising, structural engineering, and technical office work. Passionate about delivering high-quality structural solutions and sharing knowledge through teaching engineering courses.",
     "image": "assets/image/profile/Eslam_Ahmed.jpg",
     "cv": "https://drive.google.com/file/d/1XVX0ZwBmwQWocJREZecc2JJPqVuKGQP4/view?usp=sharing",
@@ -28,7 +28,7 @@
   ],
   "stats": [
     {
-      "title": "5+",
+      "title": "6+",
       "subtitle": "Years of Experience",
       "icon": "briefcase"
     },
@@ -38,7 +38,7 @@
       "icon": "certificate"
     },
     {
-      "title": "10+",
+      "title": "20+",
       "subtitle": "Projects Designed",
       "icon": "building"
     },
@@ -300,7 +300,7 @@
       "description": "Complete structural design for mosque including dome and minaret structural systems.",
       "imageUrl": "assets/image/image_all_projects/Mosque.PNG",
       "images": [
-         "assets/image/7-Mosque/intro-3.PNG",
+        "assets/image/7-Mosque/intro-3.PNG",
         "assets/image/7-Mosque/intro-1.PNG",
         "assets/image/7-Mosque/intro-2.PNG",
         "assets/image/7-Mosque/3D_VIEW-1.PNG",
@@ -337,12 +337,6 @@
     }
   ],
   "certificates": [
-    {
-      "title": "SCE Certified Civil Engineer",
-      "platform": "SCE",
-      "date": "",
-      "icon": "certificate"
-    },
     {
       "title": "Structural Design Diploma — CSI Pro Track",
       "platform": "Enskipa",

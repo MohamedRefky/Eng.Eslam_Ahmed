@@ -3,9 +3,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../core/data/portfolio_data.dart';
-
-import '../widgets/cards/project_card.dart';
 import '../../core/widgets/section_title.dart';
+import '../widgets/cards/project_card.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -22,10 +21,7 @@ class ProjectsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SectionTitle(
-            title: 'Actual Mobile Projects',
-            lineWidth: 80,
-          ),
+          const SectionTitle(title: 'Featured Projects', lineWidth: 80),
           SizedBox(height: isMobile ? 40 : 60),
           LayoutBuilder(
             builder: (context, constraints) {
@@ -45,18 +41,25 @@ class ProjectsSection extends StatelessWidget {
                 PortfolioData.data['projects'] ?? [],
               );
 
-              final cards = projectsList.map((project) => ProjectCard(
-                    title: project['title'] ?? '',
-                    description: project['description'] ?? '',
-                    imageUrl: project['imageUrl'] ?? '',
-                    technologies: List<String>.from(project['technologies'] ?? []),
-                    galleryImages: List<String>.from(project['images'] ?? []),
-                    playStoreUrl: (project['playStoreUrl'] != null &&
-                            (project['playStoreUrl'] as String).isNotEmpty)
-                        ? project['playStoreUrl']
-                        : null,
-                    githubUrl: project['githubUrl'],
-                  )).toList();
+              final cards = projectsList
+                  .map(
+                    (project) => ProjectCard(
+                      title: project['title'] ?? '',
+                      description: project['description'] ?? '',
+                      imageUrl: project['imageUrl'] ?? '',
+                      technologies: List<String>.from(
+                        project['technologies'] ?? [],
+                      ),
+                      galleryImages: List<String>.from(project['images'] ?? []),
+                      playStoreUrl:
+                          (project['playStoreUrl'] != null &&
+                              (project['playStoreUrl'] as String).isNotEmpty)
+                          ? project['playStoreUrl']
+                          : null,
+                      githubUrl: project['githubUrl'],
+                    ),
+                  )
+                  .toList();
 
               return Wrap(
                 spacing: 32,

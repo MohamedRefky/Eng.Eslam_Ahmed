@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import '../core/theme/app_colors.dart';
+
 import '../core/data/portfolio_data.dart';
+import '../core/theme/app_colors.dart';
 import '../core/utils/icon_helper.dart';
 import '../core/widgets/section_title.dart';
 
@@ -47,10 +48,9 @@ class _ExpertiseSectionState extends State<ExpertiseSection> {
   Widget build(BuildContext context) {
     final isMobile = ResponsiveBreakpoints.of(context).isMobile;
 
-    final List<Map<String, dynamic>> expertise = List<Map<String, dynamic>>.from(
-      PortfolioData.data['expertise'] ?? [],
-    );
-    
+    final List<Map<String, dynamic>> expertise =
+        List<Map<String, dynamic>>.from(PortfolioData.data['expertise'] ?? []);
+
     final List<Map<String, dynamic>> details = List<Map<String, dynamic>>.from(
       PortfolioData.data['expertiseDetails'] ?? [],
     );
@@ -60,11 +60,7 @@ class _ExpertiseSectionState extends State<ExpertiseSection> {
       padding: EdgeInsets.symmetric(vertical: isMobile ? 40 : 60),
       child: Column(
         children: [
-          const SectionTitle(
-            title: 'CORE EXPERTISE',
-            lineWidth: 80,
-            letterSpacing: 4,
-          ),
+          const SectionTitle(title: 'Skills', lineWidth: 80, letterSpacing: 4),
           SizedBox(height: isMobile ? 32 : 60),
           SizedBox(
             height: 100,
@@ -114,12 +110,19 @@ class _ExpertiseSectionState extends State<ExpertiseSection> {
                   spacing: isMobile ? 16 : 40,
                   runSpacing: isMobile ? 16 : 40,
                   alignment: WrapAlignment.center,
-                  children: details.map((detail) => _ExpertiseDetail(
-                        width: cardWidth,
-                        title: detail['title'] ?? '',
-                        desc: detail['desc'] ?? '',
-                        icon: IconHelper.getIcon(detail['icon'] ?? ''),
-                      )).toList().animate(interval: 200.ms).fadeIn().scale(),
+                  children: details
+                      .map(
+                        (detail) => _ExpertiseDetail(
+                          width: cardWidth,
+                          title: detail['title'] ?? '',
+                          desc: detail['desc'] ?? '',
+                          icon: IconHelper.getIcon(detail['icon'] ?? ''),
+                        ),
+                      )
+                      .toList()
+                      .animate(interval: 200.ms)
+                      .fadeIn()
+                      .scale(),
                 );
               },
             ),

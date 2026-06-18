@@ -5,12 +5,14 @@ import '../buttons/primary_button.dart';
 import '../buttons/outline_button.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../pages/project_gallery_page.dart';
 
 class ProjectCard extends StatefulWidget {
   final String title;
   final String description;
   final String imageUrl;
   final List<String> technologies;
+  final List<String> galleryImages;
   final String? playStoreUrl;
   final String? githubUrl;
   final String? liveDemoUrl;
@@ -21,6 +23,7 @@ class ProjectCard extends StatefulWidget {
     required this.description,
     required this.imageUrl,
     required this.technologies,
+    this.galleryImages = const [],
     this.playStoreUrl,
     this.githubUrl,
     this.liveDemoUrl,
@@ -245,10 +248,150 @@ class _ProjectCardState extends State<ProjectCard> {
                         )
                         .toList(),
                   ),
+
+                  // View Gallery button
+                  if (widget.galleryImages.isNotEmpty) ...[  
+                    const SizedBox(height: 14),
+                    _ViewGalleryButton(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (_, anim, __) => ProjectGalleryPage(
+                              title: widget.title,
+                              description: widget.description,
+                              technologies: widget.technologies,
+                              images: widget.galleryImages,
+                            ),
+                            transitionsBuilder: (_, anim, __, child) {
+                              return SlideTransition(
+                                position: Tween<Offset>(
+                                  begin: const Offset(0, 1),
+                                  end: Offset.zero,
+                                ).animate(CurvedAnimation(
+                                  parent: anim,
+                                  curve: Curves.easeOutCubic,
+                                )),
+                                child: child,
+                              );
+                            },
+                            transitionDuration: const Duration(milliseconds: 450),
+                          ),
+                        );
+                      },
+                      imageCount: widget.galleryImages.length,
+                    ),
+                  ],
                 ],
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  View Gallery Button
+// ─────────────────────────────────────────────────────────────────────────────
+
+class _ViewGalleryButton extends StatefulWidget {
+  final VoidCallback onTap;
+  final int imageCount;
+
+  const _ViewGalleryButton({
+    required this.onTap,
+    required this.imageCount,
+  });
+
+  @override
+  State<_ViewGalleryButton> createState() => _ViewGalleryButtonState();
+}
+
+class _ViewGalleryButtonState extends State<_ViewGalleryButton> {
+  bool _hovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) => setState(() => _hovered = true),
+      onExit: (_) => setState(() => _hovered = false),
+      child: GestureDetector(
+        onTap: widget.onTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          decoration: BoxDecoration(
+            gradient: _hovered
+                ? const LinearGradient(
+                    colors: [AppColors.primary, AppColors.secondary],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  )
+                : null,
+            color: _hovered ? null : AppColors.primary.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: _hovered
+                  ? Colors.transparent
+                  : AppColors.primary.withValues(alpha: 0.35),
+              width: 1.5,
+            ),
+            boxShadow: _hovered
+                ? [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.35),
+                      blurRadius: 14,
+                      offset: const Offset(0, 4),
+                    ),
+                  ]
+                : null,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.photo_library_rounded,
+                size: 16,
+                color: _hovered ? Colors.white : AppColors.primary,
+              ),
+              const SizedBox(width: 8),
+              Text(
+                'View Gallery',
+                style: TextStyle(
+                  color: _hovered ? Colors.white : AppColors.primary,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.3,
+                ),
+              ),
+              const SizedBox(width: 8),
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 200),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                decoration: BoxDecoration(
+                  color: _hovered
+                      ? Colors.white.withValues(alpha: 0.25)
+                      : AppColors.primary.withValues(alpha: 0.15),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  '${widget.imageCount}',
+                  style: TextStyle(
+                    color: _hovered ? Colors.white : AppColors.primary,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 6),
+              Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 13,
+                color: _hovered ? Colors.white : AppColors.primary,
+              ),
+            ],
+          ),
         ),
       ),
     );

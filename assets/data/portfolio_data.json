@@ -16,7 +16,6 @@
     "militaryService": "Completed",
     "dateOfBirth": "Sep 1, 1997"
   },
-
   "careerSummary": [
     {
       "title": "Structural Design Engineer",
@@ -27,7 +26,6 @@
       "period": "2020 – Present"
     }
   ],
-
   "stats": [
     {
       "title": "5+",
@@ -50,7 +48,6 @@
       "icon": "layerGroup"
     }
   ],
-
   "services": [
     {
       "title": "Structural Design",
@@ -73,7 +70,6 @@
       "icon": "chalkboardTeacher"
     }
   ],
-
   "education": [
     {
       "degree": "Bachelor's Degree in Civil Engineering",
@@ -85,7 +81,6 @@
       "icon": "graduationCap"
     }
   ],
-
   "experience": [
     {
       "title": "Technical Office Engineer",
@@ -154,7 +149,6 @@
       ]
     }
   ],
-
   "projects": [
     {
       "title": "Midor Refinery Expansion",
@@ -165,13 +159,16 @@
         "assets/image/image_all_projects/IMG_0666.PNG"
       ],
       "category": "Industrial",
-      "technologies": ["Site Supervision", "Structural Engineering"],
+      "technologies": [
+        "Site Supervision",
+        "Structural Engineering"
+      ],
       "link": null
     },
     {
-      "title": "High-Rise Building",
+      "title": "High Rise Building",
       "description": "Full structural design including system selection, reinforcement layouts, and element design for all floors.",
-      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
+      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building-bui-1.jpeg",
       "images": [
         "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building_intro-2.PNG",
@@ -190,7 +187,11 @@
         "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg"
       ],
       "category": "Residential",
-      "technologies": ["ETABS", "AutoCAD", "SAP 2000"],
+      "technologies": [
+        "ETABS",
+        "AutoCAD",
+        "SAP 2000"
+      ],
       "link": null
     },
     {
@@ -201,7 +202,11 @@
         "assets/image/image_all_projects/Hospital.PNG"
       ],
       "category": "Medical",
-      "technologies": ["ETABS", "SAFE", "AutoCAD"],
+      "technologies": [
+        "ETABS",
+        "SAFE",
+        "AutoCAD"
+      ],
       "link": null
     },
     {
@@ -217,7 +222,10 @@
         "assets/image/6-Heavy_Frame_Project/foundation.PNG"
       ],
       "category": "Industrial",
-      "technologies": ["SAP 2000", "AutoCAD"],
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
       "link": null
     },
     {
@@ -237,13 +245,16 @@
         "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG"
       ],
       "category": "Commercial",
-      "technologies": ["SAP 2000", "AutoCAD"],
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
       "link": null
     },
     {
       "title": "Elevated Tank",
       "description": "Structural design and analysis for an elevated water tank.",
-      "imageUrl": "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
+      "imageUrl": "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG",
       "images": [
         "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank_intro-2.PNG",
@@ -255,7 +266,10 @@
         "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG"
       ],
       "category": "Infrastructure",
-      "technologies": ["SAP 2000", "AutoCAD"],
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
       "link": null
     },
     {
@@ -292,13 +306,16 @@
         "assets/image/7-Mosque/special-2.PNG"
       ],
       "category": "Religious",
-      "technologies": ["ETABS", "AutoCAD"],
+      "technologies": [
+        "ETABS",
+        "AutoCAD"
+      ],
       "link": null
     },
     {
       "title": "Rectangular Halls",
       "description": "Full structural design for rectangular hall system including reinforcement layouts and structural element details.",
-      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-1.PNG",
+      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
       "images": [
         "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-1.PNG",
         "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
@@ -311,7 +328,10 @@
         "assets/image/4-Rectangular_Halls/foundation.PNG"
       ],
       "category": "Commercial",
-      "technologies": ["SAP 2000", "AutoCAD"],
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
       "link": null
     },
     {
@@ -323,7 +343,11 @@
         "assets/image/image_all_projects/IMG_0666.PNG"
       ],
       "category": "Infrastructure",
-      "technologies": ["Shop Drawings", "Quantity Take-Off", "AutoCAD"],
+      "technologies": [
+        "Shop Drawings",
+        "Quantity Take-Off",
+        "AutoCAD"
+      ],
       "link": null
     },
     {
@@ -348,11 +372,14 @@
         "assets/image/1-Villa_Project/Villa_Project-12.PNG"
       ],
       "category": "Residential",
-      "technologies": ["SAP 2000", "AutoCAD", "SAFE"],
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD",
+        "SAFE"
+      ],
       "link": null
     }
   ],
-
   "certificates": [
     {
       "title": "SCE Certified Civil Engineer",
@@ -385,20 +412,68 @@
       "icon": "fileAlt"
     }
   ],
-
   "expertise": [
-    { "name": "AutoCAD",     "icon": "drafting",   "level": 5, "tag": "A" },
-    { "name": "SAP 2000",    "icon": "building",   "level": 5, "tag": "B" },
-    { "name": "ETABS",       "icon": "layerGroup", "level": 5, "tag": "C" },
-    { "name": "SAFE",        "icon": "shield",     "level": 5, "tag": "D" },
-    { "name": "CSI Columns", "icon": "columns",    "level": 5, "tag": "E" },
-    { "name": "SP Columns",  "icon": "columns",    "level": 5, "tag": "F" },
-    { "name": "ASD",         "icon": "code",       "level": 5, "tag": "G" },
-    { "name": "Excel",       "icon": "fileExcel",  "level": 5, "tag": ""  },
-    { "name": "PowerPoint",  "icon": "presentation","level": 4, "tag": "" },
-    { "name": "MS Word",     "icon": "fileWord",   "level": 4, "tag": ""  }
+    {
+      "name": "AutoCAD",
+      "icon": "drafting",
+      "level": 5,
+      "tag": "A"
+    },
+    {
+      "name": "SAP 2000",
+      "icon": "building",
+      "level": 5,
+      "tag": "B"
+    },
+    {
+      "name": "ETABS",
+      "icon": "layerGroup",
+      "level": 5,
+      "tag": "C"
+    },
+    {
+      "name": "SAFE",
+      "icon": "shield",
+      "level": 5,
+      "tag": "D"
+    },
+    {
+      "name": "CSI Columns",
+      "icon": "columns",
+      "level": 5,
+      "tag": "E"
+    },
+    {
+      "name": "SP Columns",
+      "icon": "columns",
+      "level": 5,
+      "tag": "F"
+    },
+    {
+      "name": "ASD",
+      "icon": "code",
+      "level": 5,
+      "tag": "G"
+    },
+    {
+      "name": "Excel",
+      "icon": "fileExcel",
+      "level": 5,
+      "tag": ""
+    },
+    {
+      "name": "PowerPoint",
+      "icon": "presentation",
+      "level": 4,
+      "tag": ""
+    },
+    {
+      "name": "MS Word",
+      "icon": "fileWord",
+      "level": 4,
+      "tag": ""
+    }
   ],
-
   "techStack": [
     {
       "title": "Structural Analysis",
@@ -442,12 +517,16 @@
       ]
     }
   ],
-
   "languages": [
-    { "name": "Arabic",  "level": "Native"       },
-    { "name": "English", "level": "Intermediate" }
+    {
+      "name": "Arabic",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Intermediate"
+    }
   ],
-
   "socialLinks": [
     {
       "platform": "Email",

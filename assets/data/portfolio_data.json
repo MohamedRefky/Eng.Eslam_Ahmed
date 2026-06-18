@@ -151,31 +151,46 @@
   ],
   "projects": [
     {
-      "title": "Midor Refinery Expansion",
-      "description": "Site engineering supervision for main pipe rack, structures, and compressors shelter. Construction by Technip FMC / Ennpi for Middle East Refinery Company.",
-      "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
+      "title": "Villa",
+      "description": "Full structural design for residential villa including all structural elements and reinforcement details.",
+      "imageUrl": "assets/image/image_all_projects/Villa_Project.PNG",
       "images": [
-        "assets/image/image_all_projects/IMG_0660.PNG",
-        "assets/image/image_all_projects/IMG_0666.PNG"
+        "assets/image/1-Villa_Project/Villa_Project_intro-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-4.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-5.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-6.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-7.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-8.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-9.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-10.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-11.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-12.PNG",
+        "assets/image/image_all_projects/Villa_Project.PNG"
       ],
-      "category": "Industrial",
+      "category": "Residential",
       "technologies": [
-        "Site Supervision",
-        "Structural Engineering"
+        "SAP 2000",
+        "AutoCAD",
+        "SAFE"
       ],
       "link": null
     },
     {
       "title": "High Rise Building",
       "description": "Full structural design including system selection, reinforcement layouts, and element design for all floors.",
-      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building-bui-1.jpeg",
+      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg",
       "images": [
-        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building_intro-2.PNG",
-        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-1.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-2.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-3.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-4.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-5.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-6.PNG",
@@ -195,69 +210,12 @@
       "link": null
     },
     {
-      "title": "Hospital \u2014 15 Repeated Floors",
-      "description": "Structural design for a hospital with 15 repeated floors including complete reinforcement layouts.",
-      "imageUrl": "assets/image/image_all_projects/Hospital.PNG",
-      "images": [
-        "assets/image/image_all_projects/Hospital.PNG"
-      ],
-      "category": "Medical",
-      "technologies": [
-        "ETABS",
-        "SAFE",
-        "AutoCAD"
-      ],
-      "link": null
-    },
-    {
-      "title": "Factory \u2014 2-Hinged Frame System",
-      "description": "Industrial factory structural design using 2-hinged frame system with full structural analysis.",
-      "imageUrl": "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-1.PNG",
-      "images": [
-        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-1.PNG",
-        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-2.PNG",
-        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-3.PNG",
-        "assets/image/6-Heavy_Frame_Project/columns_and_axiss.PNG",
-        "assets/image/6-Heavy_Frame_Project/Slab.PNG",
-        "assets/image/6-Heavy_Frame_Project/foundation.PNG"
-      ],
-      "category": "Industrial",
-      "technologies": [
-        "SAP 2000",
-        "AutoCAD"
-      ],
-      "link": null
-    },
-    {
-      "title": "Wedding Hall \u2014 Radial Frame System",
-      "description": "Structural design for wedding hall using radial frame system.",
-      "imageUrl": "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
-      "images": [
-        "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-2.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-3.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-4.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-5.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-6.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-7.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-8.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-9.PNG",
-        "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG"
-      ],
-      "category": "Commercial",
-      "technologies": [
-        "SAP 2000",
-        "AutoCAD"
-      ],
-      "link": null
-    },
-    {
       "title": "Elevated Tank",
       "description": "Structural design and analysis for an elevated water tank.",
       "imageUrl": "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG",
       "images": [
-        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank_intro-2.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank-1.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank-2.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank-3.PNG",
@@ -273,13 +231,78 @@
       "link": null
     },
     {
+      "title": "Rectangular Halls",
+      "description": "Full structural design for rectangular hall system including reinforcement layouts and structural element details.",
+      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+      "images": [
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-1.jpg",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+        "assets/image/4-Rectangular_Halls/Section Rft.PNG",
+        "assets/image/4-Rectangular_Halls/Sections.PNG",
+        "assets/image/4-Rectangular_Halls/Slab.PNG",
+        "assets/image/4-Rectangular_Halls/columns and axiss.PNG",
+        "assets/image/4-Rectangular_Halls/foundation.PNG"
+      ],
+      "category": "Commercial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Wedding Hall \u2014 Radial Frame System",
+      "description": "Structural design for wedding hall using radial frame system.",
+      "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
+      "images": [
+        "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-2.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-3.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-4.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-5.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-6.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-7.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-8.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-9.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG",
+        "assets/image/image_all_projects/IMG_0660.PNG"
+      ],
+      "category": "Commercial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Factory \u2014 2-Hinged Frame System",
+      "description": "Industrial factory structural design using 2-hinged frame system with full structural analysis.",
+      "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+      "images": [
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-1.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-2.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-3.PNG",
+        "assets/image/6-Heavy_Frame_Project/columns_and_axiss.PNG",
+        "assets/image/6-Heavy_Frame_Project/Slab.PNG",
+        "assets/image/6-Heavy_Frame_Project/foundation.PNG",
+        "assets/image/image_all_projects/Heavy_Frame_Project.PNG"
+      ],
+      "category": "Industrial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
       "title": "Mosque Project",
       "description": "Complete structural design for mosque including dome and minaret structural systems.",
-      "imageUrl": "assets/image/7-Mosque/intro-1.PNG",
+      "imageUrl": "assets/image/image_all_projects/Mosque.PNG",
       "images": [
+         "assets/image/7-Mosque/intro-3.PNG",
         "assets/image/7-Mosque/intro-1.PNG",
         "assets/image/7-Mosque/intro-2.PNG",
-        "assets/image/7-Mosque/intro-3.PNG",
         "assets/image/7-Mosque/3D_VIEW-1.PNG",
         "assets/image/7-Mosque/3D_VIEW-2.PNG",
         "assets/image/7-Mosque/3D_VIEW-3.PNG",
@@ -309,73 +332,6 @@
       "technologies": [
         "ETABS",
         "AutoCAD"
-      ],
-      "link": null
-    },
-    {
-      "title": "Rectangular Halls",
-      "description": "Full structural design for rectangular hall system including reinforcement layouts and structural element details.",
-      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
-      "images": [
-        "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-1.PNG",
-        "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
-        "assets/image/4-Rectangular_Halls/Rectangular_Halls-1.jpg",
-        "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
-        "assets/image/4-Rectangular_Halls/Section Rft.PNG",
-        "assets/image/4-Rectangular_Halls/Sections.PNG",
-        "assets/image/4-Rectangular_Halls/Slab.PNG",
-        "assets/image/4-Rectangular_Halls/columns and axiss.PNG",
-        "assets/image/4-Rectangular_Halls/foundation.PNG"
-      ],
-      "category": "Commercial",
-      "technologies": [
-        "SAP 2000",
-        "AutoCAD"
-      ],
-      "link": null
-    },
-    {
-      "title": "Bahtim Ring Expansion",
-      "description": "Technical office engineering for road expansion project. Owner: General Authority for Roads and Bridges.",
-      "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
-      "images": [
-        "assets/image/image_all_projects/IMG_0660.PNG",
-        "assets/image/image_all_projects/IMG_0666.PNG"
-      ],
-      "category": "Infrastructure",
-      "technologies": [
-        "Shop Drawings",
-        "Quantity Take-Off",
-        "AutoCAD"
-      ],
-      "link": null
-    },
-    {
-      "title": "Villa",
-      "description": "Full structural design for residential villa including all structural elements and reinforcement details.",
-      "imageUrl": "assets/image/1-Villa_Project/Villa_Project_intro-1.PNG",
-      "images": [
-        "assets/image/1-Villa_Project/Villa_Project_intro-1.PNG",
-        "assets/image/1-Villa_Project/Villa_Project_intro-2.PNG",
-        "assets/image/1-Villa_Project/Villa_Project_intro-3.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-1.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-2.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-3.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-4.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-5.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-6.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-7.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-8.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-9.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-10.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-11.PNG",
-        "assets/image/1-Villa_Project/Villa_Project-12.PNG"
-      ],
-      "category": "Residential",
-      "technologies": [
-        "SAP 2000",
-        "AutoCAD",
-        "SAFE"
       ],
       "link": null
     }
@@ -539,9 +495,19 @@
       "icon": "whatsapp"
     },
     {
-      "platform": "LinkedIn",
-      "url": "",
-      "icon": "linkedin"
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/share/1CbbKZ1Vud/?mibextid=wwXIfr",
+      "icon": "facebook"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/instructor_eslamahmed?igsh=bWFwZ2MyZG9sZjRi&utm_source=qr",
+      "icon": "instagram"
+    },
+    {
+      "platform": "Company",
+      "url": "https://www.facebook.com/share/17wUQS6TRp/?mibextid=wwXIfr",
+      "icon": "facebook"
     }
   ]
 }

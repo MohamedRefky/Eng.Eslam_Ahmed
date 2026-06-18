@@ -51,6 +51,10 @@ class IconHelper {
         return FontAwesomeIcons.whatsapp;
       case 'email':
         return FontAwesomeIcons.envelope;
+      case 'facebook':
+        return FontAwesomeIcons.facebookF;
+      case 'instagram':
+        return FontAwesomeIcons.instagram;
 
       default:
         return FontAwesomeIcons.circle;

@@ -67,6 +67,14 @@ class ContactSection extends StatelessWidget {
                   displayValue = displayValue.split('github.com/').last.replaceAll('/', '');
                 } else if (displayValue.startsWith('https://wa.me/')) {
                   displayValue = '+${displayValue.replaceAll('https://wa.me/', '')}';
+                } else if (displayValue.contains('instagram.com/')) {
+                  displayValue = '@${displayValue.split('instagram.com/').last.split('?').first}';
+                } else if (displayValue.contains('facebook.com/share/')) {
+                  if (link['platform'] == 'Company') {
+                    displayValue = 'View Page';
+                  } else {
+                    displayValue = 'View Profile';
+                  }
                 }
 
                 return _ContactCard(
@@ -115,12 +123,54 @@ class ContactSection extends StatelessWidget {
               .fadeIn(delay: 1000.ms, duration: 500.ms)
               .scale(begin: const Offset(0.8, 0.8)),
           const SizedBox(height: 80),
-          Text(
-            'Designed & Built by ${AppConstants.devName}',
-            style: const TextStyle(
-              color: AppColors.textSecondary,
-              fontSize: 14,
-            ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                'Design & build by Mohamed Refky',
+                style: TextStyle(
+                  color: AppColors.textSecondary,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0.5,
+                ),
+              ),
+              const SizedBox(height: 12),
+              InkWell(
+                onTap: () => _launchUrl('https://wa.me/201019964918'),
+                borderRadius: BorderRadius.circular(20),
+                hoverColor: AppColors.primary.withValues(alpha: 0.1),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: AppColors.primary.withValues(alpha: 0.08),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: AppColors.primary.withValues(alpha: 0.3),
+                    ),
+                  ),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.whatsapp,
+                        size: 14,
+                        color: AppColors.primary,
+                      ),
+                      SizedBox(width: 6),
+                      Text(
+                        'Contact Developer',
+                        style: TextStyle(
+                          color: AppColors.primary,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 24),
         ],

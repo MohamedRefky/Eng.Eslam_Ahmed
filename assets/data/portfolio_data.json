@@ -5,7 +5,7 @@
     "description": "SCE Certified Civil Engineer with 6+ years of experience in structural design, site supervision, and technical office engineering.",
     "about": "A smart and energetic civil engineer with wide knowledge and experience in construction supervising, structural engineering, and technical office work. Passionate about delivering high-quality structural solutions and sharing knowledge through teaching engineering courses.",
     "image": "assets/image/profile/Eslam_Ahmed.jpg",
-    "cv": "https://drive.google.com/file/d/1XVX0ZwBmwQWocJREZecc2JJPqVuKGQP4/view?usp=sharing",
+    "cv": "https://drive.google.com/file/d/1z2tUgV1LEDJwk8eYDWIv1K5D7uEwGXZ_/view?usp=sharing",
     "github": "",
     "linkedin": "",
     "email": "eslamahmed157179@gmail.com",
@@ -272,8 +272,6 @@
         "assets/image/5-Rounded_Halls/Rounded_Halls-13.jpeg",
         "assets/image/5-Rounded_Halls/Rounded_Halls-14.jpeg",
         "assets/image/5-Rounded_Halls/Rounded_Halls-15.jpeg"
-
-     
       ],
       "category": "Commercial",
       "technologies": [
@@ -287,13 +285,22 @@
       "description": "Industrial factory structural design using 2-hinged frame system with full structural analysis.",
       "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
       "images": [
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-2.jpeg",
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-1.PNG",
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-2.PNG",
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-3.PNG",
         "assets/image/6-Heavy_Frame_Project/columns_and_axiss.PNG",
         "assets/image/6-Heavy_Frame_Project/Slab.PNG",
         "assets/image/6-Heavy_Frame_Project/foundation.PNG",
-        "assets/image/image_all_projects/Heavy_Frame_Project.PNG"
+        "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-2.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-3.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-4.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-5.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-6.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-7.jpeg"
       ],
       "category": "Industrial",
       "technologies": [

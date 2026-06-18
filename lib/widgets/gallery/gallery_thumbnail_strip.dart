@@ -57,35 +57,38 @@ class _ThumbItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        width: 72,
-        height: 72,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(
-            color: selected ? AppColors.primary : Colors.white.withValues(alpha: 0.1),
-            width: selected ? 2.5 : 1,
+      child: Center(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 260),
+          curve: Curves.easeOutCubic,
+          width: selected ? 76 : 64,
+          height: selected ? 76 : 64,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: selected ? AppColors.primary : Colors.white.withValues(alpha: 0.12),
+              width: selected ? 2.5 : 1,
+            ),
+            boxShadow: selected
+                ? [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.45),
+                      blurRadius: 14,
+                      spreadRadius: 1,
+                    ),
+                  ]
+                : null,
           ),
-          boxShadow: selected
-              ? [
-                  BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.45),
-                    blurRadius: 10,
-                    spreadRadius: 1,
-                  ),
-                ]
-              : null,
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(6),
-          child: AnimatedOpacity(
-            duration: const Duration(milliseconds: 200),
-            opacity: selected ? 1.0 : 0.45,
-            child: Image.asset(
-              imagePath,
-              fit: BoxFit.cover,
-              errorBuilder: (_, _, _) => const _ThumbError(),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: AnimatedOpacity(
+              duration: const Duration(milliseconds: 260),
+              opacity: selected ? 1.0 : 0.4,
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) => const _ThumbError(),
+              ),
             ),
           ),
         ),

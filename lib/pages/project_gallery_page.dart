@@ -38,7 +38,7 @@ class _ProjectGalleryPageState extends State<ProjectGalleryPage> {
   @override
   void initState() {
     super.initState();
-    _pageController = PageController();
+    _pageController = PageController(viewportFraction: 0.85);
     WidgetsBinding.instance.addPostFrameCallback((_) => _focusNode.requestFocus());
   }
 
@@ -96,41 +96,55 @@ class _ProjectGalleryPageState extends State<ProjectGalleryPage> {
     final isMobile = MediaQuery.of(context).size.width < 600;
 
     return Scaffold(
-      backgroundColor: const Color(0xFF080E1A),
-      body: SafeArea(
-        child: KeyboardListener(
-          focusNode: _focusNode,
-          autofocus: true,
-          onKeyEvent: (event) {
-            if (event is! KeyDownEvent) return;
-            if (event.logicalKey == LogicalKeyboardKey.arrowRight) _goTo(_currentIndex + 1);
-            if (event.logicalKey == LogicalKeyboardKey.arrowLeft) _goTo(_currentIndex - 1);
-            if (event.logicalKey == LogicalKeyboardKey.escape) Navigator.pop(context);
-          },
-          child: Column(
-            children: [
-              GalleryHeader(
-                title: widget.title,
-                currentIndex: _currentIndex,
-                total: widget.images.length,
-              ),
-
-              Expanded(child: _buildMainImage(isMobile)),
-
-              GalleryThumbnailStrip(
-                images: widget.images,
-                currentIndex: _currentIndex,
-                scrollController: _thumbScrollController,
-                onTap: _goTo,
-              ),
-
-              if (widget.technologies.isNotEmpty) ...[
-                const SizedBox(height: 10),
-                GalleryTechChips(technologies: widget.technologies),
-              ],
-
-              const SizedBox(height: 14),
+      backgroundColor: Colors.transparent,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: RadialGradient(
+            center: Alignment(0, -0.5),
+            radius: 1.4,
+            colors: [
+              Color(0xFF0C1930), // tint of electric dark navy
+              Color(0xFF050A14), // darker navy
+              Color(0xFF020408), // pitch black
             ],
+            stops: [0.0, 0.55, 1.0],
+          ),
+        ),
+        child: SafeArea(
+          child: KeyboardListener(
+            focusNode: _focusNode,
+            autofocus: true,
+            onKeyEvent: (event) {
+              if (event is! KeyDownEvent) return;
+              if (event.logicalKey == LogicalKeyboardKey.arrowRight) _goTo(_currentIndex + 1);
+              if (event.logicalKey == LogicalKeyboardKey.arrowLeft) _goTo(_currentIndex - 1);
+              if (event.logicalKey == LogicalKeyboardKey.escape) Navigator.pop(context);
+            },
+            child: Column(
+              children: [
+                GalleryHeader(
+                  title: widget.title,
+                  currentIndex: _currentIndex,
+                  total: widget.images.length,
+                ),
+
+                Expanded(child: _buildMainImage(isMobile)),
+
+                GalleryThumbnailStrip(
+                  images: widget.images,
+                  currentIndex: _currentIndex,
+                  scrollController: _thumbScrollController,
+                  onTap: _goTo,
+                ),
+
+                if (widget.technologies.isNotEmpty) ...[
+                  const SizedBox(height: 10),
+                  GalleryTechChips(technologies: widget.technologies),
+                ],
+
+                const SizedBox(height: 14),
+              ],
+            ),
           ),
         ),
       ),
@@ -156,28 +170,71 @@ class _ProjectGalleryPageState extends State<ProjectGalleryPage> {
           ),
         ),
 
-        // Swipeable main image
+        // Swipeable main image (with 3D active-scale and glow)
         PageView.builder(
           controller: _pageController,
           itemCount: widget.images.length,
           onPageChanged: (i) => setState(() => _currentIndex = i),
-          itemBuilder: (context, index) => GestureDetector(
-            onTap: () => _openLightbox(index),
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: isMobile ? 12 : 32,
-                vertical: 12,
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(14),
-                child: Image.asset(
-                  widget.images[index],
-                  fit: BoxFit.contain,
-                  errorBuilder: (_, _, _) => const GalleryImageError(),
+          itemBuilder: (context, index) {
+            return AnimatedBuilder(
+              animation: _pageController,
+              builder: (context, child) {
+                double scale = 0.88;
+                double opacity = 0.45;
+                if (_pageController.position.haveDimensions) {
+                  final page = _pageController.page ?? 0.0;
+                  final diff = (page - index).abs();
+                  scale = (1.0 - (diff * 0.12)).clamp(0.88, 1.0);
+                  opacity = (1.0 - (diff * 0.55)).clamp(0.45, 1.0);
+                } else {
+                  if (index == _currentIndex) {
+                    scale = 1.0;
+                    opacity = 1.0;
+                  }
+                }
+                return Transform.scale(
+                  scale: scale,
+                  child: Opacity(
+                    opacity: opacity,
+                    child: child,
+                  ),
+                );
+              },
+              child: GestureDetector(
+                onTap: () => _openLightbox(index),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isMobile ? 8 : 16,
+                    vertical: 16,
+                  ),
+                  child: Center(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: index == _currentIndex
+                            ? [
+                                BoxShadow(
+                                  color: AppColors.primary.withValues(alpha: 0.22),
+                                  blurRadius: 30,
+                                  spreadRadius: 2,
+                                ),
+                              ]
+                            : null,
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.asset(
+                          widget.images[index],
+                          fit: BoxFit.contain,
+                          errorBuilder: (_, _, _) => const GalleryImageError(),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
+            );
+          },
         ),
 
         // Navigation arrows (desktop only)

@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../../core/theme/app_colors.dart';
 
@@ -16,37 +17,42 @@ class GalleryHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(4, 6, 16, 6),
-      decoration: BoxDecoration(
-        color: const Color(0xFF080E1A),
-        border: Border(
-          bottom: BorderSide(color: AppColors.primary.withValues(alpha: 0.18)),
-        ),
-      ),
-      child: Row(
-        children: [
-          IconButton(
-            onPressed: () => Navigator.of(context).pop(),
-            icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 20, color: Colors.white),
-            tooltip: 'Back',
-          ),
-          const SizedBox(width: 4),
-          Expanded(
-            child: Text(
-              title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 0.4,
-              ),
-              overflow: TextOverflow.ellipsis,
+    return ClipRect(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(4, 6, 16, 6),
+          decoration: BoxDecoration(
+            color: Colors.black.withValues(alpha: 0.35),
+            border: Border(
+              bottom: BorderSide(color: AppColors.primary.withValues(alpha: 0.15)),
             ),
           ),
-          const SizedBox(width: 12),
-          _CounterBadge(current: currentIndex + 1, total: total),
-        ],
+          child: Row(
+            children: [
+              IconButton(
+                onPressed: () => Navigator.of(context).pop(),
+                icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 20, color: Colors.white),
+                tooltip: 'Back',
+              ),
+              const SizedBox(width: 4),
+              Expanded(
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 0.4,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              const SizedBox(width: 12),
+              _CounterBadge(current: currentIndex + 1, total: total),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -1,6 +1,6 @@
 {
   "personalInfo": {
-    "name": "Eslam Ahmed",
+    "name": "مكتب م/ اسلام احمد للخدمات الهندسيه والتدريب",
     "title": "Civil Engineer | Structural Design Engineer",
     "description": "SCE Certified Civil Engineer with 6+ years of experience in structural design, site supervision, and technical office engineering.",
     "about": "A smart and energetic civil engineer with wide knowledge and experience in construction supervising, structural engineering, and technical office work. Passionate about delivering high-quality structural solutions and sharing knowledge through teaching engineering courses.",
@@ -16,38 +16,6 @@
     "militaryService": "Completed",
     "dateOfBirth": "Sep 1, 1997"
   },
-  "careerSummary": [
-    {
-      "title": "Structural Design Engineer",
-      "period": "2020 – Present"
-    },
-    {
-      "title": "Lecturer of Civil Engineering Courses",
-      "period": "2020 – Present"
-    }
-  ],
-  "stats": [
-    {
-      "title": "6+",
-      "subtitle": "Years of Experience",
-      "icon": "briefcase"
-    },
-    {
-      "title": "SCE",
-      "subtitle": "Certified Engineer",
-      "icon": "certificate"
-    },
-    {
-      "title": "20+",
-      "subtitle": "Projects Designed",
-      "icon": "building"
-    },
-    {
-      "title": "4",
-      "subtitle": "Engineering Fields",
-      "icon": "layerGroup"
-    }
-  ],
   "services": [
     {
       "title": "Structural Design",
@@ -68,85 +36,6 @@
       "title": "Engineering Courses",
       "description": "Lecturing in structural design, reinforced concrete, AutoCAD, and shop drawing courses.",
       "icon": "chalkboardTeacher"
-    }
-  ],
-  "education": [
-    {
-      "degree": "Bachelor's Degree in Civil Engineering",
-      "university": "Valley Engineering College",
-      "period": "2015 – 2020",
-      "grade": "Very Good",
-      "project": "Reinforced Concrete",
-      "projectGrade": "Excellent",
-      "icon": "graduationCap"
-    }
-  ],
-  "experience": [
-    {
-      "title": "Technical Office Engineer",
-      "company": "Concrete for Construction",
-      "location": "Cairo, Egypt",
-      "period": "2020 – 2021",
-      "type": "Full-time",
-      "responsibilities": [
-        "Project: Bahtim Ring Expansion",
-        "Owner: General Authority for Roads and Bridges",
-        "Preparing shop drawings for beams, columns, slabs, and footings",
-        "Preparing quantity take-off for civil and arch works"
-      ]
-    },
-    {
-      "title": "Site Engineer",
-      "company": "Petrojet — The Petroleum Projects",
-      "location": "Alexandria, Egypt",
-      "period": "2021 – 2022",
-      "type": "Full-time",
-      "responsibilities": [
-        "Project: Midor Refinery Expansion",
-        "Company: Petrojet for Petroleum Projects",
-        "Construction: Technip FMC / Ennpi",
-        "Owner: Middle East Refinery Company",
-        "Supervising main pipe rack, structures, and compressors shelter",
-        "Controlling and supervising all site excavation activities"
-      ]
-    },
-    {
-      "title": "Structural Design Engineer",
-      "company": "Eslam Ahmed — Engineering Services Consulting",
-      "location": "Nasr City, Egypt",
-      "period": "2022 – Present",
-      "type": "Self-Employed",
-      "responsibilities": [
-        "Preparing structural design for all building elements",
-        "Creating suitable structural systems and converting architectural layouts to structural systems",
-        "Preparing reinforcement layouts for all structural elements",
-        "Projects designed: Villa, High-Rise Building, Elevated Tank, Factory (2-Hinged Frame System), Wedding Hall (Radial Frame System), Hospital (15 Repeated Floors), Mosque"
-      ]
-    },
-    {
-      "title": "Lecturer — Civil & Architecture Courses",
-      "company": "Arvil Group Company",
-      "location": "Dokki, Egypt",
-      "period": "2022 – Feb 2025",
-      "type": "Part-time",
-      "responsibilities": [
-        "Lecturer for Structural Design Diploma (CSI Diploma)",
-        "Lecturer for Structural AutoCAD Course",
-        "Lecturer for Reinforced Concrete Design Manual Course"
-      ]
-    },
-    {
-      "title": "Lecturer — Civil & Architecture Courses",
-      "company": "Enskipa Company",
-      "location": "Giza, Egypt",
-      "period": "Mar 2025 – Present",
-      "type": "Part-time",
-      "responsibilities": [
-        "Lecturer for Structural Design Diploma (CSI Pro Track)",
-        "Lecturer for Structural AutoCAD Course",
-        "Lecturer for Reinforced Concrete Design Manual Course",
-        "Lecturer for Shop Drawing Manual Course"
-      ]
     }
   ],
   "projects": [
@@ -252,7 +141,7 @@
       "link": null
     },
     {
-      "title": "Wedding Hall \u2014 Radial Frame System",
+      "title": "Wedding Hall — Radial Frame System",
       "description": "Structural design for wedding hall using radial frame system.",
       "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
       "images": [
@@ -281,7 +170,7 @@
       "link": null
     },
     {
-      "title": "Factory \u2014 2-Hinged Frame System",
+      "title": "Factory — 2-Hinged Frame System",
       "description": "Industrial factory structural design using 2-hinged frame system with full structural analysis.",
       "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
       "images": [
@@ -348,147 +237,6 @@
         "AutoCAD"
       ],
       "link": null
-    }
-  ],
-  "certificates": [
-    {
-      "title": "Structural Design Diploma — CSI Pro Track",
-      "platform": "Enskipa",
-      "date": "2025",
-      "icon": "building"
-    },
-    {
-      "title": "Reinforced Concrete Design Manual Course",
-      "platform": "Enskipa",
-      "date": "",
-      "icon": "layerGroup"
-    },
-    {
-      "title": "Structural AutoCAD Course",
-      "platform": "Enskipa",
-      "date": "",
-      "icon": "drafting"
-    },
-    {
-      "title": "Shop Drawing Manual Course",
-      "platform": "Enskipa",
-      "date": "",
-      "icon": "fileAlt"
-    }
-  ],
-  "expertise": [
-    {
-      "name": "AutoCAD",
-      "icon": "drafting",
-      "level": 5,
-      "tag": "A"
-    },
-    {
-      "name": "SAP 2000",
-      "icon": "building",
-      "level": 5,
-      "tag": "B"
-    },
-    {
-      "name": "ETABS",
-      "icon": "layerGroup",
-      "level": 5,
-      "tag": "C"
-    },
-    {
-      "name": "SAFE",
-      "icon": "shield",
-      "level": 5,
-      "tag": "D"
-    },
-    {
-      "name": "CSI Columns",
-      "icon": "columns",
-      "level": 5,
-      "tag": "E"
-    },
-    {
-      "name": "SP Columns",
-      "icon": "columns",
-      "level": 5,
-      "tag": "F"
-    },
-    {
-      "name": "ASD",
-      "icon": "code",
-      "level": 5,
-      "tag": "G"
-    },
-    {
-      "name": "Excel",
-      "icon": "fileExcel",
-      "level": 5,
-      "tag": ""
-    },
-    {
-      "name": "PowerPoint",
-      "icon": "presentation",
-      "level": 4,
-      "tag": ""
-    },
-    {
-      "name": "MS Word",
-      "icon": "fileWord",
-      "level": 4,
-      "tag": ""
-    }
-  ],
-  "techStack": [
-    {
-      "title": "Structural Analysis",
-      "icon": "building",
-      "skills": [
-        "SAP 2000",
-        "ETABS",
-        "SAFE",
-        "CSI Columns",
-        "SP Columns",
-        "ASD"
-      ]
-    },
-    {
-      "title": "Design & Drafting",
-      "icon": "drafting",
-      "skills": [
-        "AutoCAD (Structural)",
-        "Shop Drawings",
-        "Reinforcement Layouts",
-        "Structural System Design"
-      ]
-    },
-    {
-      "title": "Office Tools",
-      "icon": "laptop",
-      "skills": [
-        "MS Excel",
-        "MS PowerPoint",
-        "MS Word"
-      ]
-    },
-    {
-      "title": "Field & Management",
-      "icon": "hardHat",
-      "skills": [
-        "Site Supervision",
-        "Quantity Take-Off",
-        "Technical Office Engineering",
-        "Construction Management"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "name": "Arabic",
-      "level": "Native"
-    },
-    {
-      "name": "English",
-      "level": "Intermediate"
     }
   ],
   "socialLinks": [

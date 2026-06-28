@@ -115,7 +115,7 @@ class _HeroText extends StatelessWidget {
               height: 1.2,
             ),
             child: AnimatedTextKit(
-              key: ValueKey(Localizations.localeOf(context).languageCode),
+              key: ValueKey(AppConstants.devTitle),
               animatedTexts: [
                 TypewriterAnimatedText(
                   AppConstants.devTitle,

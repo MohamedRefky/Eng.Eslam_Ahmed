@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'core/theme/app_theme.dart';
-import 'pages/splash_page.dart';
+import 'core/data/portfolio_data.dart';
+import 'pages/home_page.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
+  await PortfolioData.load();
   runApp(const PortfolioApp());
 }
 
@@ -30,7 +32,7 @@ class PortfolioApp extends StatelessWidget {
       title: 'Eslam Ahmed - Portfolio',
       theme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: const SplashPage(),
+      home: const HomePage(),
     );
   }
 }

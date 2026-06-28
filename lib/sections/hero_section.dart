@@ -6,6 +6,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
+import '../../core/utils/app_localizations.dart';
 import '../widgets/buttons/primary_button.dart';
 import '../widgets/buttons/outline_button.dart';
 
@@ -70,16 +71,18 @@ class _HeroText extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final isMobile = ResponsiveBreakpoints.of(context).isMobile;
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+    final align = isMobile
+        ? CrossAxisAlignment.center
+        : (isArabic ? CrossAxisAlignment.end : CrossAxisAlignment.start);
 
     return Column(
-      crossAxisAlignment: ResponsiveBreakpoints.of(context).isMobile
-          ? CrossAxisAlignment.center
-          : CrossAxisAlignment.start,
+      crossAxisAlignment: align,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          "Hello, I'm",
-          style: TextStyle(
+        Text(
+          AppLocalizations.of(context)!.translate('hello'),
+          style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w500,
             color: AppColors.secondary,
@@ -94,12 +97,14 @@ class _HeroText extends StatelessWidget {
                   fontSize: isMobile ? 40 : 72,
                   height: 1.1,
                 ),
-                textAlign: isMobile ? TextAlign.center : TextAlign.left,
+                textAlign: isMobile
+                    ? TextAlign.center
+                    : (isArabic ? TextAlign.right : TextAlign.left),
               ),
             )
             .animate()
             .fadeIn(delay: 200.ms, duration: 600.ms)
-            .slideX(begin: -0.2, end: 0),
+            .slideX(begin: isArabic ? 0.2 : -0.2, end: 0),
         const SizedBox(height: 12),
         FittedBox(
           fit: BoxFit.scaleDown,
@@ -110,6 +115,7 @@ class _HeroText extends StatelessWidget {
               height: 1.2,
             ),
             child: AnimatedTextKit(
+              key: ValueKey(Localizations.localeOf(context).languageCode),
               animatedTexts: [
                 TypewriterAnimatedText(
                   AppConstants.devTitle,
@@ -124,9 +130,9 @@ class _HeroText extends StatelessWidget {
         Text(
               AppConstants.devDescription,
               style: textTheme.bodyLarge?.copyWith(fontSize: 18, height: 1.6),
-              textAlign: ResponsiveBreakpoints.of(context).isMobile
+              textAlign: isMobile
                   ? TextAlign.center
-                  : TextAlign.left,
+                  : (isArabic ? TextAlign.right : TextAlign.left),
             )
             .animate()
             .fadeIn(delay: 600.ms, duration: 600.ms)
@@ -135,17 +141,17 @@ class _HeroText extends StatelessWidget {
         Wrap(
           spacing: 16,
           runSpacing: 16,
-          alignment: ResponsiveBreakpoints.of(context).isMobile
+          alignment: isMobile
               ? WrapAlignment.center
-              : WrapAlignment.start,
+              : (isArabic ? WrapAlignment.end : WrapAlignment.start),
           children: [
             PrimaryButton(
-              text: 'View Projects',
+              text: AppLocalizations.of(context)!.translate('view_projects'),
               icon: const Icon(Icons.rocket_launch, size: 20),
               onPressed: onViewProjects,
             ),
             OutlineButton(
-              text: 'View CV',
+              text: AppLocalizations.of(context)!.translate('view_cv'),
               icon: const FaIcon(FontAwesomeIcons.fileLines, size: 20),
               onPressed: () async {
                 try {
@@ -159,12 +165,12 @@ class _HeroText extends StatelessWidget {
               },
             ),
             OutlineButton(
-              text: 'Contact Me',
+              text: AppLocalizations.of(context)!.translate('contact_me'),
               icon: const FaIcon(FontAwesomeIcons.paperPlane, size: 20),
               onPressed: onContactMe,
             ),
             OutlineButton(
-              text: 'WhatsApp',
+              text: AppLocalizations.of(context)!.translate('whatsapp'),
               icon: const FaIcon(FontAwesomeIcons.whatsapp, size: 20),
               onPressed: () async {
                 final Uri url = Uri.parse(AppConstants.whatsappUrl);

@@ -3,6 +3,8 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../core/theme/app_colors.dart';
 import '../core/constants/app_constants.dart';
 import '../core/data/portfolio_data.dart';
+import '../core/utils/app_localizations.dart';
+import '../main.dart';
 import '../widgets/animations/animated_gradient_background.dart';
 import '../sections/hero_section.dart';
 import '../sections/services_section.dart';
@@ -26,11 +28,17 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     _loadData();
   }
 
   Future<void> _loadData() async {
-    await PortfolioData.load();
+    final lang = Localizations.localeOf(context).languageCode;
+    await PortfolioData.load(lang);
     if (mounted) {
       setState(() {
         _isLoading = false;
@@ -107,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   _DrawerItem(
-                    title: 'Services',
+                    title: AppLocalizations.of(context)!.translate('services'),
                     icon: Icons.design_services_outlined,
                     onPressed: () {
                       Navigator.pop(context);
@@ -115,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   _DrawerItem(
-                    title: 'Courses',
+                    title: AppLocalizations.of(context)!.translate('courses'),
                     icon: Icons.school_outlined,
                     onPressed: () {
                       Navigator.pop(context);
@@ -123,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   _DrawerItem(
-                    title: 'Projects',
+                    title: AppLocalizations.of(context)!.translate('projects'),
                     icon: Icons.rocket_launch_outlined,
                     onPressed: () {
                       Navigator.pop(context);
@@ -131,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   _DrawerItem(
-                    title: 'Files',
+                    title: AppLocalizations.of(context)!.translate('files'),
                     icon: Icons.folder_open_outlined,
                     onPressed: () {
                       Navigator.pop(context);
@@ -139,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   _DrawerItem(
-                    title: 'Customer Reviews',
+                    title: AppLocalizations.of(context)!.translate('reviews'),
                     icon: Icons.reviews_outlined,
                     onPressed: () {
                       Navigator.pop(context);
@@ -147,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   _DrawerItem(
-                    title: 'Contact',
+                    title: AppLocalizations.of(context)!.translate('contact'),
                     icon: Icons.mail_outline,
                     onPressed: () {
                       Navigator.pop(context);
@@ -173,7 +181,9 @@ class _HomePageState extends State<HomePage> {
                 constraints: const BoxConstraints(maxWidth: 250),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
-                  alignment: Alignment.centerLeft,
+                  alignment: Localizations.localeOf(context).languageCode == 'ar'
+                      ? Alignment.centerRight
+                      : Alignment.centerLeft,
                   child: Text(
                     AppConstants.devName,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -183,45 +193,61 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              actions: isMobileOrTablet
-                  ? null
-                  : [
-                      Expanded(
-                        child: FittedBox(
-                          fit: BoxFit.scaleDown,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              _NavBarItem(
-                                title: 'Services',
-                                onPressed: () => _scrollToSection(_servicesKey),
-                              ),
-                              _NavBarItem(
-                                title: 'Courses',
-                                onPressed: () => _scrollToSection(_coursesKey),
-                              ),
-                              _NavBarItem(
-                                title: 'Projects',
-                                onPressed: () => _scrollToSection(_projectsKey),
-                              ),
-                              _NavBarItem(
-                                title: 'Files',
-                                onPressed: () => _scrollToSection(_booksKey),
-                              ),
-                              _NavBarItem(
-                                title: 'Customer Reviews',
-                                onPressed: () => _scrollToSection(_testimonialsKey),
-                              ),
-                              _NavBarItem(
-                                title: 'Contact',
-                                onPressed: () => _scrollToSection(_contactKey),
-                              ),
-                            ],
-                          ),
+              actions: [
+                IconButton(
+                  icon: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(Icons.language, color: AppColors.secondary, size: 20),
+                      const SizedBox(width: 4),
+                      Text(
+                        Localizations.localeOf(context).languageCode == 'ar'
+                            ? 'EN'
+                            : 'عربي',
+                        style: const TextStyle(
+                          color: AppColors.textPrimary,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(width: 8),
                     ],
+                  ),
+                  onPressed: () {
+                    final currentLocale = appLocale.value;
+                    if (currentLocale.languageCode == 'ar') {
+                      appLocale.value = const Locale('en');
+                    } else {
+                      appLocale.value = const Locale('ar');
+                    }
+                  },
+                ),
+                if (!isMobileOrTablet) ...[
+                  _NavBarItem(
+                    title: AppLocalizations.of(context)!.translate('services'),
+                    onPressed: () => _scrollToSection(_servicesKey),
+                  ),
+                  _NavBarItem(
+                    title: AppLocalizations.of(context)!.translate('courses'),
+                    onPressed: () => _scrollToSection(_coursesKey),
+                  ),
+                  _NavBarItem(
+                    title: AppLocalizations.of(context)!.translate('projects'),
+                    onPressed: () => _scrollToSection(_projectsKey),
+                  ),
+                  _NavBarItem(
+                    title: AppLocalizations.of(context)!.translate('files'),
+                    onPressed: () => _scrollToSection(_booksKey),
+                  ),
+                  _NavBarItem(
+                    title: AppLocalizations.of(context)!.translate('reviews'),
+                    onPressed: () => _scrollToSection(_testimonialsKey),
+                  ),
+                  _NavBarItem(
+                    title: AppLocalizations.of(context)!.translate('contact'),
+                    onPressed: () => _scrollToSection(_contactKey),
+                  ),
+                ],
+              ],
             ),
             SliverToBoxAdapter(
               child: Column(

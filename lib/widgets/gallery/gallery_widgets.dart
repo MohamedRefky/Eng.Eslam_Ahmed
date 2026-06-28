@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/theme/app_colors.dart';
+import '../../core/utils/app_localizations.dart';
 
 /// Shared error placeholder shown when an image fails to load.
 class GalleryImageError extends StatelessWidget {
@@ -9,12 +10,15 @@ class GalleryImageError extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xFF1C2840),
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.broken_image_outlined, size: 60, color: Colors.white24),
-          SizedBox(height: 10),
-          Text('Image not available', style: TextStyle(color: Colors.white30, fontSize: 14)),
+          const Icon(Icons.broken_image_outlined, size: 60, color: Colors.white24),
+          const SizedBox(height: 10),
+          Text(
+            AppLocalizations.of(context)!.translate('image_not_available'),
+            style: const TextStyle(color: Colors.white30, fontSize: 14),
+          ),
         ],
       ),
     );
@@ -34,12 +38,15 @@ class GalleryZoomHint extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
       ),
-      child: const Row(
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.zoom_out_map_rounded, size: 14, color: Colors.white54),
-          SizedBox(width: 6),
-          Text('Tap to zoom', style: TextStyle(color: Colors.white54, fontSize: 11)),
+          const Icon(Icons.zoom_out_map_rounded, size: 14, color: Colors.white54),
+          const SizedBox(width: 6),
+          Text(
+            AppLocalizations.of(context)!.translate('tap_to_zoom'),
+            style: const TextStyle(color: Colors.white54, fontSize: 11),
+          ),
         ],
       ),
     );

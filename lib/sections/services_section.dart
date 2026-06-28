@@ -5,6 +5,7 @@ import '../../core/theme/app_colors.dart';
 import '../../core/data/portfolio_data.dart';
 import '../../core/constants/app_icons.dart';
 import '../../core/widgets/section_title.dart';
+import '../../core/utils/app_localizations.dart';
 
 class ServicesSection extends StatefulWidget {
   const ServicesSection({super.key});
@@ -52,7 +53,7 @@ class _ServicesSectionState extends State<ServicesSection> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: isMobile ? 24 : 0),
-            child: const SectionTitle(title: 'What I Offer'),
+            child: SectionTitle(title: AppLocalizations.of(context)!.translate('what_i_offer')),
           ),
           SizedBox(height: isMobile ? 40 : 60),
           if (isMobile)

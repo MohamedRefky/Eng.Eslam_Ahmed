@@ -7,6 +7,7 @@ import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/data/portfolio_data.dart';
 import '../../core/constants/app_icons.dart';
+import '../../core/utils/app_localizations.dart';
 import '../widgets/buttons/primary_button.dart';
 import '../../core/widgets/section_title.dart';
 
@@ -32,10 +33,10 @@ class ContactSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SectionTitle(title: 'Get In Touch'),
+          SectionTitle(title: AppLocalizations.of(context)!.translate('get_in_touch')),
           const SizedBox(height: 40),
           Text(
-                "I'm currently looking for new opportunities.\nWhether you have a question or just want to say hi, I'll try my best to get back to you!",
+                AppLocalizations.of(context)!.translate('contact_description'),
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontSize: 18,
                   height: 1.6,
@@ -71,9 +72,9 @@ class ContactSection extends StatelessWidget {
                   displayValue = '@${displayValue.split('instagram.com/').last.split('?').first}';
                 } else if (displayValue.contains('facebook.com/share/')) {
                   if (link['platform'] == 'Company') {
-                    displayValue = 'View Page';
+                    displayValue = AppLocalizations.of(context)!.translate('view_page');
                   } else {
-                    displayValue = 'View Profile';
+                    displayValue = AppLocalizations.of(context)!.translate('view_profile');
                   }
                 }
 
@@ -99,7 +100,7 @@ class ContactSection extends StatelessWidget {
                     size: 28,
                     color: AppColors.secondary,
                   ),
-                  title: 'Call',
+                  title: AppLocalizations.of(context)!.translate('call'),
                   value: AppConstants.phoneCallUrl.replaceAll('tel:', ''),
                   onTap: () => _launchUrl(AppConstants.phoneCallUrl),
                 ),
@@ -115,7 +116,7 @@ class ContactSection extends StatelessWidget {
           ),
           SizedBox(height: isMobile ? 48 : 80),
           PrimaryButton(
-                text: 'Say Hello',
+                text: AppLocalizations.of(context)!.translate('say_hello'),
                 icon: const FaIcon(FontAwesomeIcons.whatsapp, size: 20),
                 onPressed: () => _launchUrl(AppConstants.whatsappUrl),
               )
@@ -126,9 +127,9 @@ class ContactSection extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                'Design & build by Mohamed Refky',
-                style: TextStyle(
+              Text(
+                AppLocalizations.of(context)!.translate('developer_credit'),
+                style: const TextStyle(
                   color: AppColors.textSecondary,
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -149,7 +150,7 @@ class ContactSection extends StatelessWidget {
                       color: AppColors.primary.withValues(alpha: 0.3),
                     ),
                   ),
-                  child: const Row(
+                  child:  Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       FaIcon(
@@ -159,8 +160,8 @@ class ContactSection extends StatelessWidget {
                       ),
                       SizedBox(width: 6),
                       Text(
-                        'Contact Developer',
-                        style: TextStyle(
+                        AppLocalizations.of(context)!.translate('contact_developer'),
+                        style: const TextStyle(
                           color: AppColors.primary,
                           fontSize: 12,
                           fontWeight: FontWeight.w600,

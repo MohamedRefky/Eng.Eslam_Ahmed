@@ -12,6 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_web_plugins:
     sdk: flutter
   web: ^1.1.1
@@ -31,7 +33,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
- 
+
   flutter_lints: ^6.0.0
   flutter_launcher_icons: ^0.13.1
 
@@ -48,6 +50,7 @@ flutter:
   assets:
     - assets/
     - assets/data/
+    - assets/i18n/
     - assets/image/profile/
     - assets/image/1-Villa_Project/
     - assets/image/2-High_Rise_Building/

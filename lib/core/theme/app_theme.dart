@@ -3,7 +3,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 class AppTheme {
-  static ThemeData get darkTheme {
+  static ThemeData getTheme(Locale locale) {
+    final isArabic = locale.languageCode == 'ar';
+    
+    // Auto-select font family per user rules:
+    // Arabic -> Zain, English -> PlusJakartaSans
+    final baseTextTheme = ThemeData.dark().textTheme;
+    final textTheme = isArabic
+        ? GoogleFonts.zainTextTheme(baseTextTheme)
+        : GoogleFonts.plusJakartaSansTextTheme(baseTextTheme);
+
+    final titleFont = isArabic ? GoogleFonts.zain : GoogleFonts.plusJakartaSans;
+    final bodyFont = isArabic ? GoogleFonts.zain : GoogleFonts.plusJakartaSans;
+
     return ThemeData(
       brightness: Brightness.dark,
       primaryColor: AppColors.primary,
@@ -13,19 +25,18 @@ class AppTheme {
         secondary: AppColors.secondary,
         surface: AppColors.cardBackground,
       ),
-      textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme)
-          .copyWith(
-            displayLarge: GoogleFonts.poppins(
-              color: AppColors.textPrimary,
-              fontWeight: FontWeight.bold,
-            ),
-            displayMedium: GoogleFonts.poppins(
-              color: AppColors.textPrimary,
-              fontWeight: FontWeight.bold,
-            ),
-            bodyLarge: GoogleFonts.inter(color: AppColors.textPrimary),
-            bodyMedium: GoogleFonts.inter(color: AppColors.textSecondary),
-          ),
+      textTheme: textTheme.copyWith(
+        displayLarge: titleFont(
+          color: AppColors.textPrimary,
+          fontWeight: FontWeight.bold,
+        ),
+        displayMedium: titleFont(
+          color: AppColors.textPrimary,
+          fontWeight: FontWeight.bold,
+        ),
+        bodyLarge: bodyFont(color: AppColors.textPrimary),
+        bodyMedium: bodyFont(color: AppColors.textSecondary),
+      ),
       cardTheme: const CardThemeData(
         color: AppColors.cardBackground,
         elevation: 8,
@@ -45,4 +56,6 @@ class AppTheme {
       ),
     );
   }
+
+  static ThemeData get darkTheme => getTheme(const Locale('ar'));
 }

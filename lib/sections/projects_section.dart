@@ -4,6 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../core/data/portfolio_data.dart';
 import '../../core/widgets/section_title.dart';
+import '../../core/utils/app_localizations.dart';
 import '../widgets/cards/project_card.dart';
 
 class ProjectsSection extends StatelessWidget {
@@ -21,7 +22,7 @@ class ProjectsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SectionTitle(title: 'Featured Projects', lineWidth: 80),
+          SectionTitle(title: AppLocalizations.of(context)!.translate('featured_projects'), lineWidth: 80),
           SizedBox(height: isMobile ? 40 : 60),
           LayoutBuilder(
             builder: (context, constraints) {

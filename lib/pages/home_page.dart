@@ -6,6 +6,7 @@ import '../core/data/portfolio_data.dart';
 import '../core/utils/app_localizations.dart';
 import '../main.dart';
 import '../widgets/animations/animated_gradient_background.dart';
+import '../widgets/buttons/language_switch_button.dart';
 import '../sections/hero_section.dart';
 import '../sections/services_section.dart';
 import '../sections/courses_section.dart';
@@ -194,32 +195,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               actions: [
-                IconButton(
-                  icon: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Icon(Icons.language, color: AppColors.secondary, size: 20),
-                      const SizedBox(width: 4),
-                      Text(
-                        Localizations.localeOf(context).languageCode == 'ar'
-                            ? 'EN'
-                            : 'عربي',
-                        style: const TextStyle(
-                          color: AppColors.textPrimary,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: LanguageSwitchButton(
+                      currentLocale: Localizations.localeOf(context),
+                      onLocaleChanged: (newLocale) {
+                        appLocale.value = newLocale;
+                      },
+                    ),
                   ),
-                  onPressed: () {
-                    final currentLocale = appLocale.value;
-                    if (currentLocale.languageCode == 'ar') {
-                      appLocale.value = const Locale('en');
-                    } else {
-                      appLocale.value = const Locale('ar');
-                    }
-                  },
                 ),
                 if (!isMobileOrTablet) ...[
                   _NavBarItem(

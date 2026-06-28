@@ -5,10 +5,9 @@ import 'core/theme/app_theme.dart';
 import 'core/data/portfolio_data.dart';
 import 'pages/home_page.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
-  await PortfolioData.load();
   runApp(const PortfolioApp());
 }
 

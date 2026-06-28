@@ -4,6 +4,7 @@ import '../core/theme/app_colors.dart';
 import '../core/constants/app_constants.dart';
 import '../widgets/animations/animated_gradient_background.dart';
 import '../sections/hero_section.dart';
+import '../sections/define_section.dart';
 import '../sections/about_section.dart';
 import '../sections/projects_section.dart';
 import '../sections/tech_stack_section.dart';
@@ -13,6 +14,8 @@ import '../sections/contact_section.dart';
 import '../sections/services_section.dart';
 import '../sections/expertise_section.dart';
 import '../sections/education_section.dart';
+import '../sections/courses_section.dart';
+import '../sections/books_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -26,10 +29,10 @@ class _HomePageState extends State<HomePage> {
 
   // Section Keys
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final GlobalKey _aboutKey = GlobalKey();
-  final GlobalKey _servicesKey = GlobalKey();
+  final GlobalKey _defineKey = GlobalKey();
   final GlobalKey _projectsKey = GlobalKey();
-  final GlobalKey _experienceKey = GlobalKey();
+  final GlobalKey _coursesKey = GlobalKey();
+  final GlobalKey _booksKey = GlobalKey();
   final GlobalKey _contactKey = GlobalKey();
 
   void _scrollToSection(GlobalKey key) {
@@ -83,23 +86,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   _DrawerItem(
-                    title: 'About',
+                    title: 'Define Eng Eslam Ahmed',
                     icon: Icons.person_outline,
                     onPressed: () {
                       Navigator.pop(context);
-                      _scrollToSection(_aboutKey);
+                      _scrollToSection(_defineKey);
                     },
                   ),
                   _DrawerItem(
-                    title: 'Services',
-                    icon: Icons.miscellaneous_services_outlined,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_servicesKey);
-                    },
-                  ),
-                  _DrawerItem(
-                    title: 'Projects',
+                    title: 'My Projects',
                     icon: Icons.rocket_launch_outlined,
                     onPressed: () {
                       Navigator.pop(context);
@@ -107,11 +102,19 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   _DrawerItem(
-                    title: 'Experience',
-                    icon: Icons.work_outline,
+                    title: 'Courses',
+                    icon: Icons.school_outlined,
                     onPressed: () {
                       Navigator.pop(context);
-                      _scrollToSection(_experienceKey);
+                      _scrollToSection(_coursesKey);
+                    },
+                  ),
+                  _DrawerItem(
+                    title: 'Books',
+                    icon: Icons.menu_book_outlined,
+                    onPressed: () {
+                      Navigator.pop(context);
+                      _scrollToSection(_booksKey);
                     },
                   ),
                   _DrawerItem(
@@ -161,21 +164,20 @@ class _HomePageState extends State<HomePage> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               _NavBarItem(
-                                title: 'About',
-                                onPressed: () => _scrollToSection(_aboutKey),
+                                title: 'Define Eng Eslam Ahmed',
+                                onPressed: () => _scrollToSection(_defineKey),
                               ),
                               _NavBarItem(
-                                title: 'Services',
-                                onPressed: () => _scrollToSection(_servicesKey),
-                              ),
-                              _NavBarItem(
-                                title: 'Projects',
+                                title: 'My Projects',
                                 onPressed: () => _scrollToSection(_projectsKey),
                               ),
                               _NavBarItem(
-                                title: 'Experience',
-                                onPressed: () =>
-                                    _scrollToSection(_experienceKey),
+                                title: 'Courses',
+                                onPressed: () => _scrollToSection(_coursesKey),
+                              ),
+                              _NavBarItem(
+                                title: 'Books',
+                                onPressed: () => _scrollToSection(_booksKey),
                               ),
                               _NavBarItem(
                                 title: 'Contact',
@@ -194,16 +196,20 @@ class _HomePageState extends State<HomePage> {
                   HeroSection(
                     onViewProjects: () => _scrollToSection(_projectsKey),
                     onContactMe: () => _scrollToSection(_contactKey),
-                    onViewServices: () => _scrollToSection(_servicesKey),
+                    onViewServices: () => _scrollToSection(_defineKey),
                   ),
-                  AboutSection(key: _aboutKey),
+                  DefineSection(key: _defineKey),
+                  const AboutSection(),
                   const ExpertiseSection(),
-                  ServicesSection(key: _servicesKey),
-                  ProjectsSection(key: _projectsKey),
+                  const ServicesSection(),
+
                   const TechStackSection(),
-                  ExperienceSection(key: _experienceKey),
+                  const ExperienceSection(),
                   const EducationSection(),
                   const CertificatesSection(),
+                  ProjectsSection(key: _projectsKey),
+                  CoursesSection(key: _coursesKey),
+                  BooksSection(key: _booksKey),
                   ContactSection(key: _contactKey),
                 ],
               ),

@@ -1,0 +1,521 @@
+{
+  "personalInfo": {
+    "name": "Eslam Ahmed",
+    "title": "Civil Engineer | Structural Design Engineer",
+    "description": "SCE Certified Civil Engineer with 6+ years of experience in structural design, site supervision, and technical office engineering.",
+    "about": "A smart and energetic civil engineer with wide knowledge and experience in construction supervising, structural engineering, and technical office work. Passionate about delivering high-quality structural solutions and sharing knowledge through teaching engineering courses.",
+    "image": "assets/image/profile/Eslam_Ahmed.jpg",
+    "cv": "https://drive.google.com/file/d/1z2tUgV1LEDJwk8eYDWIv1K5D7uEwGXZ_/view?usp=sharing",
+    "github": "",
+    "linkedin": "",
+    "email": "eslamahmed157179@gmail.com",
+    "whatsappNumber": "+201061617649",
+    "phone": "+201061617649",
+    "location": "Shoubra, Cairo, Egypt",
+    "nationality": "Egyptian",
+    "militaryService": "Completed",
+    "dateOfBirth": "Sep 1, 1997"
+  },
+  "careerSummary": [
+    {
+      "title": "Structural Design Engineer",
+      "period": "2020 – Present"
+    },
+    {
+      "title": "Lecturer of Civil Engineering Courses",
+      "period": "2020 – Present"
+    }
+  ],
+  "stats": [
+    {
+      "title": "6+",
+      "subtitle": "Years of Experience",
+      "icon": "briefcase"
+    },
+    {
+      "title": "SCE",
+      "subtitle": "Certified Engineer",
+      "icon": "certificate"
+    },
+    {
+      "title": "20+",
+      "subtitle": "Projects Designed",
+      "icon": "building"
+    },
+    {
+      "title": "4",
+      "subtitle": "Engineering Fields",
+      "icon": "layerGroup"
+    }
+  ],
+  "services": [
+    {
+      "title": "Structural Design",
+      "description": "Designing structural systems for buildings including villas, high-rise buildings, hospitals, mosques, and industrial structures.",
+      "icon": "building"
+    },
+    {
+      "title": "Site Supervision",
+      "description": "Supervising construction activities, managing pipe racks, structures, and site excavation operations.",
+      "icon": "hardHat"
+    },
+    {
+      "title": "Technical Office Engineering",
+      "description": "Preparing shop drawings, quantity take-offs, and detailed drawings for beams, columns, slabs, and footings.",
+      "icon": "drafting"
+    },
+    {
+      "title": "Engineering Courses",
+      "description": "Lecturing in structural design, reinforced concrete, AutoCAD, and shop drawing courses.",
+      "icon": "chalkboardTeacher"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's Degree in Civil Engineering",
+      "university": "Valley Engineering College",
+      "period": "2015 – 2020",
+      "grade": "Very Good",
+      "project": "Reinforced Concrete",
+      "projectGrade": "Excellent",
+      "icon": "graduationCap"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Technical Office Engineer",
+      "company": "Concrete for Construction",
+      "location": "Cairo, Egypt",
+      "period": "2020 – 2021",
+      "type": "Full-time",
+      "responsibilities": [
+        "Project: Bahtim Ring Expansion",
+        "Owner: General Authority for Roads and Bridges",
+        "Preparing shop drawings for beams, columns, slabs, and footings",
+        "Preparing quantity take-off for civil and arch works"
+      ]
+    },
+    {
+      "title": "Site Engineer",
+      "company": "Petrojet — The Petroleum Projects",
+      "location": "Alexandria, Egypt",
+      "period": "2021 – 2022",
+      "type": "Full-time",
+      "responsibilities": [
+        "Project: Midor Refinery Expansion",
+        "Company: Petrojet for Petroleum Projects",
+        "Construction: Technip FMC / Ennpi",
+        "Owner: Middle East Refinery Company",
+        "Supervising main pipe rack, structures, and compressors shelter",
+        "Controlling and supervising all site excavation activities"
+      ]
+    },
+    {
+      "title": "Structural Design Engineer",
+      "company": "Eslam Ahmed — Engineering Services Consulting",
+      "location": "Nasr City, Egypt",
+      "period": "2022 – Present",
+      "type": "Self-Employed",
+      "responsibilities": [
+        "Preparing structural design for all building elements",
+        "Creating suitable structural systems and converting architectural layouts to structural systems",
+        "Preparing reinforcement layouts for all structural elements",
+        "Projects designed: Villa, High-Rise Building, Elevated Tank, Factory (2-Hinged Frame System), Wedding Hall (Radial Frame System), Hospital (15 Repeated Floors), Mosque"
+      ]
+    },
+    {
+      "title": "Lecturer — Civil & Architecture Courses",
+      "company": "Arvil Group Company",
+      "location": "Dokki, Egypt",
+      "period": "2022 – Feb 2025",
+      "type": "Part-time",
+      "responsibilities": [
+        "Lecturer for Structural Design Diploma (CSI Diploma)",
+        "Lecturer for Structural AutoCAD Course",
+        "Lecturer for Reinforced Concrete Design Manual Course"
+      ]
+    },
+    {
+      "title": "Lecturer — Civil & Architecture Courses",
+      "company": "Enskipa Company",
+      "location": "Giza, Egypt",
+      "period": "Mar 2025 – Present",
+      "type": "Part-time",
+      "responsibilities": [
+        "Lecturer for Structural Design Diploma (CSI Pro Track)",
+        "Lecturer for Structural AutoCAD Course",
+        "Lecturer for Reinforced Concrete Design Manual Course",
+        "Lecturer for Shop Drawing Manual Course"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Villa",
+      "description": "Full structural design for residential villa including all structural elements and reinforcement details.",
+      "imageUrl": "assets/image/image_all_projects/Villa_Project.PNG",
+      "images": [
+        "assets/image/1-Villa_Project/Villa_Project_intro-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-4.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-5.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-6.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-7.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-8.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-9.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-10.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-11.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-12.PNG",
+        "assets/image/image_all_projects/Villa_Project.PNG"
+      ],
+      "category": "Residential",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD",
+        "SAFE"
+      ],
+      "link": null
+    },
+    {
+      "title": "High Rise Building",
+      "description": "Full structural design including system selection, reinforcement layouts, and element design for all floors.",
+      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg",
+      "images": [
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-2.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-1.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-2.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-4.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-5.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-6.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-7.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-8.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-9.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-10.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-bui-1.jpeg",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg"
+      ],
+      "category": "Residential",
+      "technologies": [
+        "ETABS",
+        "AutoCAD",
+        "SAP 2000"
+      ],
+      "link": null
+    },
+    {
+      "title": "Elevated Tank",
+      "description": "Structural design and analysis for an elevated water tank.",
+      "imageUrl": "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG",
+      "images": [
+        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-2.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-1.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-2.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-3.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-4.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-5.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG"
+      ],
+      "category": "Infrastructure",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Rectangular Halls",
+      "description": "Full structural design for rectangular hall system including reinforcement layouts and structural element details.",
+      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+      "images": [
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-1.jpg",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+        "assets/image/4-Rectangular_Halls/Section Rft.PNG",
+        "assets/image/4-Rectangular_Halls/Sections.PNG",
+        "assets/image/4-Rectangular_Halls/Slab.PNG",
+        "assets/image/4-Rectangular_Halls/columns and axiss.PNG",
+        "assets/image/4-Rectangular_Halls/foundation.PNG"
+      ],
+      "category": "Commercial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Wedding Hall \u2014 Radial Frame System",
+      "description": "Structural design for wedding hall using radial frame system.",
+      "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
+      "images": [
+        "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-2.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-3.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-4.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-5.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-6.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-7.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-8.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-9.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG",
+        "assets/image/image_all_projects/IMG_0660.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-11.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-12.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-13.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-14.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-15.jpeg"
+      ],
+      "category": "Commercial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Factory \u2014 2-Hinged Frame System",
+      "description": "Industrial factory structural design using 2-hinged frame system with full structural analysis.",
+      "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+      "images": [
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-2.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-1.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-2.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-3.PNG",
+        "assets/image/6-Heavy_Frame_Project/columns_and_axiss.PNG",
+        "assets/image/6-Heavy_Frame_Project/Slab.PNG",
+        "assets/image/6-Heavy_Frame_Project/foundation.PNG",
+        "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-2.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-3.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-4.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-5.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-6.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-7.jpeg"
+      ],
+      "category": "Industrial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Mosque Project",
+      "description": "Complete structural design for mosque including dome and minaret structural systems.",
+      "imageUrl": "assets/image/image_all_projects/Mosque.PNG",
+      "images": [
+        "assets/image/7-Mosque/intro-3.PNG",
+        "assets/image/7-Mosque/intro-1.PNG",
+        "assets/image/7-Mosque/intro-2.PNG",
+        "assets/image/7-Mosque/3D_VIEW-1.PNG",
+        "assets/image/7-Mosque/3D_VIEW-2.PNG",
+        "assets/image/7-Mosque/3D_VIEW-3.PNG",
+        "assets/image/7-Mosque/3D_VIEW-4.PNG",
+        "assets/image/7-Mosque/arc_ground-1.PNG",
+        "assets/image/7-Mosque/arc_ground-2.PNG",
+        "assets/image/7-Mosque/arc_Typical.PNG",
+        "assets/image/7-Mosque/arc-4.PNG",
+        "assets/image/7-Mosque/mosque.PNG",
+        "assets/image/7-Mosque/columns_and_axiss.PNG",
+        "assets/image/7-Mosque/Mosque-1.PNG",
+        "assets/image/7-Mosque/Mosque-2.PNG",
+        "assets/image/7-Mosque/Mosque-3.PNG",
+        "assets/image/7-Mosque/Mosque-4.PNG",
+        "assets/image/7-Mosque/Slab-1.PNG",
+        "assets/image/7-Mosque/Slab-2.PNG",
+        "assets/image/7-Mosque/Sections-1.PNG",
+        "assets/image/7-Mosque/Sections-2.PNG",
+        "assets/image/7-Mosque/Foundation.PNG",
+        "assets/image/7-Mosque/Stairs.PNG",
+        "assets/image/7-Mosque/XY_Plan.PNG",
+        "assets/image/7-Mosque/Yz_Plan.PNG",
+        "assets/image/7-Mosque/special-1.PNG",
+        "assets/image/7-Mosque/special-2.PNG"
+      ],
+      "category": "Religious",
+      "technologies": [
+        "ETABS",
+        "AutoCAD"
+      ],
+      "link": null
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Structural Design Diploma — CSI Pro Track",
+      "platform": "Enskipa",
+      "date": "2025",
+      "icon": "building"
+    },
+    {
+      "title": "Reinforced Concrete Design Manual Course",
+      "platform": "Enskipa",
+      "date": "",
+      "icon": "layerGroup"
+    },
+    {
+      "title": "Structural AutoCAD Course",
+      "platform": "Enskipa",
+      "date": "",
+      "icon": "drafting"
+    },
+    {
+      "title": "Shop Drawing Manual Course",
+      "platform": "Enskipa",
+      "date": "",
+      "icon": "fileAlt"
+    }
+  ],
+  "expertise": [
+    {
+      "name": "AutoCAD",
+      "icon": "drafting",
+      "level": 5,
+      "tag": "A"
+    },
+    {
+      "name": "SAP 2000",
+      "icon": "building",
+      "level": 5,
+      "tag": "B"
+    },
+    {
+      "name": "ETABS",
+      "icon": "layerGroup",
+      "level": 5,
+      "tag": "C"
+    },
+    {
+      "name": "SAFE",
+      "icon": "shield",
+      "level": 5,
+      "tag": "D"
+    },
+    {
+      "name": "CSI Columns",
+      "icon": "columns",
+      "level": 5,
+      "tag": "E"
+    },
+    {
+      "name": "SP Columns",
+      "icon": "columns",
+      "level": 5,
+      "tag": "F"
+    },
+    {
+      "name": "ASD",
+      "icon": "code",
+      "level": 5,
+      "tag": "G"
+    },
+    {
+      "name": "Excel",
+      "icon": "fileExcel",
+      "level": 5,
+      "tag": ""
+    },
+    {
+      "name": "PowerPoint",
+      "icon": "presentation",
+      "level": 4,
+      "tag": ""
+    },
+    {
+      "name": "MS Word",
+      "icon": "fileWord",
+      "level": 4,
+      "tag": ""
+    }
+  ],
+  "techStack": [
+    {
+      "title": "Structural Analysis",
+      "icon": "building",
+      "skills": [
+        "SAP 2000",
+        "ETABS",
+        "SAFE",
+        "CSI Columns",
+        "SP Columns",
+        "ASD"
+      ]
+    },
+    {
+      "title": "Design & Drafting",
+      "icon": "drafting",
+      "skills": [
+        "AutoCAD (Structural)",
+        "Shop Drawings",
+        "Reinforcement Layouts",
+        "Structural System Design"
+      ]
+    },
+    {
+      "title": "Office Tools",
+      "icon": "laptop",
+      "skills": [
+        "MS Excel",
+        "MS PowerPoint",
+        "MS Word"
+      ]
+    },
+    {
+      "title": "Field & Management",
+      "icon": "hardHat",
+      "skills": [
+        "Site Supervision",
+        "Quantity Take-Off",
+        "Technical Office Engineering",
+        "Construction Management"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Arabic",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Intermediate"
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "Email",
+      "url": "mailto:eslamahmed157179@gmail.com",
+      "icon": "email"
+    },
+    {
+      "platform": "WhatsApp",
+      "url": "https://wa.me/201061617649",
+      "icon": "whatsapp"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/share/1CbbKZ1Vud/?mibextid=wwXIfr",
+      "icon": "facebook"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/instructor_eslamahmed?igsh=bWFwZ2MyZG9sZjRi&utm_source=qr",
+      "icon": "instagram"
+    },
+    {
+      "platform": "Company",
+      "url": "https://www.facebook.com/share/17wUQS6TRp/?mibextid=wwXIfr",
+      "icon": "facebook"
+    }
+  ]
+}

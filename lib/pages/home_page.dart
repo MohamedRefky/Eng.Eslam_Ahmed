@@ -5,18 +5,12 @@ import '../core/constants/app_constants.dart';
 import '../core/data/portfolio_data.dart';
 import '../widgets/animations/animated_gradient_background.dart';
 import '../sections/hero_section.dart';
-import '../sections/define_section.dart';
-import '../sections/about_section.dart';
-import '../sections/projects_section.dart';
-import '../sections/tech_stack_section.dart';
-import '../sections/experience_section.dart';
-import '../sections/certificates_section.dart';
-import '../sections/contact_section.dart';
 import '../sections/services_section.dart';
-import '../sections/expertise_section.dart';
-import '../sections/education_section.dart';
 import '../sections/courses_section.dart';
+import '../sections/projects_section.dart';
 import '../sections/books_section.dart';
+import '../sections/testimonials_section.dart';
+import '../sections/contact_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -46,10 +40,11 @@ class _HomePageState extends State<HomePage> {
 
   // Section Keys
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final GlobalKey _defineKey = GlobalKey();
-  final GlobalKey _projectsKey = GlobalKey();
+  final GlobalKey _servicesKey = GlobalKey();
   final GlobalKey _coursesKey = GlobalKey();
+  final GlobalKey _projectsKey = GlobalKey();
   final GlobalKey _booksKey = GlobalKey();
+  final GlobalKey _testimonialsKey = GlobalKey();
   final GlobalKey _contactKey = GlobalKey();
 
   void _scrollToSection(GlobalKey key) {
@@ -112,19 +107,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   _DrawerItem(
-                    title: 'Define Eng Eslam Ahmed',
-                    icon: Icons.person_outline,
+                    title: 'Services',
+                    icon: Icons.design_services_outlined,
                     onPressed: () {
                       Navigator.pop(context);
-                      _scrollToSection(_defineKey);
-                    },
-                  ),
-                  _DrawerItem(
-                    title: 'My Projects',
-                    icon: Icons.rocket_launch_outlined,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_projectsKey);
+                      _scrollToSection(_servicesKey);
                     },
                   ),
                   _DrawerItem(
@@ -136,11 +123,27 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   _DrawerItem(
-                    title: 'Books',
-                    icon: Icons.menu_book_outlined,
+                    title: 'Projects',
+                    icon: Icons.rocket_launch_outlined,
+                    onPressed: () {
+                      Navigator.pop(context);
+                      _scrollToSection(_projectsKey);
+                    },
+                  ),
+                  _DrawerItem(
+                    title: 'Files',
+                    icon: Icons.folder_open_outlined,
                     onPressed: () {
                       Navigator.pop(context);
                       _scrollToSection(_booksKey);
+                    },
+                  ),
+                  _DrawerItem(
+                    title: 'Customer Reviews',
+                    icon: Icons.reviews_outlined,
+                    onPressed: () {
+                      Navigator.pop(context);
+                      _scrollToSection(_testimonialsKey);
                     },
                   ),
                   _DrawerItem(
@@ -190,20 +193,24 @@ class _HomePageState extends State<HomePage> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               _NavBarItem(
-                                title: 'Define Eng Eslam Ahmed',
-                                onPressed: () => _scrollToSection(_defineKey),
-                              ),
-                              _NavBarItem(
-                                title: 'My Projects',
-                                onPressed: () => _scrollToSection(_projectsKey),
+                                title: 'Services',
+                                onPressed: () => _scrollToSection(_servicesKey),
                               ),
                               _NavBarItem(
                                 title: 'Courses',
                                 onPressed: () => _scrollToSection(_coursesKey),
                               ),
                               _NavBarItem(
-                                title: 'Books',
+                                title: 'Projects',
+                                onPressed: () => _scrollToSection(_projectsKey),
+                              ),
+                              _NavBarItem(
+                                title: 'Files',
                                 onPressed: () => _scrollToSection(_booksKey),
+                              ),
+                              _NavBarItem(
+                                title: 'Customer Reviews',
+                                onPressed: () => _scrollToSection(_testimonialsKey),
                               ),
                               _NavBarItem(
                                 title: 'Contact',
@@ -222,20 +229,13 @@ class _HomePageState extends State<HomePage> {
                   HeroSection(
                     onViewProjects: () => _scrollToSection(_projectsKey),
                     onContactMe: () => _scrollToSection(_contactKey),
-                    onViewServices: () => _scrollToSection(_defineKey),
+                    onViewServices: () => _scrollToSection(_servicesKey),
                   ),
-                  DefineSection(key: _defineKey),
-                  const AboutSection(),
-                  const ExpertiseSection(),
-                  const ServicesSection(),
-
-                  const TechStackSection(),
-                  const ExperienceSection(),
-                  const EducationSection(),
-                  const CertificatesSection(),
-                  ProjectsSection(key: _projectsKey),
+                  ServicesSection(key: _servicesKey),
                   CoursesSection(key: _coursesKey),
+                  ProjectsSection(key: _projectsKey),
                   BooksSection(key: _booksKey),
+                  TestimonialsSection(key: _testimonialsKey),
                   ContactSection(key: _contactKey),
                 ],
               ),

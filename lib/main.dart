@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'core/theme/app_theme.dart';
-import 'core/data/portfolio_data.dart';
 import 'pages/home_page.dart';
 
 void main() {

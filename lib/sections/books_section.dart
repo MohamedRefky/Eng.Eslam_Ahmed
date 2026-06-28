@@ -10,7 +10,7 @@ class BooksSection extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 48, horizontal: 24),
       child: Column(
         children: [
-          SectionTitle(title: 'Books'),
+          SectionTitle(title: 'ملفات (Files)'),
           SizedBox(height: 24),
           // Content will be added later
         ],

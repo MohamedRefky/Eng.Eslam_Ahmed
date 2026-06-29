@@ -45,9 +45,13 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
   String _t(BuildContext context, String key, String ar) {
     final lang = Localizations.localeOf(context).languageCode;
     final isCsi = _courseData?['id'] == 'csi_diploma';
+    final isManual = _courseData?['id'] == 'manual_design';
     
     if (lang == 'ar') {
-      if (key == 'drawings' && isCsi) return 'القطاعات التي سيتم تصميمها';
+      if (key == 'drawings') {
+        if (isCsi) return 'القطاعات التي سيتم تصميمها';
+        if (isManual) return 'المحتوى التفصيلي لكورس التأسيس';
+      }
       return ar;
     }
     switch (key) {
@@ -56,7 +60,9 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
       case 'target_audience':
         return 'Who Is This Course For?';
       case 'drawings':
-        return isCsi ? 'Sections to be Designed' : 'Drawings You Will Learn';
+        if (isCsi) return 'Sections to be Designed';
+        if (isManual) return 'Detailed Curriculum';
+        return 'Drawings You Will Learn';
       case 'projects':
         return 'Practical Projects';
       case 'faqs':
@@ -654,6 +660,64 @@ class _DrawingsGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool useVerticalList = items.any((item) => item.length > 30);
+
+    if (useVerticalList) {
+      return Column(
+        children: items.asMap().entries.map((entry) {
+          return Container(
+            width: double.infinity,
+            margin: const EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: AppColors.background,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppColors.primary.withValues(alpha: 0.15)),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 24,
+                  height: 24,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [AppColors.primary, AppColors.secondary],
+                    ),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: Text(
+                      '${entry.key + 1}',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Text(
+                      entry.value,
+                      style: const TextStyle(
+                        color: AppColors.textSecondary,
+                        fontSize: 14,
+                        height: 1.5,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        }).toList(),
+      );
+    }
+
     return Wrap(
       spacing: 10,
       runSpacing: 10,

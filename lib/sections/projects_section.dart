@@ -5,7 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../core/data/office_data.dart';
 import '../../core/widgets/section_title.dart';
 import '../../core/utils/app_localizations.dart';
-import '../widgets/cards/project_card.dart';
+import '../pages/home/widgets/project_card.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});

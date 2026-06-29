@@ -1,11 +1,9 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-
-import '../../core/theme/app_colors.dart';
-import '../../core/utils/app_localizations.dart';
-import '../../pages/project_gallery/project_gallery_page.dart';
+import '../../../core/theme/app_colors.dart';
+import '../../../core/utils/app_localizations.dart';
+import '../../project_gallery/project_gallery_page.dart';
 
 class ProjectCard extends StatefulWidget {
   final String title;

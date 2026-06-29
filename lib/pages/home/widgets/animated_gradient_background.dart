@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import '../../core/theme/app_colors.dart';
+import '../../../core/theme/app_colors.dart';
 import 'shooting_stars_background.dart';
 
 class AnimatedGradientBackground extends StatefulWidget {

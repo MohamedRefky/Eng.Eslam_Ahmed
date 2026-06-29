@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../core/theme/app_colors.dart';
-import '../core/constants/app_constants.dart';
-import '../core/utils/app_localizations.dart';
+import '../theme/app_colors.dart';
+import '../constants/app_constants.dart';
+import '../utils/app_localizations.dart';
 
 class AppDrawer extends StatelessWidget {
   final Function(String section)? onSectionSelect;

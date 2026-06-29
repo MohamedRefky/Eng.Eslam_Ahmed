@@ -8,7 +8,7 @@ import '../../core/theme/app_colors.dart';
 import '../../core/data/office_data.dart';
 import '../../core/constants/app_icons.dart';
 import '../../core/utils/app_localizations.dart';
-import '../widgets/buttons/primary_button.dart';
+import '../core/widgets/buttons/primary_button.dart';
 import '../../core/widgets/section_title.dart';
 
 class ContactSection extends StatelessWidget {

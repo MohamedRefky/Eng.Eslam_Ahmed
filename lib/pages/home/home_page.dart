@@ -12,9 +12,9 @@ import '../../sections/hero_section.dart';
 import '../../sections/projects_section.dart';
 import '../../sections/services_section.dart';
 import '../../sections/testimonials_section.dart';
-import '../../widgets/app_drawer.dart';
-import '../../widgets/animations/animated_gradient_background.dart';
-import '../../widgets/buttons/language_switch_button.dart';
+import '../../core/widgets/app_drawer.dart';
+import 'widgets/animated_gradient_background.dart';
+import '../../core/widgets/buttons/language_switch_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

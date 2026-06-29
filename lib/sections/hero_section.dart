@@ -7,8 +7,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/app_localizations.dart';
-import '../widgets/buttons/primary_button.dart';
-import '../widgets/buttons/outline_button.dart';
+import '../core/widgets/buttons/primary_button.dart';
+import '../core/widgets/buttons/outline_button.dart';
 
 class HeroSection extends StatelessWidget {
   final VoidCallback? onViewProjects;

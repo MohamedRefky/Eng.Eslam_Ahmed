@@ -39,5 +39,11 @@
   "course_content": "Course Content",
   "course_programs": "Software Covered",
   "course_checks": "CHECKS to Perform",
-  "course_analysis_methods": "Seismic Analysis Methods"
+  "course_analysis_methods": "Seismic Analysis Methods",
+  "books_title": "Engineering Books & References",
+  "books_subtitle": "A curated collection of specialized engineering books available for download",
+  "view_more_books": "More Books",
+  "download_book": "Download Book",
+  "no_books": "No books available",
+  "books_page_title": "Engineering Library"
 }

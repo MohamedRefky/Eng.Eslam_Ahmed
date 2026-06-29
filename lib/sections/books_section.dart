@@ -143,8 +143,8 @@ class _BookCardState extends State<_BookCard> {
                     children: [
                       // Background
                       hasImage
-                          ? Image.asset(imagePath, fit: BoxFit.cover,
-                              errorBuilder: (_, __, ___) => _CoverPlaceholder())
+                          ? Image.asset(imagePath, fit: BoxFit.fill,
+                              errorBuilder: (_, _, _) => _CoverPlaceholder())
                           : _CoverPlaceholder(),
                       // Gradient overlay
                       Positioned.fill(

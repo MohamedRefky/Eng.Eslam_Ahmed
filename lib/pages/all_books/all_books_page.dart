@@ -3,6 +3,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import '../../core/data/office_data.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/app_localizations.dart';
@@ -32,15 +33,28 @@ class _AllBooksPageState extends State<AllBooksPage> {
   Widget build(BuildContext context) {
     final List<dynamic> books = OfficeData.data['books'] ?? [];
     final isMobile = ResponsiveBreakpoints.of(context).isMobile;
-    final isMobileOrTablet = ResponsiveBreakpoints.of(context).isMobile || ResponsiveBreakpoints.of(context).isTablet;
+    final isMobileOrTablet =
+        ResponsiveBreakpoints.of(context).isMobile ||
+        ResponsiveBreakpoints.of(context).isTablet;
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
     final loc = AppLocalizations.of(context)!;
 
     // Gather unique categories
-    final categories = <String>{'all', ...books.map((b) => (b as Map<String, dynamic>)['category'] as String? ?? '')};
+    final categories = <String>{
+      'all',
+      ...books.map(
+        (b) => (b as Map<String, dynamic>)['category'] as String? ?? '',
+      ),
+    };
     final filtered = _selectedCategory == 'all'
         ? books
-        : books.where((b) => (b as Map<String, dynamic>)['category'] == _selectedCategory).toList();
+        : books
+              .where(
+                (b) =>
+                    (b as Map<String, dynamic>)['category'] ==
+                    _selectedCategory,
+              )
+              .toList();
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -61,11 +75,15 @@ class _AllBooksPageState extends State<AllBooksPage> {
                   color: Colors.black38,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Icon(Icons.arrow_back_ios_new, color: Colors.white, size: 18),
+                child: const Icon(
+                  Icons.arrow_back_ios_new,
+                  color: Colors.white,
+                  size: 18,
+                ),
               ),
               onPressed: () => Navigator.of(context).pop(),
             ),
-             actions: [
+            actions: [
               Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 6),
@@ -84,7 +102,11 @@ class _AllBooksPageState extends State<AllBooksPage> {
                         color: Colors.black38,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: const Icon(Icons.menu, color: Colors.white, size: 18),
+                      child: const Icon(
+                        Icons.menu,
+                        color: Colors.white,
+                        size: 18,
+                      ),
                     ),
                     onPressed: () => Scaffold.of(ctx).openDrawer(),
                   ),
@@ -100,7 +122,8 @@ class _AllBooksPageState extends State<AllBooksPage> {
                 ].map(
                   (key) => _NavBarItem(
                     title: AppLocalizations.of(context)!.translate(key),
-                    onPressed: () => Navigator.of(context).popUntil((r) => r.isFirst),
+                    onPressed: () =>
+                        Navigator.of(context).popUntil((r) => r.isFirst),
                   ),
                 ),
                 const SizedBox(width: 12),
@@ -116,7 +139,11 @@ class _AllBooksPageState extends State<AllBooksPage> {
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
-                        colors: [Color(0xFF0f0f1a), Color(0xFF1a1a2e), Color(0xFF16213e)],
+                        colors: [
+                          Color(0xFF0f0f1a),
+                          Color(0xFF1a1a2e),
+                          Color(0xFF16213e),
+                        ],
                       ),
                     ),
                   ),
@@ -171,7 +198,10 @@ class _AllBooksPageState extends State<AllBooksPage> {
                       children: [
                         // Badge
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 5,
+                          ),
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors: [AppColors.primary, AppColors.secondary],
@@ -181,10 +211,16 @@ class _AllBooksPageState extends State<AllBooksPage> {
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.library_books_rounded, color: Colors.white, size: 14),
+                              const Icon(
+                                Icons.library_books_rounded,
+                                color: Colors.white,
+                                size: 14,
+                              ),
                               const SizedBox(width: 6),
                               Text(
-                                isArabic ? 'المكتبة الهندسية' : 'Engineering Library',
+                                isArabic
+                                    ? 'المكتبة الهندسية'
+                                    : 'Engineering Library',
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 11,
@@ -230,28 +266,40 @@ class _AllBooksPageState extends State<AllBooksPage> {
                 child: Row(
                   children: categories.map((cat) {
                     final isSelected = _selectedCategory == cat;
-                    final label = cat == 'all' ? (isArabic ? 'الكل' : 'All') : cat;
+                    final label = cat == 'all'
+                        ? (isArabic ? 'الكل' : 'All')
+                        : cat;
                     return GestureDetector(
                       onTap: () => setState(() => _selectedCategory = cat),
                       child: AnimatedContainer(
                         duration: const Duration(milliseconds: 250),
                         margin: const EdgeInsets.only(right: 10),
-                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 9),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 18,
+                          vertical: 9,
+                        ),
                         decoration: BoxDecoration(
                           gradient: isSelected
                               ? const LinearGradient(
-                                  colors: [AppColors.primary, AppColors.secondary],
+                                  colors: [
+                                    AppColors.primary,
+                                    AppColors.secondary,
+                                  ],
                                 )
                               : null,
                           color: isSelected ? null : AppColors.cardBackground,
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(
-                            color: isSelected ? Colors.transparent : AppColors.primary.withValues(alpha: 0.2),
+                            color: isSelected
+                                ? Colors.transparent
+                                : AppColors.primary.withValues(alpha: 0.2),
                           ),
                           boxShadow: isSelected
                               ? [
                                   BoxShadow(
-                                    color: AppColors.primary.withValues(alpha: 0.3),
+                                    color: AppColors.primary.withValues(
+                                      alpha: 0.3,
+                                    ),
                                     blurRadius: 12,
                                     offset: const Offset(0, 4),
                                   ),
@@ -261,8 +309,12 @@ class _AllBooksPageState extends State<AllBooksPage> {
                         child: Text(
                           label,
                           style: TextStyle(
-                            color: isSelected ? Colors.white : AppColors.textSecondary,
-                            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                            color: isSelected
+                                ? Colors.white
+                                : AppColors.textSecondary,
+                            fontWeight: isSelected
+                                ? FontWeight.bold
+                                : FontWeight.normal,
                             fontSize: 13,
                           ),
                         ),
@@ -290,12 +342,16 @@ class _AllBooksPageState extends State<AllBooksPage> {
                             Icon(
                               Icons.library_books_outlined,
                               size: 64,
-                              color: AppColors.textSecondary.withValues(alpha: 0.4),
+                              color: AppColors.textSecondary.withValues(
+                                alpha: 0.4,
+                              ),
                             ),
                             const SizedBox(height: 16),
                             Text(
                               loc.translate('no_books'),
-                              style: const TextStyle(color: AppColors.textSecondary),
+                              style: const TextStyle(
+                                color: AppColors.textSecondary,
+                              ),
                             ),
                           ],
                         ),
@@ -309,16 +365,10 @@ class _AllBooksPageState extends State<AllBooksPage> {
                       crossAxisSpacing: 28,
                       childAspectRatio: 0.92,
                     ),
-                    delegate: SliverChildBuilderDelegate(
-                      (context, index) {
-                        final book = filtered[index] as Map<String, dynamic>;
-                        return _BookLibraryCard(
-                          book: book,
-                          index: index,
-                        );
-                      },
-                      childCount: filtered.length,
-                    ),
+                    delegate: SliverChildBuilderDelegate((context, index) {
+                      final book = filtered[index] as Map<String, dynamic>;
+                      return _BookLibraryCard(book: book, index: index);
+                    }, childCount: filtered.length),
                   ),
           ),
 
@@ -356,214 +406,253 @@ class _BookLibraryCardState extends State<_BookLibraryCard> {
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
 
     return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
-      child: GestureDetector(
-        onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => BookDetailsPage(book: widget.book)),
-        ),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 260),
-          decoration: BoxDecoration(
-            color: AppColors.cardBackground,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: _isHovered ? AppColors.primary : AppColors.primary.withValues(alpha: 0.13),
-              width: 1.5,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: _isHovered
-                    ? AppColors.primary.withValues(alpha: 0.2)
-                    : Colors.black.withValues(alpha: 0.25),
-                blurRadius: _isHovered ? 24 : 12,
-                offset: const Offset(0, 4),
+          cursor: SystemMouseCursors.click,
+          onEnter: (_) => setState(() => _isHovered = true),
+          onExit: (_) => setState(() => _isHovered = false),
+          child: GestureDetector(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => BookDetailsPage(book: widget.book),
               ),
-            ],
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // ── Cover Image (Top) ─────────────────────────────────────────
-                Expanded(
-                  flex: 5,
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      hasImage
-                          ? Image.asset(imagePath, fit: BoxFit.cover,
-                              errorBuilder: (_, __, ___) => _CoverPlaceholder())
-                          : _CoverPlaceholder(),
-                      // Index Badge
-                      Positioned(
-                        top: 10,
-                        right: isArabic ? null : 10,
-                        left: isArabic ? 10 : null,
-                        child: Container(
-                          width: 26,
-                          height: 26,
-                          decoration: BoxDecoration(
-                            color: Colors.black54,
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.white24),
-                          ),
-                          child: Center(
-                            child: Text(
-                              '${widget.index + 1}',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      // Category badge
-                      if (widget.book['category'] != null)
-                        Positioned(
-                          top: 10,
-                          left: isArabic ? null : 10,
-                          right: isArabic ? 10 : null,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                            decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                colors: [AppColors.primary, AppColors.secondary],
-                              ),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Text(
-                              widget.book['category'] ?? '',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                    ],
-                  ),
+            ),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 260),
+              decoration: BoxDecoration(
+                color: AppColors.cardBackground,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: _isHovered
+                      ? AppColors.primary
+                      : AppColors.primary.withValues(alpha: 0.13),
+                  width: 1.5,
                 ),
-
-                // ── Content Info (Bottom) ─────────────────────────────────────
-                Expanded(
-                  flex: 6,
-                  child: Padding(
-                    padding: const EdgeInsets.all(14),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Title
-                        Expanded(
-                          child: Text(
-                            widget.book['title'] ?? '',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              height: 1.3,
+                boxShadow: [
+                  BoxShadow(
+                    color: _isHovered
+                        ? AppColors.primary.withValues(alpha: 0.2)
+                        : Colors.black.withValues(alpha: 0.25),
+                    blurRadius: _isHovered ? 24 : 12,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // ── Cover Image (Top) ─────────────────────────────────────────
+                    Expanded(
+                      flex: 5,
+                      child: Stack(
+                        fit: StackFit.expand,
+                        children: [
+                          hasImage
+                              ? Image.asset(
+                                  imagePath,
+                                  fit: BoxFit.fill,
+                                  errorBuilder: (_, _, _) =>
+                                      _CoverPlaceholder(),
+                                )
+                              : _CoverPlaceholder(),
+                          // Index Badge
+                          Positioned(
+                            top: 10,
+                            right: isArabic ? null : 10,
+                            left: isArabic ? 10 : null,
+                            child: Container(
+                              width: 26,
+                              height: 26,
+                              decoration: BoxDecoration(
+                                color: Colors.black54,
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white24),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '${widget.index + 1}',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                        const SizedBox(height: 6),
-                        // Author
-                        if (widget.book['author'] != null)
-                          Row(
-                            children: [
-                              const Icon(Icons.person_outline_rounded,
-                                  color: AppColors.primary, size: 14),
-                              const SizedBox(width: 4),
-                              Expanded(
-                                  child: Text(
-                                widget.book['author'] ?? '',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
-                                  color: AppColors.textSecondary,
-                                  fontSize: 13,
+                          // Category badge
+                          if (widget.book['category'] != null)
+                            Positioned(
+                              top: 10,
+                              left: isArabic ? null : 10,
+                              right: isArabic ? 10 : null,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 4,
                                 ),
-                              )),
-                            ],
-                          ),
-                        const SizedBox(height: 12),
-                        // Action buttons row
-                        Row(
-                          children: [
-                            // Download
-                            Expanded(
-                              child: DecoratedBox(
                                 decoration: BoxDecoration(
                                   gradient: const LinearGradient(
-                                    colors: [AppColors.primary, AppColors.secondary],
+                                    colors: [
+                                      AppColors.primary,
+                                      AppColors.secondary,
+                                    ],
                                   ),
-                                  borderRadius: BorderRadius.circular(8),
+                                  borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: ElevatedButton.icon(
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.transparent,
-                                    shadowColor: Colors.transparent,
-                                    padding: const EdgeInsets.symmetric(vertical: 8),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                  ),
-                                  onPressed: _download,
-                                  icon: const FaIcon(FontAwesomeIcons.googleDrive,
-                                      color: Colors.white, size: 13),
-                                  label: Text(
-                                    isArabic ? 'تحميل' : 'Download',
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 13,
-                                    ),
+                                child: Text(
+                                  widget.book['category'] ?? '',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
                             ),
-                            const SizedBox(width: 8),
-                            // Details
-                            AnimatedContainer(
-                              duration: const Duration(milliseconds: 260),
-                              padding: const EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                color: _isHovered
-                                    ? AppColors.primary.withValues(alpha: 0.2)
-                                    : AppColors.primary.withValues(alpha: 0.07),
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(
-                                  color: AppColors.primary.withValues(alpha: 0.2),
+                        ],
+                      ),
+                    ),
+
+                    // ── Content Info (Bottom) ─────────────────────────────────────
+                    Expanded(
+                      flex: 6,
+                      child: Padding(
+                        padding: const EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Title
+                            Expanded(
+                              child: Text(
+                                widget.book['title'] ?? '',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1.3,
                                 ),
                               ),
-                              child: const Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                color: AppColors.primary,
-                                size: 12,
+                            ),
+                            const SizedBox(height: 6),
+                            // Author
+                            if (widget.book['author'] != null)
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.person_outline_rounded,
+                                    color: AppColors.primary,
+                                    size: 14,
+                                  ),
+                                  const SizedBox(width: 4),
+                                  Expanded(
+                                    child: Text(
+                                      widget.book['author'] ?? '',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: const TextStyle(
+                                        color: AppColors.textSecondary,
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
+                            const SizedBox(height: 12),
+                            // Action buttons row
+                            Row(
+                              children: [
+                                // Download
+                                Expanded(
+                                  child: DecoratedBox(
+                                    decoration: BoxDecoration(
+                                      gradient: const LinearGradient(
+                                        colors: [
+                                          AppColors.primary,
+                                          AppColors.secondary,
+                                        ],
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: ElevatedButton.icon(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: Colors.transparent,
+                                        shadowColor: Colors.transparent,
+                                        padding: const EdgeInsets.symmetric(
+                                          vertical: 8,
+                                        ),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            8,
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: _download,
+                                      icon: const FaIcon(
+                                        FontAwesomeIcons.googleDrive,
+                                        color: Colors.white,
+                                        size: 13,
+                                      ),
+                                      label: Text(
+                                        isArabic ? 'تحميل' : 'Download',
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                // Details
+                                AnimatedContainer(
+                                  duration: const Duration(milliseconds: 260),
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: _isHovered
+                                        ? AppColors.primary.withValues(
+                                            alpha: 0.2,
+                                          )
+                                        : AppColors.primary.withValues(
+                                            alpha: 0.07,
+                                          ),
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                      color: AppColors.primary.withValues(
+                                        alpha: 0.2,
+                                      ),
+                                    ),
+                                  ),
+                                  child: const Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    color: AppColors.primary,
+                                    size: 12,
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
-        ),
-      ),
-    )
+        )
         .animate()
         .fadeIn(duration: 400.ms, delay: (widget.index * 60).ms)
-        .slideY(begin: 0.1, end: 0, duration: 400.ms, delay: (widget.index * 60).ms);
+        .slideY(
+          begin: 0.1,
+          end: 0,
+          duration: 400.ms,
+          delay: (widget.index * 60).ms,
+        );
   }
 }
 

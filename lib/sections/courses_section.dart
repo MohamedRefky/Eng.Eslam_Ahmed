@@ -72,7 +72,7 @@ class _CourseCardState extends State<_CourseCard> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => CourseDetailsPage(courseData: widget.course),
+              builder: (context) => CourseDetailsPage(courseId: widget.course['id']),
             ),
           );
         },
@@ -215,12 +215,12 @@ class _CourseCardState extends State<_CourseCard> {
                         children: [
                           _StatChip(
                             icon: Icons.access_time_filled_rounded,
-                            label: isArabic ? '٣٣ ساعة' : '33 Hours',
+                            label: widget.course['duration'] ?? '',
                           ),
                           const SizedBox(width: 12),
                           _StatChip(
                             icon: Icons.video_library_rounded,
-                            label: isArabic ? '١١ محاضرة' : '11 Lectures',
+                            label: widget.course['lectures'] ?? '',
                           ),
                         ],
                       ),
@@ -261,7 +261,7 @@ class _CourseCardState extends State<_CourseCard> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => CourseDetailsPage(
-                                  courseData: widget.course,
+                                  courseId: widget.course['id'],
                                 ),
                               ),
                             );

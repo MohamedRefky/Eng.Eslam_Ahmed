@@ -1,3 +1,4 @@
+import 'package:eslam_ahmed_portfolio/core/data/office_data.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import '../core/theme/app_colors.dart';
@@ -6,20 +7,52 @@ import '../widgets/app_drawer.dart';
 import '../widgets/buttons/language_switch_button.dart';
 import '../main.dart';
 
-class CourseDetailsPage extends StatelessWidget {
-  final Map<String, dynamic> courseData;
+class CourseDetailsPage extends StatefulWidget {
+  final String courseId;
 
-  const CourseDetailsPage({super.key, required this.courseData});
+  const CourseDetailsPage({super.key, required this.courseId});
+
+  @override
+  State<CourseDetailsPage> createState() => _CourseDetailsPageState();
+}
+
+class _CourseDetailsPageState extends State<CourseDetailsPage> {
+  bool _isLoading = true;
+  Map<String, dynamic>? _courseData;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _loadData();
+  }
+
+  Future<void> _loadData() async {
+    final lang = Localizations.localeOf(context).languageCode;
+    await OfficeData.load(lang);
+    if (mounted) {
+      final courses = OfficeData.data['courses'] as List<dynamic>? ?? [];
+      final courseData = courses.firstWhere(
+        (c) => c['id'] == widget.courseId,
+        orElse: () => null,
+      ) as Map<String, dynamic>?;
+      setState(() {
+        _courseData = courseData;
+        _isLoading = false;
+      });
+    }
+  }
 
   String _t(BuildContext context, String key, String ar) {
     final lang = Localizations.localeOf(context).languageCode;
-    final isCsi = courseData['id'] == 'csi_diploma';
+    final isCsi = _courseData?['id'] == 'csi_diploma';
     
     if (lang == 'ar') {
       if (key == 'drawings' && isCsi) return 'القطاعات التي سيتم تصميمها';
       return ar;
     }
     switch (key) {
+      case 'description':
+        return 'About the Course';
       case 'target_audience':
         return 'Who Is This Course For?';
       case 'drawings':
@@ -47,6 +80,29 @@ class CourseDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return const Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: CircularProgressIndicator(color: AppColors.primary),
+        ),
+      );
+    }
+
+    final courseData = _courseData;
+
+    if (courseData == null) {
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: Text(
+            AppLocalizations.of(context)?.translate('no_courses') ?? 'Course not found',
+            style: const TextStyle(color: Colors.white),
+          ),
+        ),
+      );
+    }
+
     final isMobile = ResponsiveBreakpoints.of(context).isMobile;
     final isTablet = ResponsiveBreakpoints.of(context).isTablet;
     final isMobileOrTablet = isMobile || isTablet;
@@ -126,7 +182,7 @@ class CourseDetailsPage extends StatelessWidget {
                       ? Image.asset(
                           imagePath,
                           fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => Container(
+                          errorBuilder: (_, _, _) => Container(
                             decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [AppColors.secondary, AppColors.primary],
@@ -400,36 +456,34 @@ class CourseDetailsPage extends StatelessWidget {
                                 ],
                               ],
                             )
-                          : IntrinsicHeight(
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: [
-                                  if (courseData['outcomes'] != null)
-                                    Expanded(
-                                      child: _GlassCard(
-                                        child: _OutcomesBenefits(
-                                          label: _t(context, 'outcomes', 'كيف سيصبح مستواك'),
-                                          items: List<String>.from(courseData['outcomes']),
-                                          icon: Icons.trending_up_rounded,
-                                          iconColor: AppColors.accent,
-                                        ),
+                          : Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                if (courseData['outcomes'] != null)
+                                  Expanded(
+                                    child: _GlassCard(
+                                      child: _OutcomesBenefits(
+                                        label: _t(context, 'outcomes', 'كيف سيصبح مستواك'),
+                                        items: List<String>.from(courseData['outcomes']),
+                                        icon: Icons.trending_up_rounded,
+                                        iconColor: AppColors.accent,
                                       ),
                                     ),
-                                  if (courseData['benefits'] != null) ...[
-                                    const SizedBox(width: 24),
-                                    Expanded(
-                                      child: _GlassCard(
-                                        child: _OutcomesBenefits(
-                                          label: _t(context, 'benefits', 'مميزات الاشتراك'),
-                                          items: List<String>.from(courseData['benefits']),
-                                          icon: Icons.star_rounded,
-                                          iconColor: AppColors.primary,
-                                        ),
+                                  ),
+                                if (courseData['benefits'] != null) ...[
+                                  const SizedBox(width: 24),
+                                  Expanded(
+                                    child: _GlassCard(
+                                      child: _OutcomesBenefits(
+                                        label: _t(context, 'benefits', 'مميزات الاشتراك'),
+                                        items: List<String>.from(courseData['benefits']),
+                                        icon: Icons.star_rounded,
+                                        iconColor: AppColors.primary,
                                       ),
                                     ),
-                                  ],
+                                  ),
                                 ],
-                              ),
+                              ],
                             ),
                       const SizedBox(height: 24),
                     ],

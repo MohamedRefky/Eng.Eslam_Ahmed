@@ -1,8 +1,8 @@
-import '../data/portfolio_data.dart';
+import '../data/office_data.dart';
 
 class AppConstants {
   static Map<String, dynamic> get _info =>
-      PortfolioData.data['personalInfo'] ?? {};
+      OfficeData.data['personalInfo'] ?? {};
 
   static String get devName => _info['name'] ?? 'Eslam Ahmed';
   static String get devTitle => _info['title'] ?? 'Civil Engineer | Structural Design Engineer';

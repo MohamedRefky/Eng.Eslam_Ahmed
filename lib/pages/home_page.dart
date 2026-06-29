@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import '../core/theme/app_colors.dart';
 import '../core/constants/app_constants.dart';
-import '../core/data/portfolio_data.dart';
+import '../core/data/office_data.dart';
 import '../core/utils/app_localizations.dart';
 import '../main.dart';
 import '../widgets/animations/animated_gradient_background.dart';
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> _loadData() async {
     final lang = Localizations.localeOf(context).languageCode;
-    await PortfolioData.load(lang);
+    await OfficeData.load(lang);
     if (mounted) {
       setState(() {
         _isLoading = false;

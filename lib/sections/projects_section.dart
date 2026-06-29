@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import '../../core/data/portfolio_data.dart';
+import '../../core/data/office_data.dart';
 import '../../core/widgets/section_title.dart';
 import '../../core/utils/app_localizations.dart';
 import '../widgets/cards/project_card.dart';
@@ -39,7 +39,7 @@ class ProjectsSection extends StatelessWidget {
               }
 
               final projectsList = List<Map<String, dynamic>>.from(
-                PortfolioData.data['projects'] ?? [],
+                OfficeData.data['projects'] ?? [],
               );
 
               final cards = projectsList

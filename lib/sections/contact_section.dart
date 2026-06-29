@@ -5,7 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
-import '../../core/data/portfolio_data.dart';
+import '../../core/data/office_data.dart';
 import '../../core/constants/app_icons.dart';
 import '../../core/utils/app_localizations.dart';
 import '../widgets/buttons/primary_button.dart';
@@ -55,7 +55,7 @@ class ContactSection extends StatelessWidget {
                   : 240.0;
 
               final socialLinks = List<Map<String, dynamic>>.from(
-                PortfolioData.data['socialLinks'] ?? [],
+                OfficeData.data['socialLinks'] ?? [],
               );
 
               final List<Widget> cards = socialLinks.map((link) {

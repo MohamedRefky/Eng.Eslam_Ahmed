@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import '../../core/theme/app_colors.dart';
-import '../../core/data/portfolio_data.dart';
+import '../../core/data/office_data.dart';
 import '../../core/constants/app_icons.dart';
 import '../../core/widgets/section_title.dart';
 import '../../core/utils/app_localizations.dart';
@@ -37,7 +37,7 @@ class _ServicesSectionState extends State<ServicesSection> {
   }
 
   List<Map<String, dynamic>> get services =>
-      List<Map<String, dynamic>>.from(PortfolioData.data['services'] ?? []);
+      List<Map<String, dynamic>>.from(OfficeData.data['services'] ?? []);
 
   @override
   Widget build(BuildContext context) {

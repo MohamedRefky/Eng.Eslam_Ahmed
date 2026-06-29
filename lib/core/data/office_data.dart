@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-class PortfolioData {
+class OfficeData {
   static String? _loadedLang;
   static Map<String, dynamic> _data = {};
   static Map<String, dynamic> get data => _data;
@@ -11,7 +11,7 @@ class PortfolioData {
     if (_loadedLang == lang) return;
     try {
       final String jsonString = await rootBundle.loadString(
-        'assets/data/portfolio_data_$lang.json',
+        'assets/data/data_$lang.json',
       );
       _data = jsonDecode(jsonString);
       _loadedLang = lang;

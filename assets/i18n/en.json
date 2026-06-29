@@ -24,5 +24,7 @@
   "view_profile": "View Profile",
   "view_gallery": "View Gallery",
   "tap_to_zoom": "Open Image",
-  "image_not_available": "Image not available"
+  "image_not_available": "Image not available",
+  "view_details": "View Details",
+  "no_courses": "No courses available"
 }

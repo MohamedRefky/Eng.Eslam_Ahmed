@@ -278,5 +278,88 @@
     "assets/image/feadback/2.png",
     "assets/image/feadback/3.png",
     "assets/image/feadback/pictures_with_student.png"
+  ],
+  "courses": [
+    {
+      "id": "civil_autocad",
+      "title": "Civil Auto-cad",
+      "image": "assets/image/courses/autocad_placeholder.png",
+      "description": "One of the most essential courses for any civil engineer. It is considered the foundation of our work in both design and technical office fields. All shop drawings that are executed on-site are produced from this software. If you want to enter a reinforced concrete or structural graduation project, or work in design or technical office fields, you must first start learning this software as it's the base upon which all your next steps are built.",
+      "targetAudience": [
+        "This course is exclusively for civil engineering students and engineers",
+        "The course is suitable for execution engineers and technical office engineers",
+        "Suitable for fresh graduates and students",
+        "The course is suitable for design engineers and beginners",
+        "Suitable for graduation project students (Concrete and Structural)"
+      ],
+      "drawings": [
+        "Axes and Columns Drawing",
+        "Foundations Drawing",
+        "Columns Sections Drawing",
+        "Foundations Sections Drawing",
+        "Beams Sections Drawing",
+        "Stairs Sections Drawing",
+        "Solid Slab Drawing",
+        "Flat Slab Drawing",
+        "Hollow Block Slab Drawing",
+        "Paneled Beams Slab Drawing",
+        "Converting Architectural System to Structural System"
+      ],
+      "projects": [
+        "Residential Villa Project",
+        "Hinged Frame Coverings Project",
+        "Radial Frame Coverings Project"
+      ],
+      "faqs": [
+        {
+          "question": "Does the course include manual explanations?",
+          "answer": "Yes indeed, the course includes very important manual explanations for some parts that will help you understand the basics of drafting on AutoCAD."
+        },
+        {
+          "question": "How many hours is the course?",
+          "answer": "The course duration is 33 hours, consisting of 11 lectures explained over a month and a half."
+        },
+        {
+          "question": "Is the course a set of recorded videos?",
+          "answer": "Yes indeed, the course consists of high quality 1080p recorded videos."
+        },
+        {
+          "question": "How is the follow-up done?",
+          "answer": "Trainees are added to a WhatsApp group, and there is daily follow-up by a full customer service team to continuously assist you, as well as the instructor to answer all your questions daily."
+        }
+      ],
+      "outcomes": [
+        "You will be fully qualified to enter the structural design field",
+        "You will have the full experience and ability to read architectural drawings",
+        "You will have the full experience and ability to create a balanced structural system",
+        "You will have the full experience and ability to arrange columns in the structural system",
+        "You will have the full experience and ability to place beams in the structural system",
+        "You will have the full experience and ability to choose the appropriate slab type",
+        "If you are a student, the course will help you pass the graduation project with excellence"
+      ],
+      "benefits": [
+        "You will be added to our platform which has many advantages",
+        "You will receive all explanation materials (projects library + structural drawings + explanation books)",
+        "You will receive a certificate of course completion after passing 80% of the tasks",
+        "We will teach you how to market yourself correctly by creating a strong CV and Portfolio",
+        "Daily follow-up, which is the most important point, as the instructor and customer service follow up with you daily to solve all your problems",
+        "The instructor holds a Zoom meeting with you once a week to review everything done during the week and answer your questions",
+        "We provide the software to test and check your level",
+        "Tasks of each trainee are evaluated through the Facebook group"
+      ],
+      "content": [
+        {"lecture": "Lecture (1)", "subject": "Introduction & Edit Options"},
+        {"lecture": "Lecture (2)", "subject": "Column and Axis & Foundation"},
+        {"lecture": "Lecture (3)", "subject": "Sections Of Column and Walls & Foundation"},
+        {"lecture": "Lecture (4)", "subject": "Sections of Beams & Section of Stairs"},
+        {"lecture": "Lecture (5)", "subject": "Solid Slabs & Flat Slabs"},
+        {"lecture": "Lecture (6)", "subject": "Hollow Block & Paneled Beams"},
+        {"lecture": "Lecture (7)", "subject": "Text Style & Dimension Style"},
+        {"lecture": "Lecture (8)", "subject": "Statically System"},
+        {"lecture": "Lecture (9)", "subject": "Project 1. (Villa)"},
+        {"lecture": "Lecture (10)", "subject": "Project 2. (Rectangle Halls)"},
+        {"lecture": "Lecture (11)", "subject": "Project 3. (Radial Halls)"}
+      ]
+    }
   ]
 }

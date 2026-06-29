@@ -10,9 +10,8 @@ class OfficeData {
   static Future<void> load([String lang = 'ar']) async {
     if (_loadedLang == lang) return;
     try {
-      final String jsonString = await rootBundle.loadString(
-        'assets/data/data_$lang.json',
-      );
+      final ByteData data = await rootBundle.load('assets/data/data_$lang.json');
+      final String jsonString = utf8.decode(data.buffer.asUint8List());
       _data = jsonDecode(jsonString);
       _loadedLang = lang;
     } catch (e) {

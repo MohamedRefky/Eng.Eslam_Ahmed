@@ -1,6 +1,9 @@
 import 'package:eslam_ahmed_portfolio/core/data/office_data.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../core/constants/app_constants.dart';
 import '../core/theme/app_colors.dart';
 import '../core/utils/app_localizations.dart';
 import '../widgets/app_drawer.dart';
@@ -39,6 +42,23 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
         _courseData = courseData;
         _isLoading = false;
       });
+    }
+  }
+
+  Future<void> _bookCourse(Map<String, dynamic> courseData) async {
+    final title = courseData['title'] ?? '';
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+    final message = isArabic 
+        ? 'مرحباً مهندس إسلام، أود الاستفسار وحجز كورس: $title'
+        : 'Hello Eng. Eslam, I would like to book the course: $title';
+    
+    final encodedMessage = Uri.encodeComponent(message);
+    final number = AppConstants.whatsappNumber.replaceAll('+', '').replaceAll(' ', '');
+    final urlString = 'https://wa.me/$number?text=$encodedMessage';
+    
+    final Uri url = Uri.parse(urlString);
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      debugPrint('Could not launch WhatsApp');
     }
   }
 
@@ -113,6 +133,7 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
     final isTablet = ResponsiveBreakpoints.of(context).isTablet;
     final isMobileOrTablet = isMobile || isTablet;
     final imagePath = courseData['image'] as String?;
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -179,52 +200,61 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
               ],
             ],
             flexibleSpace: FlexibleSpaceBar(
-              collapseMode: CollapseMode.parallax,
               background: Stack(
                 fit: StackFit.expand,
                 children: [
-                  // Background image or gradient
-                  imagePath != null && !imagePath.contains('placeholder')
-                      ? Image.asset(
-                          imagePath,
-                          fit: BoxFit.cover,
-                          errorBuilder: (_, _, _) => Container(
-                            decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [AppColors.secondary, AppColors.primary],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
-                            ),
-                          ),
-                        )
-                      : Container(
+                  if (imagePath != null && imagePath.isNotEmpty)
+                    Image.asset(
+                      imagePath,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
                           decoration: const BoxDecoration(
                             gradient: LinearGradient(
-                              colors: [
-                                Color(0xFF001A33),
-                                AppColors.secondary,
-                                AppColors.primary,
-                              ],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
+                              colors: [AppColors.primary, AppColors.secondary],
                             ),
                           ),
-                          child: const Center(
+                          child: Center(
                             child: Icon(
-                              Icons.architecture_rounded,
-                              size: 120,
-                              color: Colors.white12,
+                              Icons.menu_book_rounded,
+                              size: isMobile ? 64 : 96,
+                              color: Colors.white.withValues(alpha: 0.3),
                             ),
                           ),
+                        );
+                      },
+                    )
+                  else
+                    Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [AppColors.primary, AppColors.secondary],
                         ),
-                  // Gradient overlay bottom → transparent (darkens for text legibility)
-                  Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.transparent, Colors.black87],
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.menu_book_rounded,
+                          size: isMobile ? 64 : 96,
+                          color: Colors.white.withValues(alpha: 0.3),
+                        ),
+                      ),
+                    ),
+                  // Dark overlay gradient
+                  Positioned.fill(
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Colors.black.withValues(alpha: 0.1),
+                            Colors.black.withValues(alpha: 0.8),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -301,6 +331,96 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                               color: AppColors.textSecondary,
                               height: 1.9,
                               fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+
+                    // Call to Action Card (Book Now)
+                    _GlassCard(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  color: Colors.green.withValues(alpha: 0.15),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: const FaIcon(
+                                  FontAwesomeIcons.whatsapp,
+                                  color: Colors.green,
+                                  size: 26,
+                                ),
+                              ),
+                              const SizedBox(width: 16),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      isArabic ? 'احجز مقعدك الآن' : 'Book Your Seat Now',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      isArabic 
+                                          ? 'تواصل معنا مباشرة عبر الواتساب للاستفسار وحجز مكانك في الكورس'
+                                          : 'Contact us directly on WhatsApp to inquire and book your seat',
+                                      style: const TextStyle(
+                                        color: AppColors.textSecondary,
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                          Container(
+                            width: double.infinity,
+                            height: 52,
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [Color(0xFF25D366), Color(0xFF075E54)],
+                              ),
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.green.withValues(alpha: 0.2),
+                                  blurRadius: 12,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
+                            ),
+                            child: ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.transparent,
+                                shadowColor: Colors.transparent,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                              onPressed: () => _bookCourse(courseData),
+                              icon: const FaIcon(FontAwesomeIcons.whatsapp, color: Colors.white, size: 20),
+                              label: Text(
+                                isArabic ? 'تواصل للحجز (واتساب)' : 'Inquire & Book (WhatsApp)',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  letterSpacing: 0.3,
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -537,6 +657,20 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => _bookCourse(courseData),
+        backgroundColor: const Color(0xFF25D366),
+        elevation: 6,
+        icon: const FaIcon(FontAwesomeIcons.whatsapp, color: Colors.white),
+        label: Text(
+          isArabic ? 'احجز الآن' : 'Book Now',
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 15.5,
+          ),
+        ),
       ),
     );
   }

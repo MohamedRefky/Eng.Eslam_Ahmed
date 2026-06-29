@@ -30,7 +30,9 @@ class DownloadableProjectsSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SectionTitle(
-            title: AppLocalizations.of(context)!.translate('downloadable_projects'),
+            title: AppLocalizations.of(
+              context,
+            )!.translate('downloadable_projects'),
             lineWidth: 80,
           ),
           SizedBox(height: isMobile ? 40 : 60),
@@ -138,10 +140,7 @@ class __DownloadableProjectCardState extends State<_DownloadableProjectCard> {
               children: [
                 // Background Cover Image
                 if (hasImage)
-                  Image.asset(
-                    imagePath,
-                    fit: BoxFit.cover,
-                  )
+                  Image.asset(imagePath, fit: BoxFit.fill)
                 else
                   Container(
                     decoration: const BoxDecoration(
@@ -175,9 +174,7 @@ class __DownloadableProjectCardState extends State<_DownloadableProjectCard> {
                 AnimatedOpacity(
                   opacity: _isHovered ? 0.05 : 0.0,
                   duration: const Duration(milliseconds: 200),
-                  child: Container(
-                    color: AppColors.primary,
-                  ),
+                  child: Container(color: AppColors.primary),
                 ),
 
                 // Card content
@@ -273,7 +270,9 @@ class __DownloadableProjectCardState extends State<_DownloadableProjectCard> {
                               ),
                               const SizedBox(width: 8),
                               Text(
-                                isArabic ? "تحميل ملفات المشروع" : "Download Project Files",
+                                isArabic
+                                    ? "تحميل ملفات المشروع"
+                                    : "Download Project Files",
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 13,

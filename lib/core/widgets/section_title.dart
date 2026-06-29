@@ -6,17 +6,20 @@ class SectionTitle extends StatelessWidget {
   final String title;
   final double lineWidth;
   final double? letterSpacing;
+  final CrossAxisAlignment crossAxisAlignment;
 
   const SectionTitle({
     super.key,
     required this.title,
     this.lineWidth = 60,
     this.letterSpacing,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: crossAxisAlignment,
       children: [
         FittedBox(
           fit: BoxFit.scaleDown,
@@ -28,7 +31,11 @@ class SectionTitle extends StatelessWidget {
               color: AppColors.textPrimary,
               letterSpacing: letterSpacing,
             ),
-            textAlign: TextAlign.center,
+            textAlign: crossAxisAlignment == CrossAxisAlignment.center
+                ? TextAlign.center
+                : (crossAxisAlignment == CrossAxisAlignment.start
+                    ? TextAlign.start
+                    : TextAlign.end),
           ),
         ).animate().fadeIn(duration: 600.ms).slideY(begin: 0.3, end: 0),
         const SizedBox(height: 16),

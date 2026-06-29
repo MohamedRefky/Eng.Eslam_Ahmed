@@ -10,6 +10,7 @@ import '../../sections/contact_section.dart';
 import '../../sections/courses_section.dart';
 import '../../sections/hero_section.dart';
 import '../../sections/projects_section.dart';
+import '../../sections/downloadable_projects_section.dart';
 import '../../sections/services_section.dart';
 import '../../sections/testimonials_section.dart';
 import '../../core/widgets/app_drawer.dart';
@@ -195,6 +196,7 @@ class _HomePageState extends State<HomePage> {
                   ServicesSection(key: _servicesKey),
                   CoursesSection(key: _coursesKey),
                   ProjectsSection(key: _projectsKey),
+                  const DownloadableProjectsSection(),
                   BooksSection(key: _booksKey),
                   TestimonialsSection(key: _testimonialsKey),
                   ContactSection(key: _contactKey),

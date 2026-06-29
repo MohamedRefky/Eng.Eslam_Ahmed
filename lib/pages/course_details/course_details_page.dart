@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/app_localizations.dart';
@@ -107,16 +108,19 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
         slivers: [
           // ── Hero AppBar ─────────────────────────────────────────────────────
           SliverAppBar(
-            expandedHeight: isMobile ? 260 : 380,
+            expandedHeight: isMobile ? 440 : 360,
             pinned: true,
-            backgroundColor: AppColors.background,
+            backgroundColor: const Color(0xFF0a0a18),
             elevation: 0,
             leading: IconButton(
               icon: Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
-                  color: Colors.black38,
+                  color: Colors.black45,
                   borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: Colors.white.withValues(alpha: 0.1),
+                  ),
                 ),
                 child: const Icon(
                   Icons.arrow_back_ios_new,
@@ -173,108 +177,106 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
               ],
             ],
             flexibleSpace: FlexibleSpaceBar(
-              background: Stack(
-                fit: StackFit.expand,
-                children: [
-                  if (imagePath != null && imagePath.isNotEmpty)
-                    Image.asset(
-                      imagePath,
-                      fit: BoxFit.fill,
-                      errorBuilder: (context, error, stackTrace) {
-                        return Container(
-                          decoration: const BoxDecoration(
-                            gradient: LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [AppColors.primary, AppColors.secondary],
-                            ),
-                          ),
-                          child: Center(
-                            child: Icon(
-                              Icons.menu_book_rounded,
-                              size: isMobile ? 64 : 96,
-                              color: Colors.white.withValues(alpha: 0.3),
-                            ),
-                          ),
-                        );
-                      },
-                    )
-                  else
-                    Container(
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [AppColors.primary, AppColors.secondary],
-                        ),
-                      ),
+              background: Container(
+                decoration: const BoxDecoration(
+                  gradient: RadialGradient(
+                    center: Alignment(0, -0.3),
+                    radius: 1.2,
+                    colors: [
+                      Color(0xFF151535),
+                      Color(0xFF0c0c1e),
+                      Color(0xFF080816),
+                    ],
+                  ),
+                ),
+                child: Stack(
+                  children: [
+                    // ── Ambient glow behind course cover ─────────────────────
+                    Positioned(
+                      top: isMobile ? 75 : 60,
+                      left: 0,
+                      right: 0,
                       child: Center(
-                        child: Icon(
-                          Icons.menu_book_rounded,
-                          size: isMobile ? 64 : 96,
-                          color: Colors.white.withValues(alpha: 0.3),
-                        ),
-                      ),
-                    ),
-                  // Dark overlay gradient
-                  Positioned.fill(
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Colors.black.withValues(alpha: 0.1),
-                            Colors.black.withValues(alpha: 0.8),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  // Hero content
-                  Positioned(
-                    bottom: 24,
-                    left: 24,
-                    right: 24,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 4,
-                          ),
+                        child: Container(
+                          width: isMobile ? 180 : 220,
+                          height: isMobile ? 140 : 180,
                           decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                              colors: [AppColors.primary, AppColors.secondary],
-                            ),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: const Text(
-                            'COURSE',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          courseData['title'] ?? '',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            height: 1.2,
+                            borderRadius: BorderRadius.circular(60),
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.primary.withValues(
+                                  alpha: 0.25,
+                                ),
+                                blurRadius: 80,
+                                spreadRadius: 20,
+                              ),
+                              BoxShadow(
+                                color: AppColors.secondary.withValues(
+                                  alpha: 0.15,
+                                ),
+                                blurRadius: 60,
+                                spreadRadius: 10,
+                              ),
+                            ],
                           ),
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                ],
+
+                    // ── Decorative grid dots ────────────────────────────────
+                    Positioned.fill(
+                      child: CustomPaint(painter: _DotGridPainter()),
+                    ),
+
+                    // ── Main content ────────────────────────────────────────
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(
+                        24,
+                        isMobile ? 55 : 45,
+                        24,
+                        10,
+                      ),
+                      child: isMobile
+                          ? Column(
+                              children: [
+                                // Floating course cover
+                                _PremiumCourseCover(
+                                  imagePath: imagePath,
+                                  width: 280,
+                                  height: 157,
+                                  showReflection: false,
+                                ),
+                                const SizedBox(height: 12),
+                                _CourseHeroMeta(
+                                  courseData: courseData,
+                                  isMobile: true,
+                                ),
+                              ],
+                            )
+                          : Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Spacer(),
+                                _PremiumCourseCover(
+                                  imagePath: imagePath,
+                                  width: 360,
+                                  height: 202,
+                                  showReflection: true,
+                                ),
+                                const SizedBox(width: 36),
+                                Expanded(
+                                  flex: 3,
+                                  child: _CourseHeroMeta(
+                                    courseData: courseData,
+                                    isMobile: false,
+                                  ),
+                                ),
+                                const Spacer(),
+                              ],
+                            ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -351,4 +353,296 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
       ),
     );
   }
+}
+
+// ── Premium Course Cover (3D floating with reflection) ───────────────────────
+class _PremiumCourseCover extends StatelessWidget {
+  final String? imagePath;
+  final double width;
+  final double height;
+  final bool showReflection;
+
+  const _PremiumCourseCover({
+    required this.imagePath,
+    required this.width,
+    required this.height,
+    this.showReflection = true,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final double reflectionHeight = showReflection ? height * 0.20 : 0.0;
+    final hasImage = imagePath != null && imagePath!.isNotEmpty;
+    return SizedBox(
+      width: width,
+      height: height + reflectionHeight,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          // ── Mirror reflection ──────────────────────────────────────────
+          if (showReflection)
+            Positioned(
+              top: height - 2,
+              child: Transform(
+                alignment: Alignment.topCenter,
+                transform: Matrix4.diagonal3Values(1.0, -1.0, 1.0),
+                child: ShaderMask(
+                  shaderCallback: (bounds) => LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.white.withValues(alpha: 0.15),
+                      Colors.transparent,
+                    ],
+                  ).createShader(bounds),
+                  blendMode: BlendMode.dstIn,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: SizedBox(
+                      width: width,
+                      height: height * 0.30,
+                      child: hasImage
+                          ? Image.asset(
+                              imagePath!,
+                              fit: BoxFit.cover,
+                              alignment: Alignment.bottomCenter,
+                              errorBuilder: (_, _, _) =>
+                                  Container(color: const Color(0xFF1a1a2e)),
+                            )
+                          : Container(color: const Color(0xFF1a1a2e)),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+          // ── Main course cover ────────────────────────────────────────────
+          Positioned(
+            top: 0,
+            child: Container(
+              width: width,
+              height: height,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  // Primary color glow
+                  BoxShadow(
+                    color: AppColors.primary.withValues(alpha: 0.3),
+                    blurRadius: 30,
+                    spreadRadius: 2,
+                    offset: const Offset(0, 12),
+                  ),
+                  // Deep shadow
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.6),
+                    blurRadius: 20,
+                    offset: const Offset(4, 8),
+                  ),
+                  // Soft ambient
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.3),
+                    blurRadius: 8,
+                    offset: const Offset(-2, 2),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    // Course image
+                    hasImage
+                        ? Image.asset(
+                            imagePath!,
+                            fit: BoxFit.cover,
+                            errorBuilder: (_, _, _) => _CoverFallback(),
+                          )
+                        : _CoverFallback(),
+
+                    // Light shimmer highlight
+                    Positioned.fill(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: const Alignment(-1.0, -1.0),
+                            end: const Alignment(1.0, 1.0),
+                            colors: [
+                              Colors.white.withValues(alpha: 0.12),
+                              Colors.transparent,
+                              Colors.transparent,
+                              Colors.white.withValues(alpha: 0.04),
+                            ],
+                            stops: const [0.0, 0.3, 0.7, 1.0],
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    // Top edge highlight
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      child: Container(
+                        height: 1,
+                        color: Colors.white.withValues(alpha: 0.15),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ── Cover Fallback ───────────────────────────────────────────────────────────
+class _CoverFallback extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFF1e1e3a), Color(0xFF2a1a4e), Color(0xFF0f2040)],
+        ),
+      ),
+      child: Center(
+        child: Icon(
+          Icons.menu_book_rounded,
+          size: 48,
+          color: Colors.white.withValues(alpha: 0.12),
+        ),
+      ),
+    );
+  }
+}
+
+// ── Course Hero Meta ─────────────────────────────────────────────────────────
+class _CourseHeroMeta extends StatelessWidget {
+  final Map<String, dynamic> courseData;
+  final bool isMobile;
+
+  const _CourseHeroMeta({required this.courseData, required this.isMobile});
+
+  @override
+  Widget build(BuildContext context) {
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+    return Column(
+      crossAxisAlignment:
+          isMobile ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        // Badge
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [AppColors.primary, AppColors.secondary],
+            ),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: const Text(
+            'COURSE',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 11,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2,
+            ),
+          ),
+        ),
+        const SizedBox(height: 12),
+        // Title
+        Text(
+          courseData['title'] ?? '',
+          textAlign: isMobile ? TextAlign.center : TextAlign.start,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: isMobile ? 22 : 28,
+            fontWeight: FontWeight.bold,
+            height: 1.2,
+          ),
+        ),
+        const SizedBox(height: 14),
+        // Duration and Lectures Wrap
+        Wrap(
+          spacing: 16,
+          runSpacing: 8,
+          alignment: isMobile ? WrapAlignment.center : WrapAlignment.start,
+          children: [
+            if (courseData['duration'] != null &&
+                (courseData['duration'] as String).isNotEmpty)
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.access_time_rounded,
+                    color: AppColors.primary,
+                    size: 16,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    courseData['duration'],
+                    style: TextStyle(
+                      color: Colors.white.withValues(alpha: 0.75),
+                      fontSize: 13.5,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            if (courseData['lectures'] != null &&
+                (courseData['lectures'] as String).isNotEmpty)
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.play_circle_outline_rounded,
+                    color: AppColors.secondary,
+                    size: 16,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    courseData['lectures'],
+                    style: TextStyle(
+                      color: Colors.white.withValues(alpha: 0.75),
+                      fontSize: 13.5,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+// ── Dot Grid Painter (subtle decorative background) ─────────────────────────
+class _DotGridPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Colors.white.withValues(alpha: 0.03)
+      ..style = PaintingStyle.fill;
+
+    const spacing = 28.0;
+    const dotRadius = 1.0;
+
+    for (double x = 0; x < size.width; x += spacing) {
+      for (double y = 0; y < size.height; y += spacing) {
+        canvas.drawCircle(Offset(x, y), dotRadius, paint);
+      }
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }

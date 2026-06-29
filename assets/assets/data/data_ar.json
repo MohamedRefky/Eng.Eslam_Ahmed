@@ -558,5 +558,16 @@
         {"lecture": "Lecture (11)", "subject": "Introduction to Lateral Loads"}
       ]
     }
+  ],
+  "books": [
+    {
+      "id": "system_structures",
+      "title": "6-System Structures",
+      "author": "د. عبد الرحمن مجاهد",
+      "description": "كتاب متخصص في أنظمة الهياكل الإنشائية",
+      "image": "",
+      "driveLink": "https://drive.google.com/file/d/1QVtErN2jLiSk_64gvbg-UAUenj2-cT6J/view?usp=drive_link",
+      "category": "إنشائي"
+    }
   ]
 }

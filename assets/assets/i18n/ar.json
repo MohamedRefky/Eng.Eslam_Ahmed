@@ -39,5 +39,11 @@
   "course_content": "محتوى الكورس",
   "course_programs": "البرامج المستخدمة في الدبلومة",
   "course_checks": "الـ CHECKS التي سنقوم بعملها",
-  "course_analysis_methods": "طرق تحليل المنشآت تحت تأثير الزلازل"
+  "course_analysis_methods": "طرق تحليل المنشآت تحت تأثير الزلازل",
+  "books_title": "الكتب والمراجع الهندسية",
+  "books_subtitle": "مجموعة من الكتب الهندسية المتخصصة متاحة للتحميل",
+  "view_more_books": "مزيد من الكتب",
+  "download_book": "تحميل الكتاب",
+  "no_books": "لا توجد كتب متاحة حالياً",
+  "books_page_title": "المكتبة الهندسية"
 }

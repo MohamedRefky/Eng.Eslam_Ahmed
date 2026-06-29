@@ -4,12 +4,11 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/app_localizations.dart';
-import '../core/widgets/buttons/outline_button.dart';
 import '../core/widgets/buttons/primary_button.dart';
+import '../core/widgets/buttons/outline_button.dart';
 
 class HeroSection extends StatelessWidget {
   final VoidCallback? onViewProjects;
@@ -98,7 +97,9 @@ class _HeroText extends StatelessWidget {
                   fontSize: isMobile ? 40 : 72,
                   height: 1.1,
                 ),
-                textAlign: isMobile ? TextAlign.center : TextAlign.start,
+                textAlign: isMobile
+                    ? TextAlign.center
+                    : TextAlign.start,
               ),
             )
             .animate()
@@ -129,7 +130,9 @@ class _HeroText extends StatelessWidget {
         Text(
               AppConstants.devDescription,
               style: textTheme.bodyLarge?.copyWith(fontSize: 18, height: 1.6),
-              textAlign: isMobile ? TextAlign.center : TextAlign.start,
+              textAlign: isMobile
+                  ? TextAlign.center
+                  : TextAlign.start,
             )
             .animate()
             .fadeIn(delay: 600.ms, duration: 600.ms)
@@ -137,46 +140,38 @@ class _HeroText extends StatelessWidget {
         if (AppConstants.devHighlights.isNotEmpty) ...[
           const SizedBox(height: 24),
           Column(
-                crossAxisAlignment: align,
-                children: AppConstants.devHighlights.map((highlight) {
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 12.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Icon(
-                          Icons.check_circle,
-                          color: AppColors.primary,
-                          size: 22,
-                        ),
-                        const SizedBox(width: 8),
-                        Flexible(
-                          child: Text(
-                            highlight,
-                            style: textTheme.bodyLarge?.copyWith(
-                              fontSize: 16,
-                              height: 1.5,
-                            ),
-                            textAlign: isMobile
-                                ? TextAlign.center
-                                : TextAlign.start,
-                          ),
-                        ),
-                      ],
+            crossAxisAlignment: align,
+            children: AppConstants.devHighlights.map((highlight) {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 12.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Icon(Icons.check_circle, color: AppColors.primary, size: 22),
+                    const SizedBox(width: 8),
+                    Flexible(
+                      child: Text(
+                        highlight,
+                        style: textTheme.bodyLarge?.copyWith(fontSize: 16, height: 1.5),
+                        textAlign: isMobile
+                            ? TextAlign.center
+                            : TextAlign.start,
+                      ),
                     ),
-                  );
-                }).toList(),
-              )
-              .animate()
-              .fadeIn(delay: 700.ms, duration: 600.ms)
-              .slideY(begin: 0.2, end: 0),
+                  ],
+                ),
+              );
+            }).toList(),
+          ).animate().fadeIn(delay: 700.ms, duration: 600.ms).slideY(begin: 0.2, end: 0),
         ],
         const SizedBox(height: 32),
         Wrap(
           spacing: 16,
           runSpacing: 16,
-          alignment: isMobile ? WrapAlignment.center : WrapAlignment.start,
+          alignment: isMobile
+              ? WrapAlignment.center
+              : WrapAlignment.start,
           children: [
             PrimaryButton(
               text: AppLocalizations.of(context)!.translate('view_projects'),

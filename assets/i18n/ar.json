@@ -26,5 +26,18 @@
   "tap_to_zoom": "عرض الصورة",
   "image_not_available": "الصورة غير متوفرة",
   "view_details": "التفاصيل",
-  "no_courses": "لا توجد كورسات حالياً"
+  "no_courses": "لا توجد كورسات حالياً",
+  "course_description": "نبذة عن الكورس",
+  "course_target_audience": "لمن هذا الكورس",
+  "course_drawings_csi": "القطاعات التي سيتم تصميمها",
+  "course_drawings_manual": "المحتوى التفصيلي لكورس التأسيس",
+  "course_drawings_default": "اللوحات التي سيتم رسمها",
+  "course_projects": "المشاريع والتطبيقات",
+  "course_faqs": "الأسئلة الشائعة",
+  "course_outcomes": "كيف سيصبح مستواك",
+  "course_benefits": "مميزات الاشتراك",
+  "course_content": "محتوى الكورس",
+  "course_programs": "البرامج المستخدمة في الدبلومة",
+  "course_checks": "الـ CHECKS التي سنقوم بعملها",
+  "course_analysis_methods": "طرق تحليل المنشآت تحت تأثير الزلازل"
 }

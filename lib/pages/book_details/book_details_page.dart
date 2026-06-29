@@ -8,12 +8,44 @@ import '../../core/widgets/app_drawer.dart';
 import '../../core/widgets/buttons/language_switch_button.dart';
 import '../../main.dart';
 
-class BookDetailsPage extends StatelessWidget {
-  final Map<String, dynamic> book;
-  const BookDetailsPage({super.key, required this.book});
+import '../../core/data/office_data.dart';
+
+class BookDetailsPage extends StatefulWidget {
+  final String bookId;
+  const BookDetailsPage({super.key, required this.bookId});
+
+  @override
+  State<BookDetailsPage> createState() => _BookDetailsPageState();
+}
+
+class _BookDetailsPageState extends State<BookDetailsPage> {
+  Map<String, dynamic>? _bookData;
+  bool _isLoading = true;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _loadData();
+  }
+
+  Future<void> _loadData() async {
+    final lang = Localizations.localeOf(context).languageCode;
+    await OfficeData.load(lang);
+    if (mounted) {
+      final books = OfficeData.data['books'] as List<dynamic>? ?? [];
+      final bookData = books.firstWhere(
+        (b) => b['id'] == widget.bookId,
+        orElse: () => null,
+      ) as Map<String, dynamic>?;
+      setState(() {
+        _bookData = bookData;
+        _isLoading = false;
+      });
+    }
+  }
 
   Future<void> _downloadBook() async {
-    final Uri url = Uri.parse(book['driveLink'] ?? '');
+    final Uri url = Uri.parse(_bookData?['driveLink'] ?? '');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       debugPrint('Could not open book link');
     }
@@ -21,6 +53,29 @@ class BookDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return const Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: CircularProgressIndicator(color: AppColors.primary),
+        ),
+      );
+    }
+
+    final book = _bookData;
+
+    if (book == null) {
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: Text(
+            AppLocalizations.of(context)?.translate('no_books') ?? 'Book not found',
+            style: const TextStyle(color: Colors.white),
+          ),
+        ),
+      );
+    }
+
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
     final isMobile = MediaQuery.of(context).size.width < 600;
     final isTablet =

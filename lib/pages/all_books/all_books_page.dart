@@ -24,6 +24,15 @@ class _AllBooksPageState extends State<AllBooksPage> {
   final _scrollController = ScrollController();
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final lang = Localizations.localeOf(context).languageCode;
+    OfficeData.load(lang).then((_) {
+      if (mounted) setState(() {});
+    });
+  }
+
+  @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
@@ -413,7 +422,7 @@ class _BookLibraryCardState extends State<_BookLibraryCard> {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => BookDetailsPage(book: widget.book),
+                builder: (_) => BookDetailsPage(bookId: widget.book['id']),
               ),
             ),
             child: AnimatedContainer(

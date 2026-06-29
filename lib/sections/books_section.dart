@@ -100,7 +100,7 @@ class _BookCardState extends State<_BookCard> {
         onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => BookDetailsPage(book: widget.book),
+            builder: (_) => BookDetailsPage(bookId: widget.book['id']),
           ),
         ),
         child: AnimatedContainer(

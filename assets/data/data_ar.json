@@ -304,11 +304,7 @@
       "url": "https://www.instagram.com/instructor_eslamahmed?igsh=bWFwZ2MyZG9sZjRi&utm_source=qr",
       "icon": "instagram"
     },
-    {
-      "platform": "صفحة الشركة",
-      "url": "https://www.facebook.com/share/17wUQS6TRp/?mibextid=wwXIfr",
-      "icon": "facebook"
-    },
+  
     {
       "platform": "لينكد إن",
       "url": "https://www.linkedin.com/in/eslam-ahmed157179",
@@ -571,11 +567,6 @@
         "تصميم وتفريد حديد التسليح للسمالت والميدات والشدادات وعلاقتها بالقواعد والأعمدة",
         "حساب أحمال الرياح والزلازل والطرق الديناميكية والاستاتيكية لتحليل المنشآت زلزالياً",
         "تصميم وتفريد حديد حوائط القص (Shear Walls) والـ Core"
-      ],
-      "projects": [
-        "تطبيق عملي وتصميم مانيوال متكامل لفيلا سكنية",
-        "تصميم مانيوال متكامل لمشروع تغطيات Hinged Frame",
-        "تصميم مانيوال متكامل لمشروع تغطيات Radial Frame"
       ],
       "faqs": [
         {

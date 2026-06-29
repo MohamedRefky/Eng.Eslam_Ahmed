@@ -305,11 +305,6 @@
       "icon": "instagram"
     },
     {
-      "platform": "Company",
-      "url": "https://www.facebook.com/share/17wUQS6TRp/?mibextid=wwXIfr",
-      "icon": "facebook"
-    },
-    {
       "platform": "LinkedIn",
       "url": "https://www.linkedin.com/in/eslam-ahmed157179",
       "icon": "linkedin"
@@ -392,17 +387,50 @@
         "Tasks of each trainee are evaluated through the Facebook group"
       ],
       "content": [
-        {"lecture": "Lecture (1)", "subject": "Introduction & Edit Options"},
-        {"lecture": "Lecture (2)", "subject": "Column and Axis & Foundation"},
-        {"lecture": "Lecture (3)", "subject": "Sections Of Column and Walls & Foundation"},
-        {"lecture": "Lecture (4)", "subject": "Sections of Beams & Section of Stairs"},
-        {"lecture": "Lecture (5)", "subject": "Solid Slabs & Flat Slabs"},
-        {"lecture": "Lecture (6)", "subject": "Hollow Block & Paneled Beams"},
-        {"lecture": "Lecture (7)", "subject": "Text Style & Dimension Style"},
-        {"lecture": "Lecture (8)", "subject": "Statically System"},
-        {"lecture": "Lecture (9)", "subject": "Project 1. (Villa)"},
-        {"lecture": "Lecture (10)", "subject": "Project 2. (Rectangle Halls)"},
-        {"lecture": "Lecture (11)", "subject": "Project 3. (Radial Halls)"}
+        {
+          "lecture": "Lecture (1)",
+          "subject": "Introduction & Edit Options"
+        },
+        {
+          "lecture": "Lecture (2)",
+          "subject": "Column and Axis & Foundation"
+        },
+        {
+          "lecture": "Lecture (3)",
+          "subject": "Sections Of Column and Walls & Foundation"
+        },
+        {
+          "lecture": "Lecture (4)",
+          "subject": "Sections of Beams & Section of Stairs"
+        },
+        {
+          "lecture": "Lecture (5)",
+          "subject": "Solid Slabs & Flat Slabs"
+        },
+        {
+          "lecture": "Lecture (6)",
+          "subject": "Hollow Block & Paneled Beams"
+        },
+        {
+          "lecture": "Lecture (7)",
+          "subject": "Text Style & Dimension Style"
+        },
+        {
+          "lecture": "Lecture (8)",
+          "subject": "Statically System"
+        },
+        {
+          "lecture": "Lecture (9)",
+          "subject": "Project 1. (Villa)"
+        },
+        {
+          "lecture": "Lecture (10)",
+          "subject": "Project 2. (Rectangle Halls)"
+        },
+        {
+          "lecture": "Lecture (11)",
+          "subject": "Project 3. (Radial Halls)"
+        }
       ]
     },
     {
@@ -539,11 +567,6 @@
         "Calculation of wind and earthquake loads, static and dynamic analysis methods",
         "Design and detailing of Shear Walls and Core"
       ],
-      "projects": [
-        "Complete manual design and application of a residential villa",
-        "Complete manual design of a Hinged Frame coverings project",
-        "Complete manual design of a Radial Frame coverings project"
-      ],
       "faqs": [
         {
           "question": "Does the course rely on manual explanations?",
@@ -587,17 +610,50 @@
         "Check center of mass and center of Rigidity"
       ],
       "content": [
-        {"lecture": "Lecture (1)", "subject": "Structural Analysis Revision"},
-        {"lecture": "Lecture (2)", "subject": "Introduction about Rc Manual"},
-        {"lecture": "Lecture (3)", "subject": "Design and Shop Drawing Of beam"},
-        {"lecture": "Lecture (4)", "subject": "Design and Shop Drawing Of Column"},
-        {"lecture": "Lecture (5)", "subject": "Design and Shop Drawing Of Solid slab"},
-        {"lecture": "Lecture (6)", "subject": "Design and Shop Drawing Of Flat slab"},
-        {"lecture": "Lecture (7)", "subject": "Design and Shop Drawing Of Hollow Block"},
-        {"lecture": "Lecture (8)", "subject": "Design and Shop Drawing Of Paneled beams"},
-        {"lecture": "Lecture (9)", "subject": "Design and Shop Drawing Of Stairs"},
-        {"lecture": "Lecture (10)", "subject": "Design and Shop Drawing Of Footings"},
-        {"lecture": "Lecture (11)", "subject": "Introduction to Lateral Loads"}
+        {
+          "lecture": "Lecture (1)",
+          "subject": "Structural Analysis Revision"
+        },
+        {
+          "lecture": "Lecture (2)",
+          "subject": "Introduction about Rc Manual"
+        },
+        {
+          "lecture": "Lecture (3)",
+          "subject": "Design and Shop Drawing Of beam"
+        },
+        {
+          "lecture": "Lecture (4)",
+          "subject": "Design and Shop Drawing Of Column"
+        },
+        {
+          "lecture": "Lecture (5)",
+          "subject": "Design and Shop Drawing Of Solid slab"
+        },
+        {
+          "lecture": "Lecture (6)",
+          "subject": "Design and Shop Drawing Of Flat slab"
+        },
+        {
+          "lecture": "Lecture (7)",
+          "subject": "Design and Shop Drawing Of Hollow Block"
+        },
+        {
+          "lecture": "Lecture (8)",
+          "subject": "Design and Shop Drawing Of Paneled beams"
+        },
+        {
+          "lecture": "Lecture (9)",
+          "subject": "Design and Shop Drawing Of Stairs"
+        },
+        {
+          "lecture": "Lecture (10)",
+          "subject": "Design and Shop Drawing Of Footings"
+        },
+        {
+          "lecture": "Lecture (11)",
+          "subject": "Introduction to Lateral Loads"
+        }
       ]
     }
   ],

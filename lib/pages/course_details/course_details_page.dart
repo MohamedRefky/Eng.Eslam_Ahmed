@@ -1,7 +1,7 @@
 import 'package:eslam_ahmed_portfolio/core/data/office_data.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
@@ -36,10 +36,12 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
     await OfficeData.load(lang);
     if (mounted) {
       final courses = OfficeData.data['courses'] as List<dynamic>? ?? [];
-      final courseData = courses.firstWhere(
-        (c) => c['id'] == widget.courseId,
-        orElse: () => null,
-      ) as Map<String, dynamic>?;
+      final courseData =
+          courses.firstWhere(
+                (c) => c['id'] == widget.courseId,
+                orElse: () => null,
+              )
+              as Map<String, dynamic>?;
       setState(() {
         _courseData = courseData;
         _isLoading = false;
@@ -50,14 +52,16 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
   Future<void> _bookCourse(Map<String, dynamic> courseData) async {
     final title = courseData['title'] ?? '';
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
-    final message = isArabic 
+    final message = isArabic
         ? 'مرحباً مهندس إسلام، أود الاستفسار وحجز كورس: $title'
         : 'Hello Eng. Eslam, I would like to book the course: $title';
-    
+
     final encodedMessage = Uri.encodeComponent(message);
-    final number = AppConstants.whatsappNumber.replaceAll('+', '').replaceAll(' ', '');
+    final number = AppConstants.whatsappNumber
+        .replaceAll('+', '')
+        .replaceAll(' ', '');
     final urlString = 'https://wa.me/$number?text=$encodedMessage';
-    
+
     final Uri url = Uri.parse(urlString);
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       debugPrint('Could not launch WhatsApp');
@@ -82,7 +86,8 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
         backgroundColor: AppColors.background,
         body: Center(
           child: Text(
-            AppLocalizations.of(context)?.translate('no_courses') ?? 'Course not found',
+            AppLocalizations.of(context)?.translate('no_courses') ??
+                'Course not found',
             style: const TextStyle(color: Colors.white),
           ),
         ),
@@ -113,7 +118,11 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                   color: Colors.black38,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Icon(Icons.arrow_back_ios_new, color: Colors.white, size: 18),
+                child: const Icon(
+                  Icons.arrow_back_ios_new,
+                  color: Colors.white,
+                  size: 18,
+                ),
               ),
               onPressed: () => Navigator.of(context).pop(),
             ),
@@ -136,7 +145,11 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                         color: Colors.black38,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: const Icon(Icons.menu, color: Colors.white, size: 20),
+                      child: const Icon(
+                        Icons.menu,
+                        color: Colors.white,
+                        size: 20,
+                      ),
                     ),
                     onPressed: () => Scaffold.of(ctx).openDrawer(),
                   ),
@@ -166,7 +179,7 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                   if (imagePath != null && imagePath.isNotEmpty)
                     Image.asset(
                       imagePath,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                       errorBuilder: (context, error, stackTrace) {
                         return Container(
                           decoration: const BoxDecoration(
@@ -228,7 +241,10 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 4,
+                          ),
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors: [AppColors.primary, AppColors.secondary],

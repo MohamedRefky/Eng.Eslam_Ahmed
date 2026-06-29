@@ -265,5 +265,11 @@
       "url": "https://www.facebook.com/share/17wUQS6TRp/?mibextid=wwXIfr",
       "icon": "facebook"
     }
+  ],
+  "feedbackImages": [
+    "assets/image/feadback/1.png",
+    "assets/image/feadback/2.png",
+    "assets/image/feadback/3.png",
+    "assets/image/feadback/pictures_with_student.png"
   ]
 }

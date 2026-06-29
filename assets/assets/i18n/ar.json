@@ -24,5 +24,7 @@
   "view_profile": "عرض الحساب",
   "view_gallery": "عرض المعرض",
   "tap_to_zoom": "عرض الصورة",
-  "image_not_available": "الصورة غير متوفرة"
+  "image_not_available": "الصورة غير متوفرة",
+  "view_details": "التفاصيل",
+  "no_courses": "لا توجد كورسات حالياً"
 }

@@ -8,6 +8,7 @@ import '../core/theme/app_colors.dart';
 import '../core/utils/app_localizations.dart';
 import '../core/widgets/section_title.dart';
 import '../pages/book_details/book_details_page.dart';
+import '../pages/all_books/all_books_page.dart';
 
 class BooksSection extends StatelessWidget {
   const BooksSection({super.key});
@@ -59,7 +60,6 @@ class BooksSection extends StatelessWidget {
             if (hasMore) ...[
               const SizedBox(height: 40),
               _ViewMoreButton(
-                books: books,
                 label: loc.translate('view_more_books'),
               ),
             ],
@@ -363,126 +363,44 @@ class _QuickDownloadButton extends StatelessWidget {
 
 // ── View More Button ──────────────────────────────────────────────────────────
 class _ViewMoreButton extends StatelessWidget {
-  final List<dynamic> books;
   final String label;
-  const _ViewMoreButton({required this.books, required this.label});
+  const _ViewMoreButton({required this.label});
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton.icon(
-      style: OutlinedButton.styleFrom(
-        foregroundColor: AppColors.primary,
-        side: BorderSide(color: AppColors.primary.withValues(alpha: 0.5), width: 1.5),
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 14),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [AppColors.primary, AppColors.secondary],
+        ),
+        borderRadius: BorderRadius.circular(14),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primary.withValues(alpha: 0.35),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
+          ),
+        ],
       ),
-      onPressed: () {
-        // Navigate to full books library page (coming soon)
-        // For now, show all books via a bottom sheet
-        _showAllBooks(context);
-      },
-      icon: const Icon(Icons.library_books_rounded, size: 20),
-      label: Text(
-        label,
-        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-      ),
-    );
-  }
-
-  void _showAllBooks(BuildContext context) {
-    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: AppColors.cardBackground,
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-      ),
-      builder: (_) => DraggableScrollableSheet(
-        initialChildSize: 0.65,
-        maxChildSize: 0.92,
-        minChildSize: 0.4,
-        expand: false,
-        builder: (_, ctrl) => Column(
-          children: [
-            const SizedBox(height: 12),
-            Container(
-              width: 40,
-              height: 4,
-              decoration: BoxDecoration(
-                color: Colors.white24,
-                borderRadius: BorderRadius.circular(4),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                isArabic ? 'جميع الكتب' : 'All Books',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Expanded(
-              child: ListView.separated(
-                controller: ctrl,
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                itemCount: books.length,
-                separatorBuilder: (_, __) => const SizedBox(height: 12),
-                itemBuilder: (ctx, i) {
-                  final book = books[i] as Map<String, dynamic>;
-                  return ListTile(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14),
-                      side: BorderSide(
-                        color: AppColors.primary.withValues(alpha: 0.15),
-                      ),
-                    ),
-                    tileColor: AppColors.background,
-                    leading: Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [AppColors.primary, AppColors.secondary],
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: const Icon(Icons.menu_book_rounded, color: Colors.white, size: 20),
-                    ),
-                    title: Text(
-                      book['title'] ?? '',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                      ),
-                    ),
-                    subtitle: Text(
-                      book['author'] ?? '',
-                      style: const TextStyle(color: AppColors.textSecondary, fontSize: 12),
-                    ),
-                    trailing: const Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: AppColors.primary,
-                      size: 14,
-                    ),
-                    onTap: () {
-                      Navigator.pop(ctx);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => BookDetailsPage(book: book),
-                        ),
-                      );
-                    },
-                  );
-                },
-              ),
-            ),
-            const SizedBox(height: 24),
-          ],
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 16),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        ),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const AllBooksPage()),
+        ),
+        icon: const Icon(Icons.library_books_rounded, color: Colors.white, size: 20),
+        label: Text(
+          label,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
+          ),
         ),
       ),
     );

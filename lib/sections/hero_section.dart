@@ -74,7 +74,7 @@ class _HeroText extends StatelessWidget {
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
     final align = isMobile
         ? CrossAxisAlignment.center
-        : (isArabic ? CrossAxisAlignment.end : CrossAxisAlignment.start);
+        : CrossAxisAlignment.start;
 
     return Column(
       crossAxisAlignment: align,
@@ -99,7 +99,7 @@ class _HeroText extends StatelessWidget {
                 ),
                 textAlign: isMobile
                     ? TextAlign.center
-                    : (isArabic ? TextAlign.right : TextAlign.left),
+                    : TextAlign.start,
               ),
             )
             .animate()
@@ -132,18 +132,46 @@ class _HeroText extends StatelessWidget {
               style: textTheme.bodyLarge?.copyWith(fontSize: 18, height: 1.6),
               textAlign: isMobile
                   ? TextAlign.center
-                  : (isArabic ? TextAlign.right : TextAlign.left),
+                  : TextAlign.start,
             )
             .animate()
             .fadeIn(delay: 600.ms, duration: 600.ms)
             .slideY(begin: 0.2, end: 0),
-        const SizedBox(height: 40),
+        if (AppConstants.devHighlights.isNotEmpty) ...[
+          const SizedBox(height: 24),
+          Column(
+            crossAxisAlignment: align,
+            children: AppConstants.devHighlights.map((highlight) {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 12.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Icon(Icons.check_circle, color: AppColors.primary, size: 22),
+                    const SizedBox(width: 8),
+                    Flexible(
+                      child: Text(
+                        highlight,
+                        style: textTheme.bodyLarge?.copyWith(fontSize: 16, height: 1.5),
+                        textAlign: isMobile
+                            ? TextAlign.center
+                            : TextAlign.start,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+          ).animate().fadeIn(delay: 700.ms, duration: 600.ms).slideY(begin: 0.2, end: 0),
+        ],
+        const SizedBox(height: 32),
         Wrap(
           spacing: 16,
           runSpacing: 16,
           alignment: isMobile
               ? WrapAlignment.center
-              : (isArabic ? WrapAlignment.end : WrapAlignment.start),
+              : WrapAlignment.start,
           children: [
             PrimaryButton(
               text: AppLocalizations.of(context)!.translate('view_projects'),

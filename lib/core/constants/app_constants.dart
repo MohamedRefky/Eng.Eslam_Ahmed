@@ -10,6 +10,9 @@ class AppConstants {
       _info['description'] ??
       'SCE Certified Civil Engineer with 5+ years of experience in structural design, site supervision, and technical office engineering.';
 
+  static List<String> get devHighlights =>
+      List<String>.from(_info['highlights'] ?? []);
+
   static String get devImagePath =>
       _info['image'] ?? 'assets/image/profile/Eslam_Ahmed.jpg';
   static String get devCvPath =>

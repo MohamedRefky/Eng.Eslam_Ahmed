@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../core/constants/app_constants.dart';
-import '../core/data/office_data.dart';
-import '../core/theme/app_colors.dart';
-import '../core/utils/splash_service.dart';
-import 'home_page.dart';
+import '../../core/constants/app_constants.dart';
+import '../../core/data/office_data.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/utils/splash_service.dart';
+import '../home/home_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});

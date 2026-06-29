@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../widgets/gallery/gallery_header.dart';
-import '../widgets/gallery/gallery_arrow.dart';
-import '../widgets/gallery/gallery_thumbnail_strip.dart';
-import '../widgets/gallery/gallery_widgets.dart';
-import '../widgets/gallery/lightbox_viewer.dart';
-import '../core/theme/app_colors.dart';
+import 'widgets/gallery_header.dart';
+import 'widgets/gallery_arrow.dart';
+import 'widgets/gallery_thumbnail_strip.dart';
+import 'widgets/gallery_widgets.dart';
+import 'widgets/lightbox_viewer.dart';
+import '../../core/theme/app_colors.dart';
 
 /// Full-screen project gallery page.
 ///

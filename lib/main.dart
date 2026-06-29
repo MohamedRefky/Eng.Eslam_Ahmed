@@ -4,7 +4,7 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'core/theme/app_theme.dart';
 import 'core/utils/app_localizations.dart';
-import 'pages/home_page.dart';
+import 'pages/home/home_page.dart';
 
 final ValueNotifier<Locale> appLocale = ValueNotifier(const Locale('ar'));
 

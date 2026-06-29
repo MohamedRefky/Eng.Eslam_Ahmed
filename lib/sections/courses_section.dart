@@ -5,7 +5,7 @@ import '../core/data/office_data.dart';
 import '../core/theme/app_colors.dart';
 import '../core/utils/app_localizations.dart';
 import '../core/widgets/section_title.dart';
-import '../pages/course_details_page.dart';
+import '../pages/course_details/course_details_page.dart';
 
 class CoursesSection extends StatelessWidget {
   const CoursesSection({super.key});

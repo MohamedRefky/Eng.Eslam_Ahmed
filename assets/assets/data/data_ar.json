@@ -661,6 +661,105 @@
       "image": "assets/image/books_picture/4.JPG",
       "driveLink": "https://drive.google.com/file/d/1EncCvyFyiRXgEaQlt5I1C3WYVKMyzO_s/view?usp=sharing",
       "category": "كود هندسي"
+    },
+    {
+      "id": "Egyptian_code_203_2007",
+      "title": "الكود المصري 203-2007",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "الكود المصرى لتصميم وتنفيذ المنشات الخرسانيه كود رقم 203 - 2007",
+      "image": "assets/image/books_picture/5.JPG",
+      "driveLink": "https://drive.google.com/file/d/1O-Vc4aGID8D3SL1pbU5-SGgvxxIqrUxv/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "reinforcing_retaining_walls",
+      "title": "تسليح الجدران الخرسانية الساندة",
+      "author": "م/ ياسين محمد عبده",
+      "description": "سلسلة الوحدات التدريبية المتكاملة لمجموعة مهن بناء الهياكل - تسليح الجدران الخرسانية الساندة، وزارة التعليم الفني والتدريب المهني (قطاع المناهج والتعليم المستمر).",
+      "image": "assets/image/books_picture/6.JPG",
+      "driveLink": "https://drive.google.com/file/d/12ZLyqnyaFxnANe7EvOSopWhRhtpSgo2A/view?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "site_engineer_mission",
+      "title": "Site Engineer Mission",
+      "author": "غير معروف",
+      "description": "دليل مهندس الموقع في أعمال التنفيذ والإشراف الهندسي.",
+      "image": "assets/image/books_picture/7.JPG",
+      "driveLink": "https://drive.google.com/file/d/1dP8ZW-qZtl8Bzr2ua61U8NLotYH_B2T3/view?usp=sharing",
+      "category": "تنفيذ"
+    },
+    {
+      "id": "excavation_backfilling",
+      "title": "أعمال الحفر والردم",
+      "author": "م/ إسلام حمدي رزق البسطويسي",
+      "description": "كتاب هندسي متخصص يشرح أعمال الحفر والردم في المواقع والمنشآت.",
+      "image": "assets/image/books_picture/8.JPG",
+      "driveLink": "https://drive.google.com/file/d/1urAFcwKhnDqOKuO_VzH2KUBfbNlR5odt/view?usp=sharing",
+      "category": "تنفيذ"
+    },
+    {
+      "id": "egyptian_loads_code",
+      "title": "الكود المصري للأحمال 201-2008",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "الكود المصري لحساب الأحمال والقوى في الأعمال الإنشائية وأعمال المباني كود رقم 201 - 2008.",
+      "image": "assets/image/books_picture/9.JPG",
+      "driveLink": "https://drive.google.com/file/d/1-IRsIVHPJMvn4DIRaqVzngX5dcKjBBsH/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "types_buildings_slabs",
+      "title": "أنواع المباني والبلاطات الخرسانية",
+      "author": "غير معروف",
+      "description": "مقدمة عن العمارة والأنظمة الإنشائية المختلفة للبلاطات الخرسانية.",
+      "image": "assets/image/books_picture/10.JPG",
+      "driveLink": "https://drive.google.com/file/d/1f59ERJEUEyAyTQK8ceI8rQW0iab-OTuv/view?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "repair_strengthening_mansoura",
+      "title": "ترميم وتدعيم المنشآت - جامعة المنصورة",
+      "author": "اتحاد طلاب كلية الهندسة بجامعة المنصورة",
+      "description": "كتاب متخصص في طرق ترميم وتدعيم المنشآت الخرسانية من إعداد اتحاد طلاب كلية الهندسة بجامعة المنصورة.",
+      "image": "assets/image/books_picture/11.JPG",
+      "driveLink": "https://drive.google.com/file/d/1mafJ4VLdoBXrkeSZ2amz2ZTNarvZFTf1/view?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "structural_details_guide",
+      "title": "دليل التفاصيل الإنشائية 203-2003",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "دليل التفاصيل الإنشائية الصادر عن اللجنة الدائمة للكود المصري لتصميم وتنفيذ المنشآت الخرسانية رقم 203 - 2003.",
+      "image": "assets/image/books_picture/12.JPG",
+      "driveLink": "https://drive.google.com/file/d/1kwQZ6u9HByqH6JV8MoT20oR4q7Ah49Tx/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "finishing_works_guide",
+      "title": "شرح أعمال التشطيبات للمباني الخرسانية",
+      "author": "غير معروف",
+      "description": "دليل عملي يشرح تفاصيل وخطوات أعمال التشطيبات المختلفة للمباني الخرسانية.",
+      "image": "assets/image/books_picture/13.JPG",
+      "driveLink": "https://drive.google.com/file/d/1_0Oo1BlDtfT7JcgsLXMQ-DCDTrejgT-1/view?usp=sharing",
+      "category": "تنفيذ"
+    },
+    {
+      "id": "unified_building_law",
+      "title": "قانون البناء الموحد 119 لسنة 2008",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "اللائحة التنفيذية لقانون البناء الموحد الصادر بقانون رقم 119 لسنة 2008.",
+      "image": "assets/image/books_picture/14.JPG",
+      "driveLink": "https://drive.google.com/file/d/1yih9iwY89ly2IozbVIF2RtPVcY3YUNkR/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "foundation_engineering_agha",
+      "title": "مبادئ هندسة الأساسات للمهندس أحمد الآغا",
+      "author": "م/ أحمد الآغا",
+      "description": "كتاب أساسيات هندسة الأساسات مع مسائل محلولة وتطبيقات عملية للشرح.",
+      "image": "assets/image/books_picture/15.JPG",
+      "driveLink": "https://drive.google.com/file/d/12kCfoYJk_Hgyv0f5WldNFsaHfKQRQxDW/view?usp=sharing",
+      "category": "إنشائي"
     }
   ]
 }

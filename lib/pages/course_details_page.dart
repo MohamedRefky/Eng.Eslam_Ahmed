@@ -13,12 +13,17 @@ class CourseDetailsPage extends StatelessWidget {
 
   String _t(BuildContext context, String key, String ar) {
     final lang = Localizations.localeOf(context).languageCode;
-    if (lang == 'ar') return ar;
+    final isCsi = courseData['id'] == 'csi_diploma';
+    
+    if (lang == 'ar') {
+      if (key == 'drawings' && isCsi) return 'القطاعات التي سيتم تصميمها';
+      return ar;
+    }
     switch (key) {
       case 'target_audience':
         return 'Who Is This Course For?';
       case 'drawings':
-        return 'Drawings You Will Learn';
+        return isCsi ? 'Sections to be Designed' : 'Drawings You Will Learn';
       case 'projects':
         return 'Practical Projects';
       case 'faqs':
@@ -29,6 +34,12 @@ class CourseDetailsPage extends StatelessWidget {
         return 'What You Will Get';
       case 'content':
         return 'Course Content';
+      case 'programs':
+        return 'Software Covered';
+      case 'checks':
+        return 'CHECKS to Perform';
+      case 'analysis_methods':
+        return 'Seismic Analysis Methods';
       default:
         return ar;
     }
@@ -257,6 +268,26 @@ class CourseDetailsPage extends StatelessWidget {
                       const SizedBox(height: 24),
                     ],
 
+                    // Programs Used (Optional)
+                    if (courseData['programs'] != null) ...[
+                      _GlassCard(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _SectionLabel(
+                              label: _t(context, 'programs', 'البرامج المستخدمة في الدبلومة'),
+                              icon: Icons.computer_rounded,
+                            ),
+                            const SizedBox(height: 16),
+                            _ProgramsGrid(
+                              items: List<String>.from(courseData['programs']),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                    ],
+
                     // Drawings — numbered grid
                     if (courseData['drawings'] != null) ...[
                       _GlassCard(
@@ -271,6 +302,26 @@ class CourseDetailsPage extends StatelessWidget {
                             _DrawingsGrid(
                               items: List<String>.from(courseData['drawings']),
                               isMobile: isMobile,
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                    ],
+
+                    // Checks to perform (Optional)
+                    if (courseData['checks'] != null) ...[
+                      _GlassCard(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _SectionLabel(
+                              label: _t(context, 'checks', 'الـ CHECKS التي سنقوم بعملها'),
+                              icon: Icons.done_all_rounded,
+                            ),
+                            const SizedBox(height: 16),
+                            _ChecksGrid(
+                              items: List<String>.from(courseData['checks']),
                             ),
                           ],
                         ),
@@ -293,6 +344,28 @@ class CourseDetailsPage extends StatelessWidget {
                               items: List<String>.from(courseData['projects']),
                               icon: Icons.rocket_launch_rounded,
                               iconColor: AppColors.secondary,
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                    ],
+
+                    // Seismic Analysis Methods (Optional)
+                    if (courseData['analysisMethods'] != null) ...[
+                      _GlassCard(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _SectionLabel(
+                              label: _t(context, 'analysis_methods', 'طرق تحليل المنشآت تحت تأثير الزلازل'),
+                              icon: Icons.analytics_rounded,
+                            ),
+                            const SizedBox(height: 16),
+                            _BulletList(
+                              items: List<String>.from(courseData['analysisMethods']),
+                              icon: Icons.flash_on_rounded,
+                              iconColor: AppColors.accent,
                             ),
                           ],
                         ),
@@ -771,3 +844,79 @@ class _NavBarItem extends StatelessWidget {
     );
   }
 }
+
+class _ProgramsGrid extends StatelessWidget {
+  final List<String> items;
+  const _ProgramsGrid({required this.items});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 10,
+      runSpacing: 10,
+      children: items.map((program) {
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          decoration: BoxDecoration(
+            color: AppColors.background,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppColors.primary.withValues(alpha: 0.25)),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.code_rounded, color: AppColors.primary, size: 16),
+              const SizedBox(width: 8),
+              Text(
+                program,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 13,
+                ),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
+    );
+  }
+}
+
+class _ChecksGrid extends StatelessWidget {
+  final List<String> items;
+  const _ChecksGrid({required this.items});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 10,
+      runSpacing: 10,
+      children: items.map((check) {
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          decoration: BoxDecoration(
+            color: AppColors.background,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppColors.accent.withValues(alpha: 0.2)),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.check_circle_rounded, color: AppColors.accent, size: 16),
+              const SizedBox(width: 8),
+              Text(
+                check,
+                style: const TextStyle(
+                  color: AppColors.textSecondary,
+                  fontSize: 13.5,
+                ),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
+    );
+  }
+}
+

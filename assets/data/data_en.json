@@ -568,6 +568,15 @@
       "image": "",
       "driveLink": "https://drive.google.com/file/d/1QVtErN2jLiSk_64gvbg-UAUenj2-cT6J/view?usp=drive_link",
       "category": "Structural"
+    },
+    {
+      "id": "forty_questions",
+      "title": "40 Questions In Structure Engineering",
+      "author": "Prepared & Compiled by Eng. Karim Sayed Jaber",
+      "description": "A collection of questions and problems in reinforced concrete with answers according to the Egyptian Code for Concrete.",
+      "image": "",
+      "driveLink": "https://docs.google.com/document/d/1QLRhXdO8XgLiJPfqRrR9v1iSYoDA9mHVeh2hu0ZEC18/edit?usp=sharing",
+      "category": "Structural"
     }
   ]
 }

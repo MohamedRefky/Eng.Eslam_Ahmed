@@ -81,7 +81,7 @@ class _CourseCardState extends State<_CourseCard> {
           curve: Curves.easeOutCubic,
           width: cardWidth,
           transform: _isHovered
-              ? (Matrix4.identity()..translate(0, -10, 0))
+              ? Matrix4.translationValues(0, -10.0, 0)
               : Matrix4.identity(),
           decoration: BoxDecoration(
             color: AppColors.cardBackground,

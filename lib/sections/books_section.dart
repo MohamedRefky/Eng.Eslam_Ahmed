@@ -108,7 +108,7 @@ class _BookCardState extends State<_BookCard> {
           curve: Curves.easeOutCubic,
           width: isMobile ? double.infinity : _cardWidth,
           transform: _isHovered
-              ? (Matrix4.identity()..translate(0, -10.0, 0))
+              ? Matrix4.translationValues(0, -10.0, 0)
               : Matrix4.identity(),
           decoration: BoxDecoration(
             color: AppColors.cardBackground,

@@ -377,9 +377,7 @@ class _PremiumBookCover extends StatelessWidget {
               top: height - 2,
               child: Transform(
                 alignment: Alignment.topCenter,
-                transform: Matrix4.identity()
-                  ..scale(1.0, -1.0)
-                  ..rotateX(0.0),
+                transform: Matrix4.diagonal3Values(1.0, -1.0, 1.0),
                 child: ShaderMask(
                   shaderCallback: (bounds) => LinearGradient(
                     begin: Alignment.topCenter,

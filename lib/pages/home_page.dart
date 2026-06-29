@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import '../core/theme/app_colors.dart';
+
 import '../core/constants/app_constants.dart';
 import '../core/data/office_data.dart';
+import '../core/theme/app_colors.dart';
 import '../core/utils/app_localizations.dart';
 import '../main.dart';
+import '../sections/books_section.dart';
+import '../sections/contact_section.dart';
+import '../sections/courses_section.dart';
+import '../sections/hero_section.dart';
+import '../sections/projects_section.dart';
+import '../sections/services_section.dart';
+import '../sections/testimonials_section.dart';
+import '../widgets/app_drawer.dart';
 import '../widgets/animations/animated_gradient_background.dart';
 import '../widgets/buttons/language_switch_button.dart';
-import '../sections/hero_section.dart';
-import '../sections/services_section.dart';
-import '../sections/courses_section.dart';
-import '../sections/projects_section.dart';
-import '../sections/books_section.dart';
-import '../sections/testimonials_section.dart';
-import '../sections/contact_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -90,81 +92,29 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       key: _scaffoldKey,
       drawer: isMobileOrTablet
-          ? Drawer(
-              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-              child: ListView(
-                padding: EdgeInsets.zero,
-                children: [
-                  DrawerHeader(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [AppColors.primary, AppColors.secondary],
-                      ),
-                    ),
-                    child: Center(
-                      child: FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: Text(
-                          AppConstants.devName,
-                          style: Theme.of(context).textTheme.displaySmall
-                              ?.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _DrawerItem(
-                    title: AppLocalizations.of(context)!.translate('services'),
-                    icon: Icons.design_services_outlined,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_servicesKey);
-                    },
-                  ),
-                  _DrawerItem(
-                    title: AppLocalizations.of(context)!.translate('courses'),
-                    icon: Icons.school_outlined,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_coursesKey);
-                    },
-                  ),
-                  _DrawerItem(
-                    title: AppLocalizations.of(context)!.translate('projects'),
-                    icon: Icons.rocket_launch_outlined,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_projectsKey);
-                    },
-                  ),
-                  _DrawerItem(
-                    title: AppLocalizations.of(context)!.translate('files'),
-                    icon: Icons.folder_open_outlined,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_booksKey);
-                    },
-                  ),
-                  _DrawerItem(
-                    title: AppLocalizations.of(context)!.translate('reviews'),
-                    icon: Icons.reviews_outlined,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_testimonialsKey);
-                    },
-                  ),
-                  _DrawerItem(
-                    title: AppLocalizations.of(context)!.translate('contact'),
-                    icon: Icons.mail_outline,
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _scrollToSection(_contactKey);
-                    },
-                  ),
-                ],
-              ),
+          ? AppDrawer(
+              onSectionSelect: (section) {
+                switch (section) {
+                  case 'services':
+                    _scrollToSection(_servicesKey);
+                    break;
+                  case 'courses':
+                    _scrollToSection(_coursesKey);
+                    break;
+                  case 'projects':
+                    _scrollToSection(_projectsKey);
+                    break;
+                  case 'files':
+                    _scrollToSection(_booksKey);
+                    break;
+                  case 'reviews':
+                    _scrollToSection(_testimonialsKey);
+                    break;
+                  case 'contact':
+                    _scrollToSection(_contactKey);
+                    break;
+                }
+              },
             )
           : null,
       body: AnimatedGradientBackground(
@@ -182,7 +132,8 @@ class _HomePageState extends State<HomePage> {
                 constraints: const BoxConstraints(maxWidth: 250),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
-                  alignment: Localizations.localeOf(context).languageCode == 'ar'
+                  alignment:
+                      Localizations.localeOf(context).languageCode == 'ar'
                       ? Alignment.centerRight
                       : Alignment.centerLeft,
                   child: Text(
@@ -254,27 +205,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class _DrawerItem extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  final VoidCallback onPressed;
-
-  const _DrawerItem({
-    required this.title,
-    required this.icon,
-    required this.onPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(icon, color: AppColors.primary),
-      title: Text(title, style: const TextStyle(color: AppColors.textPrimary)),
-      onTap: onPressed,
     );
   }
 }

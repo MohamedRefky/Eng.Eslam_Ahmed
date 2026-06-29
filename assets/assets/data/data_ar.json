@@ -246,6 +246,43 @@
       "link": null
     }
   ],
+  "downloadableProjects": [
+    {
+      "id": "hospital_1",
+      "title": "HOSPITAL-1",
+      "description": "مشروع تصميم إنشائي كامل لمستشفى نموذج 1 يشمل المخططات الإنشائية واللوحات التفصيلية.",
+      "image": "assets/image/projects_picture/1.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1OzAXg4fJkBieNjlZl79Y6-TTLBeekc4A?usp=sharing"
+    },
+    {
+      "id": "mall_2",
+      "title": "MALL-2",
+      "description": "مشروع تصميم إنشائي لمركز تجاري (مول) يشمل النظام الإنشائي للأعمدة والأسقف المفرغة وقواعد التأسيس.",
+      "image": "assets/image/projects_picture/2.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1HG689GW79HZeuPLXDq0sVLzQPRgiBlkO?usp=sharing"
+    },
+    {
+      "id": "tall_building",
+      "title": "Tall Building",
+      "description": "مشروع تصميم برج شاهق الارتفاع مع دراسة أحمال الرياح والزلازل والنظام الإنشائي المقاوم للأحمال الجانبية.",
+      "image": "assets/image/projects_picture/3.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1137qX1Q_j-Xs20Ta13RmG_yc6S-W1VmC?usp=sharing"
+    },
+    {
+      "id": "admin_building_3",
+      "title": "مبنى إداري - 3",
+      "description": "مشروع تصميم مبنى إداري متكامل يشمل التفاصيل الإنشائية وحصر وتوزيع الأحمال.",
+      "image": "assets/image/projects_picture/4.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1Gjh2vIL3hK5To2_nHVwrU3GkasjqwlQI?usp=sharing"
+    },
+    {
+      "id": "full_hospital_project",
+      "title": "مشروع كامل لمستشفى",
+      "description": "دراسة وتصميم إنشائي متكامل لمستشفى بجميع تفاصيل تسليح البلاطات، الأعمدة، الكاميرات، والأساسات.",
+      "image": "assets/image/projects_picture/5.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/16khd4VgK6n4y7NXbP68vgDD0couP6oTN?usp=sharing"
+    }
+  ],
   "socialLinks": [
     {
       "platform": "البريد الإلكتروني",

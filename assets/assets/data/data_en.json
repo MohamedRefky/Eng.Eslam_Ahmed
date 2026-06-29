@@ -283,7 +283,7 @@
     {
       "id": "civil_autocad",
       "title": "Civil Auto-cad",
-      "image": "assets/image/courses/autocad_placeholder.png",
+      "image": "assets/image/courses_picture/AUTOCAD.png",
       "duration": "33 Hours",
       "lectures": "11 Lectures",
       "description": "One of the most essential courses for any civil engineer. It is considered the foundation of our work in both design and technical office fields. All shop drawings that are executed on-site are produced from this software. If you want to enter a reinforced concrete or structural graduation project, or work in design or technical office fields, you must first start learning this software as it's the base upon which all your next steps are built.",
@@ -366,7 +366,7 @@
     {
       "id": "csi_diploma",
       "title": "CSI DIPLOMA",
-      "image": "assets/image/courses/csi_placeholder.png",
+      "image": "assets/image/courses_picture/CSI_PRO_TRACK.png",
       "duration": "92 Hours",
       "lectures": "37 Lectures",
       "description": "The Structural Design Diploma is a comprehensive professional course in structural design of concrete structures. It includes manual explanations and practical applications on designing multiple projects using various design programs. This diploma is widely popular and most common in the Gulf countries and the Middle East.",
@@ -467,7 +467,7 @@
     {
       "id": "manual_design",
       "title": "Manual Design",
-      "image": "assets/image/courses/manual_placeholder.png",
+      "image": "assets/image/courses_picture/MANUAL_AND_SHOP_DRAWING.png",
       "duration": "66 Hours",
       "lectures": "11 Lectures (146 videos)",
       "description": "The Manual Structural Foundation Course is a comprehensive professional course for manual structural design of building elements, in addition to learning the principles of manual detailing and drafting of reinforcement (manual shop drawing). Our main goal of the course is to establish the civil engineer by teaching manual design.",

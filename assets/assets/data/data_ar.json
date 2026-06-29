@@ -271,6 +271,11 @@
       "platform": "صفحة الشركة",
       "url": "https://www.facebook.com/share/17wUQS6TRp/?mibextid=wwXIfr",
       "icon": "facebook"
+    },
+    {
+      "platform": "لينكد إن",
+      "url": "https://www.linkedin.com/in/eslam-ahmed157179",
+      "icon": "linkedin"
     }
   ],
   "feedbackImages": [

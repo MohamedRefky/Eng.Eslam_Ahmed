@@ -42308,8 +42308,8 @@ m=A.cg(s.i(0,"videoUrl"))
 l=m!=null&&m.length!==0
 r=t.B
 k=a2.a0(r).r.f.gbl()
-if(q)j=l?500:440
-else j=l?440:360
+if(q)j=l?380:440
+else j=l?340:360
 i=A.an(8)
 i=A.k1(a1,a1,A.af(a1,B.lg,B.h,a1,a1,new A.a5(B.kf,a1,A.c4(B.e.J(0.1),1),i,a1,a1,B.o),a1,a1,a1,B.dS,a1,a1,a1),a1,a1,new A.alQ(a2),a1,a1,a1)
 r=a2.a0(r).r.f

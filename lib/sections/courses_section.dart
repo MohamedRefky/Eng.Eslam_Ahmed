@@ -62,6 +62,8 @@ class _CourseCardState extends State<_CourseCard> {
     final double cardWidth = isMobile ? double.infinity : 380;
     final imagePath = widget.course['image'] as String?;
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+    final videoUrl = widget.course['videoUrl'] as String?;
+    final hasVideo = videoUrl != null && videoUrl.isNotEmpty;
 
     return MouseRegion(
       cursor: SystemMouseCursors.click,
@@ -180,6 +182,54 @@ class _CourseCardState extends State<_CourseCard> {
                         ),
                       ),
                     ),
+                    // Glassmorphic Intro Video Badge
+                    if (hasVideo)
+                      Positioned(
+                        top: 16,
+                        left: isArabic ? null : 16,
+                        right: isArabic ? 16 : null,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 11,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withValues(alpha: 0.65),
+                            borderRadius: BorderRadius.circular(30),
+                            border: Border.all(
+                              color: AppColors.primary.withValues(alpha: 0.55),
+                              width: 1,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.primary.withValues(alpha: 0.2),
+                                blurRadius: 10,
+                                spreadRadius: 0,
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.play_arrow_rounded,
+                                color: AppColors.primary,
+                                size: 14,
+                              ),
+                              const SizedBox(width: 5),
+                              Text(
+                                isArabic ? 'فيديو تعريفى' : 'Intro Video',
+                                style: TextStyle(
+                                  color: AppColors.primary,
+                                  fontSize: 10.5,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: isArabic ? 'Zain' : null,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                   ],
                 ),
 

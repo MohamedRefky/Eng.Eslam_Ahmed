@@ -11,11 +11,11 @@ final ValueNotifier<Locale> appLocale = ValueNotifier(const Locale('ar'));
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
-  runApp(const PortfolioApp());
+  runApp(const EngEslamAhmedApp());
 }
 
-class PortfolioApp extends StatelessWidget {
-  const PortfolioApp({super.key});
+class EngEslamAhmedApp extends StatelessWidget {
+  const EngEslamAhmedApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class PortfolioApp extends StatelessWidget {
               ],
             );
           },
-          title: 'Eslam Ahmed - Portfolio',
+          title: 'Eng Eslam Ahmed',
           theme: AppTheme.getTheme(locale),
           debugShowCheckedModeBanner: false,
           home: const SplashPage(),

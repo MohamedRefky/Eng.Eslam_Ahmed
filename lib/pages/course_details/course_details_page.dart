@@ -1,4 +1,4 @@
-import 'package:eslam_ahmed_portfolio/core/data/office_data.dart';
+import 'package:eng_eslam_ahmed/core/data/office_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

@@ -1,5 +1,6 @@
 import 'package:eslam_ahmed_portfolio/core/data/office_data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -373,7 +374,7 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
 
                     // Content Table / Syllabus
                     CourseContentSection(courseData: courseData),
-                  ],
+                  ].animate(interval: 50.ms).fadeIn(duration: 500.ms).slideY(begin: 0.08, end: 0, curve: Curves.easeOutCubic),
                 ),
               ),
             ),
@@ -575,7 +576,7 @@ class _CourseHeroMeta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    final metaContent = Column(
       crossAxisAlignment: isMobile
           ? CrossAxisAlignment.center
           : CrossAxisAlignment.start,
@@ -664,6 +665,30 @@ class _CourseHeroMeta extends StatelessWidget {
           ],
         ),
       ],
+    );
+
+    if (isMobile) {
+      return metaContent;
+    }
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+      decoration: BoxDecoration(
+        color: const Color(0xFF0F172A).withValues(alpha: 0.35),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.08),
+          width: 1,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.25),
+            blurRadius: 15,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: metaContent,
     );
   }
 }

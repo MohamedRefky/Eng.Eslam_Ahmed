@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/app_localizations.dart';
@@ -251,7 +252,10 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                                 if (hasVideo)
                                   LayoutBuilder(
                                     builder: (context, constraints) {
-                                      final videoWidth = (MediaQuery.of(context).size.width - 48).clamp(280.0, 420.0);
+                                      final videoWidth =
+                                          (MediaQuery.of(context).size.width -
+                                                  48)
+                                              .clamp(280.0, 420.0);
                                       final videoHeight = videoWidth * 9 / 16;
                                       return YouTubeVideoPlayer(
                                         videoUrl: videoUrl,
@@ -282,8 +286,11 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                                 if (hasVideo)
                                   LayoutBuilder(
                                     builder: (context, constraints) {
-                                      final screenWidth = MediaQuery.of(context).size.width;
-                                      final videoWidth = (screenWidth * 0.38).clamp(400.0, 580.0);
+                                      final screenWidth = MediaQuery.of(
+                                        context,
+                                      ).size.width;
+                                      final videoWidth = (screenWidth * 0.38)
+                                          .clamp(400.0, 580.0);
                                       final videoHeight = videoWidth * 9 / 16;
                                       return YouTubeVideoPlayer(
                                         videoUrl: videoUrl,
@@ -332,7 +339,6 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                   children: [
                     // Description
                     CourseDescriptionSection(courseData: courseData),
-                    const SizedBox(height: 24),
 
                     // WhatsApp Booking (CTA Card)
                     CourseBookNowSection(

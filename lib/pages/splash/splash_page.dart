@@ -21,18 +21,20 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   Future<void> _initializeApp() async {
-    // 1. Load Data
-    await OfficeData.load();
+    final lang = 'ar'; // Default language, will reload in HomePage if different
 
-    // 2. Wait a bit for the animation (500ms is enough for a snappy feel)
-    await Future.delayed(const Duration(milliseconds: 500));
+    // Load data in parallel with splash display
+    await OfficeData.load(lang);
+
+    // Very brief pause so the animation feels intentional (not a flicker)
+    await Future.delayed(const Duration(milliseconds: 400));
 
     if (!mounted) return;
 
-    // 3. Hide Web Splash if exists
+    // Hide the web splash overlay (index.html)
     SplashService.hide();
 
-    // 4. Navigate to Home
+    // Navigate to home with a smooth fade
     Navigator.of(context).pushReplacement(
       PageRouteBuilder(
         pageBuilder: (context, animation, secondaryAnimation) =>
@@ -40,36 +42,42 @@ class _SplashPageState extends State<SplashPage> {
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           return FadeTransition(opacity: animation, child: child);
         },
-        transitionDuration: const Duration(milliseconds: 800),
+        transitionDuration: const Duration(milliseconds: 600),
       ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    // This Flutter splash mirrors the web splash so the transition is seamless.
+    // On web: the HTML splash covers this, so the user only sees one splash.
+    // On mobile (if ever used): this provides a native splash experience.
     return Scaffold(
-      backgroundColor: const Color(0xFF0F172A), // Matches your web splash
+      backgroundColor: AppColors.background,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Profile Image with Glow
+            // Profile Image with animated glow ring
             Container(
-                  width: 150,
-                  height: 150,
+                  width: 140,
+                  height: 140,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: AppColors.primary, width: 4),
+                    border: Border.all(
+                      color: AppColors.primary,
+                      width: 3,
+                    ),
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.primary.withValues(alpha: 0.5),
+                        color: AppColors.primary.withValues(alpha: 0.3),
                         blurRadius: 30,
                         spreadRadius: 5,
                       ),
                     ],
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(75),
+                    borderRadius: BorderRadius.circular(70),
                     child: Image.asset(
                       'assets/image/profile/Eslam_Ahmed.jpg',
                       fit: BoxFit.cover,
@@ -77,39 +85,69 @@ class _SplashPageState extends State<SplashPage> {
                   ),
                 )
                 .animate()
-                .scale(duration: 600.ms, curve: Curves.bounceOut)
-                .fadeIn(),
+                .scale(
+                  duration: 700.ms,
+                  begin: const Offset(0.7, 0.7),
+                  end: const Offset(1.0, 1.0),
+                  curve: Curves.easeOutBack,
+                )
+                .fadeIn(duration: 600.ms),
 
-            const SizedBox(height: 32),
+            const SizedBox(height: 28),
 
-            // Name Text
+            // Name
             Text(
                   AppConstants.devName.toUpperCase(),
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 4,
+                    letterSpacing: 6,
                   ),
                 )
                 .animate(delay: 200.ms)
                 .fadeIn(duration: 600.ms)
-                .slideY(begin: 0.5, end: 0),
+                .slideY(begin: 0.4, end: 0),
 
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
 
-            // Loading Bar
+            // Tagline
+            ShaderMask(
+              shaderCallback: (bounds) => const LinearGradient(
+                colors: [
+                  AppColors.primary,
+                  AppColors.secondary,
+                  AppColors.accent,
+                ],
+              ).createShader(bounds),
+              child: const Text(
+                'STRUCTURAL DESIGN ENGINEER',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  letterSpacing: 3,
+                ),
+              ),
+            )
+                .animate(delay: 400.ms)
+                .fadeIn(duration: 600.ms)
+                .slideY(begin: 0.4, end: 0),
+
+            const SizedBox(height: 36),
+
+            // Loading bar
             SizedBox(
-              width: 150,
+              width: 120,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(2),
                 child: const LinearProgressIndicator(
                   backgroundColor: Colors.white10,
                   valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
                   minHeight: 2,
                 ),
               ),
-            ).animate(delay: 400.ms).fadeIn().scaleX(begin: 0, end: 1),
+            ).animate(delay: 600.ms).fadeIn().scaleX(begin: 0, end: 1),
           ],
         ),
       ),

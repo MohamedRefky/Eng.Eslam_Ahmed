@@ -1,11 +1,11 @@
 {
-    "name": "Eslam Ahmed Portfolio",
-    "short_name": "Eslam Ahmed",
+    "name": "Eng Eslam Ahmed",
+    "short_name": "Eng Eslam",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Eslam Ahmed - Civil Engineer & Structural Design Engineer Portfolio",
+    "description": "Eng Eslam Ahmed - Civil Engineer & Structural Design Engineer",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

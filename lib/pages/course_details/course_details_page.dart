@@ -11,6 +11,7 @@ import '../../core/widgets/buttons/language_switch_button.dart';
 import '../../main.dart';
 import 'widgets/book_now_section.dart';
 import 'widgets/course_sections.dart';
+import 'widgets/youtube_video_player.dart';
 
 class CourseDetailsPage extends StatefulWidget {
   final String courseId;
@@ -98,6 +99,8 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
     final isTablet = ResponsiveBreakpoints.of(context).isTablet;
     final isMobileOrTablet = isMobile || isTablet;
     final imagePath = courseData['image'] as String?;
+    final videoUrl = courseData['videoUrl'] as String?;
+    final hasVideo = videoUrl != null && videoUrl.isNotEmpty;
     final isArabic = Localizations.localeOf(context).languageCode == 'ar';
 
     return Scaffold(
@@ -238,13 +241,21 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                       child: isMobile
                           ? Column(
                               children: [
-                                // Floating course cover
-                                _PremiumCourseCover(
-                                  imagePath: imagePath,
-                                  width: 280,
-                                  height: 157,
-                                  showReflection: false,
-                                ),
+                                // Floating course cover / Video
+                                if (hasVideo)
+                                  YouTubeVideoPlayer(
+                                    videoUrl: videoUrl,
+                                    width: 280,
+                                    height: 157,
+                                    borderRadius: BorderRadius.circular(10),
+                                  )
+                                else
+                                  _PremiumCourseCover(
+                                    imagePath: imagePath,
+                                    width: 280,
+                                    height: 157,
+                                    showReflection: false,
+                                  ),
                                 const SizedBox(height: 12),
                                 _CourseHeroMeta(
                                   courseData: courseData,
@@ -256,12 +267,20 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Spacer(),
-                                _PremiumCourseCover(
-                                  imagePath: imagePath,
-                                  width: 360,
-                                  height: 202,
-                                  showReflection: true,
-                                ),
+                                if (hasVideo)
+                                  YouTubeVideoPlayer(
+                                    videoUrl: videoUrl,
+                                    width: 360,
+                                    height: 202,
+                                    borderRadius: BorderRadius.circular(10),
+                                  )
+                                else
+                                  _PremiumCourseCover(
+                                    imagePath: imagePath,
+                                    width: 360,
+                                    height: 202,
+                                    showReflection: true,
+                                  ),
                                 const SizedBox(width: 36),
                                 Expanded(
                                   flex: 3,

@@ -337,44 +337,56 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Description
-                    CourseDescriptionSection(courseData: courseData),
+                  children:
+                      [
+                            // Description
+                            CourseDescriptionSection(courseData: courseData),
 
-                    // WhatsApp Booking (CTA Card)
-                    CourseBookNowSection(
-                      courseData: courseData,
-                      onBookPressed: () => _bookCourse(courseData),
-                    ),
-                    const SizedBox(height: 24),
+                            // WhatsApp Booking (CTA Card)
+                            CourseBookNowSection(
+                              courseData: courseData,
+                              onBookPressed: () => _bookCourse(courseData),
+                            ),
+                            const SizedBox(height: 24),
 
-                    // Target Audience
-                    CourseTargetAudienceSection(courseData: courseData),
+                            // Target Audience
+                            CourseTargetAudienceSection(courseData: courseData),
 
-                    // Programs Used
-                    CourseProgramsSection(courseData: courseData),
+                            // Programs Used
+                            CourseProgramsSection(courseData: courseData),
 
-                    // Drawings / Sections Grid
-                    CourseDrawingsSection(courseData: courseData),
+                            // Drawings / Sections Grid
+                            CourseDrawingsSection(courseData: courseData),
 
-                    // Checks Grid
-                    CourseChecksSection(courseData: courseData),
+                            // Checks Grid
+                            CourseChecksSection(courseData: courseData),
 
-                    // Projects
-                    CourseProjectsSection(courseData: courseData),
+                            // Projects
+                            CourseProjectsSection(courseData: courseData),
 
-                    // Seismic Analysis Methods
-                    CourseAnalysisMethodsSection(courseData: courseData),
+                            // Seismic Analysis Methods
+                            CourseAnalysisMethodsSection(
+                              courseData: courseData,
+                            ),
 
-                    // Outcomes & Benefits
-                    CourseOutcomesBenefitsSection(courseData: courseData),
+                            // Outcomes & Benefits
+                            CourseOutcomesBenefitsSection(
+                              courseData: courseData,
+                            ),
 
-                    // FAQs
-                    CourseFaqsSection(courseData: courseData),
+                            // FAQs
+                            CourseFaqsSection(courseData: courseData),
 
-                    // Content Table / Syllabus
-                    CourseContentSection(courseData: courseData),
-                  ].animate(interval: 50.ms).fadeIn(duration: 500.ms).slideY(begin: 0.08, end: 0, curve: Curves.easeOutCubic),
+                            // Content Table / Syllabus
+                            CourseContentSection(courseData: courseData),
+                          ]
+                          .animate(interval: 50.ms)
+                          .fadeIn(duration: 500.ms)
+                          .slideY(
+                            begin: 0.08,
+                            end: 0,
+                            curve: Curves.easeOutCubic,
+                          ),
                 ),
               ),
             ),

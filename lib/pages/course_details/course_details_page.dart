@@ -110,7 +110,9 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
         slivers: [
           // ── Hero AppBar ─────────────────────────────────────────────────────
           SliverAppBar(
-            expandedHeight: isMobile ? 440 : 360,
+            expandedHeight: isMobile
+                ? (hasVideo ? 500 : 440)
+                : (hasVideo ? 440 : 360),
             pinned: true,
             backgroundColor: const Color(0xFF0a0a18),
             elevation: 0,
@@ -200,17 +202,21 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                       right: 0,
                       child: Center(
                         child: Container(
-                          width: isMobile ? 180 : 220,
-                          height: isMobile ? 140 : 180,
+                          width: isMobile
+                              ? (hasVideo ? 260 : 180)
+                              : (hasVideo ? 340 : 220),
+                          height: isMobile
+                              ? (hasVideo ? 200 : 140)
+                              : (hasVideo ? 260 : 180),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(60),
                             boxShadow: [
                               BoxShadow(
                                 color: AppColors.primary.withValues(
-                                  alpha: 0.25,
+                                  alpha: hasVideo ? 0.35 : 0.25,
                                 ),
-                                blurRadius: 80,
-                                spreadRadius: 20,
+                                blurRadius: hasVideo ? 100 : 80,
+                                spreadRadius: hasVideo ? 30 : 20,
                               ),
                               BoxShadow(
                                 color: AppColors.secondary.withValues(
@@ -243,11 +249,17 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                               children: [
                                 // Floating course cover / Video
                                 if (hasVideo)
-                                  YouTubeVideoPlayer(
-                                    videoUrl: videoUrl,
-                                    width: 280,
-                                    height: 157,
-                                    borderRadius: BorderRadius.circular(10),
+                                  LayoutBuilder(
+                                    builder: (context, constraints) {
+                                      final videoWidth = (MediaQuery.of(context).size.width - 48).clamp(280.0, 420.0);
+                                      final videoHeight = videoWidth * 9 / 16;
+                                      return YouTubeVideoPlayer(
+                                        videoUrl: videoUrl,
+                                        width: videoWidth,
+                                        height: videoHeight,
+                                        borderRadius: BorderRadius.circular(12),
+                                      );
+                                    },
                                   )
                                 else
                                   _PremiumCourseCover(
@@ -268,11 +280,18 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                               children: [
                                 const Spacer(),
                                 if (hasVideo)
-                                  YouTubeVideoPlayer(
-                                    videoUrl: videoUrl,
-                                    width: 360,
-                                    height: 202,
-                                    borderRadius: BorderRadius.circular(10),
+                                  LayoutBuilder(
+                                    builder: (context, constraints) {
+                                      final screenWidth = MediaQuery.of(context).size.width;
+                                      final videoWidth = (screenWidth * 0.38).clamp(400.0, 580.0);
+                                      final videoHeight = videoWidth * 9 / 16;
+                                      return YouTubeVideoPlayer(
+                                        videoUrl: videoUrl,
+                                        width: videoWidth,
+                                        height: videoHeight,
+                                        borderRadius: BorderRadius.circular(12),
+                                      );
+                                    },
                                   )
                                 else
                                   _PremiumCourseCover(

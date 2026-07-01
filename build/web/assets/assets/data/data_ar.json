@@ -1,0 +1,801 @@
+{
+  "personalInfo": {
+    "name": "مكتب م/ اسلام احمد للخدمات الهندسيه والتدريب",
+    "title": "مهندس مدني | مهندس تصميم إنشائي",
+    "description": "مهندس مدني بخبرة تزيد عن 6 سنوات في التصميم الإنشائي، والإشراف على المواقع، وأعمال المكتب الفني.",
+    "about": "مهندس مدني ذكي ونشيط يتمتع بمعرفة وخبرة واسعة في الإشراف على أعمال التشييد، الهندسة الإنشائية، وأعمال المكتب الفني. شغوف بتقديم حلول إنشائية عالية الجودة ومشاركة المعرفة من خلال تدريس الدورات الهندسية.",
+    "image": "assets/image/profile/Eslam_Ahmed.jpg",
+    "cv": "https://drive.google.com/file/d/1kZl3c4tSRP5alNUC5zK9WhxWrqfEjMqK/view?usp=sharing",
+    "github": "",
+    "linkedin": "",
+    "email": "eslamahmed157179@gmail.com",
+    "whatsappNumber": "+201061617649",
+    "phone": "+201061617649",
+    "location": "شبرا، القاهرة، مصر",
+    "nationality": "مصري",
+    "militaryService": "قدّم الخدمة العسكرية",
+    "dateOfBirth": "1 سبتمبر 1997",
+    "highlights": [
+      "مهندس تصميم إنشائي ومحاضر لدى شركة ENSKIIPA",
+      "خبرة 6 سنوات في سوق العمل والتدريس",
+      "قام بتصميم العديد من المشاريع داخل وخارج مصر",
+      "قام بتدريب 12,000 طالب وخريج خلال السنوات الماضية",
+      "مؤسس ومالك مكتب إسلام أحمد للخدمات الهندسية"
+    ]
+  },
+  "services": [
+    {
+      "title": "التصميم الإنشائي",
+      "description": "تصميم الأنظمة الإنشائية للمباني بما في ذلك الفيلات، والمباني الشاهقة، والمستشفيات، والمساجد، والمنشآت الصناعية.",
+      "icon": "building"
+    },
+    {
+      "title": "الإشراف على الموقع",
+      "description": "الإشراف على أنشطة البناء، وإدارة حاملات الأنابيب، والهياكل الإنشائية، وعمليات الحفر في الموقع.",
+      "icon": "hardHat"
+    },
+    {
+      "title": "هندسة المكتب الفني",
+      "description": "إعداد الرسومات التنفيذية (Shop Drawings)، وحصر الكميات، والرسومات التفصيلية للكمرات والأعمدة والأسقف والقواعد.",
+      "icon": "drafting"
+    },
+    {
+      "title": "الدورات الهندسية",
+      "description": "إلقاء المحاضرات في دبلومات التصميم الإنشائي، والخرسانة المسلحة، والأوتوكاد، والرسومات التنفيذية.",
+      "icon": "chalkboardTeacher"
+    }
+  ],
+  "projects": [
+    {
+      "title": "فيلا سكنية",
+      "description": "تصميم إنشائي كامل لفيلا سكنية تشمل جميع العناصر الإنشائية وتفاصيل التسليح.",
+      "imageUrl": "assets/image/image_all_projects/Villa_Project.PNG",
+      "images": [
+        "assets/image/1-Villa_Project/Villa_Project_intro-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-4.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-5.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-6.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-7.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-8.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-9.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-10.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-11.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-12.PNG",
+        "assets/image/image_all_projects/Villa_Project.PNG"
+      ],
+      "category": "سكني",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD",
+        "SAFE"
+      ],
+      "link": null
+    },
+    {
+      "title": "برج سكني شاهق",
+      "description": "تصميم إنشائي كامل يشمل اختيار النظام الإنشائي، ومخططات التسليح، وتصميم العناصر الإنشائية لجميع الأدوار.",
+      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg",
+      "images": [
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-2.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-1.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-2.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-4.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-5.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-6.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-7.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-8.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-9.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-10.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-bui-1.jpeg",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg"
+      ],
+      "category": "سكني",
+      "technologies": [
+        "ETABS",
+        "AutoCAD",
+        "SAP 2000"
+      ],
+      "link": null
+    },
+    {
+      "title": "خزان مياه علوي",
+      "description": "تحليل وتصميم إنشائي لخزان مياه علوي.",
+      "imageUrl": "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG",
+      "images": [
+        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-2.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-1.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-2.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-3.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-4.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-5.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG"
+      ],
+      "category": "بنية تحتية",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "صالات مستطيلة",
+      "description": "تصميم إنشائي كامل لنظام صالة مستطيلة بما في ذلك مخططات التسليح وتفاصيل العناصر الإنشائية.",
+      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+      "images": [
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-1.jpg",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+        "assets/image/4-Rectangular_Halls/Section Rft.PNG",
+        "assets/image/4-Rectangular_Halls/Sections.PNG",
+        "assets/image/4-Rectangular_Halls/Slab.PNG",
+        "assets/image/4-Rectangular_Halls/columns and axiss.PNG",
+        "assets/image/4-Rectangular_Halls/foundation.PNG"
+      ],
+      "category": "تجاري",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "قاعة أفراح — نظام إطارات دائرية",
+      "description": "تصميم إنشائي لقاعة أفراح باستخدام نظام الإطارات الدائرية.",
+      "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
+      "images": [
+        "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-2.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-3.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-4.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-5.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-6.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-7.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-8.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-9.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG",
+        "assets/image/image_all_projects/IMG_0660.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-11.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-12.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-13.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-14.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-15.jpeg"
+      ],
+      "category": "تجاري",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "مصنع — نظام إطارات مفصلية ثنائية",
+      "description": "تصميم إنشائي لمصنع صناعي باستخدام نظام إطارات مفصلية ثنائية مع التحليل الإنشائي الكامل.",
+      "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+      "images": [
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-2.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-1.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-2.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-3.PNG",
+        "assets/image/6-Heavy_Frame_Project/columns_and_axiss.PNG",
+        "assets/image/6-Heavy_Frame_Project/Slab.PNG",
+        "assets/image/6-Heavy_Frame_Project/foundation.PNG",
+        "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-2.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-3.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-4.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-5.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-6.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-7.jpeg"
+      ],
+      "category": "صناعي",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "مشروع مسجد",
+      "description": "تصميم إنشائي كامل لمسجد يشمل الأنظمة الإنشائية للقبة والمئذنة.",
+      "imageUrl": "assets/image/image_all_projects/Mosque.PNG",
+      "images": [
+        "assets/image/7-Mosque/intro-3.PNG",
+        "assets/image/7-Mosque/intro-1.PNG",
+        "assets/image/7-Mosque/intro-2.PNG",
+        "assets/image/7-Mosque/3D_VIEW-1.PNG",
+        "assets/image/7-Mosque/3D_VIEW-2.PNG",
+        "assets/image/7-Mosque/3D_VIEW-3.PNG",
+        "assets/image/7-Mosque/3D_VIEW-4.PNG",
+        "assets/image/7-Mosque/arc_ground-1.PNG",
+        "assets/image/7-Mosque/arc_ground-2.PNG",
+        "assets/image/7-Mosque/arc_Typical.PNG",
+        "assets/image/7-Mosque/arc-4.PNG",
+        "assets/image/7-Mosque/mosque.PNG",
+        "assets/image/7-Mosque/columns_and_axiss.PNG",
+        "assets/image/7-Mosque/Mosque-1.PNG",
+        "assets/image/7-Mosque/Mosque-2.PNG",
+        "assets/image/7-Mosque/Mosque-3.PNG",
+        "assets/image/7-Mosque/Mosque-4.PNG",
+        "assets/image/7-Mosque/Slab-1.PNG",
+        "assets/image/7-Mosque/Slab-2.PNG",
+        "assets/image/7-Mosque/Sections-1.PNG",
+        "assets/image/7-Mosque/Sections-2.PNG",
+        "assets/image/7-Mosque/Foundation.PNG",
+        "assets/image/7-Mosque/Stairs.PNG",
+        "assets/image/7-Mosque/XY_Plan.PNG",
+        "assets/image/7-Mosque/Yz_Plan.PNG",
+        "assets/image/7-Mosque/special-1.PNG",
+        "assets/image/7-Mosque/special-2.PNG"
+      ],
+      "category": "ديني",
+      "technologies": [
+        "ETABS",
+        "AutoCAD"
+      ],
+      "link": null
+    }
+  ],
+  "downloadableProjects": [
+    {
+      "id": "hospital_1",
+      "title": "HOSPITAL-1",
+      "description": "مشروع تصميم إنشائي كامل لمستشفى نموذج 1 يشمل المخططات الإنشائية واللوحات التفصيلية.",
+      "image": "assets/image/projects_picture/1.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1OzAXg4fJkBieNjlZl79Y6-TTLBeekc4A?usp=sharing"
+    },
+    {
+      "id": "mall_2",
+      "title": "MALL-2",
+      "description": "مشروع تصميم إنشائي لمركز تجاري (مول) يشمل النظام الإنشائي للأعمدة والأسقف المفرغة وقواعد التأسيس.",
+      "image": "assets/image/projects_picture/2.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1HG689GW79HZeuPLXDq0sVLzQPRgiBlkO?usp=sharing"
+    },
+    {
+      "id": "tall_building",
+      "title": "Tall Building",
+      "description": "مشروع تصميم برج شاهق الارتفاع مع دراسة أحمال الرياح والزلازل والنظام الإنشائي المقاوم للأحمال الجانبية.",
+      "image": "assets/image/projects_picture/3.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1137qX1Q_j-Xs20Ta13RmG_yc6S-W1VmC?usp=sharing"
+    },
+    {
+      "id": "admin_building_3",
+      "title": "مبنى إداري - 3",
+      "description": "مشروع تصميم مبنى إداري متكامل يشمل التفاصيل الإنشائية وحصر وتوزيع الأحمال.",
+      "image": "assets/image/projects_picture/4.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1Gjh2vIL3hK5To2_nHVwrU3GkasjqwlQI?usp=sharing"
+    },
+    {
+      "id": "full_hospital_project",
+      "title": "مشروع كامل لمستشفى",
+      "description": "دراسة وتصميم إنشائي متكامل لمستشفى بجميع تفاصيل تسليح البلاطات، الأعمدة، الكاميرات، والأساسات.",
+      "image": "assets/image/projects_picture/5.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/16khd4VgK6n4y7NXbP68vgDD0couP6oTN?usp=sharing"
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "البريد الإلكتروني",
+      "url": "mailto:eslamahmed157179@gmail.com",
+      "icon": "email"
+    },
+    {
+      "platform": "واتساب",
+      "url": "https://wa.me/201061617649",
+      "icon": "whatsapp"
+    },
+    {
+      "platform": "فيسبوك",
+      "url": "https://www.facebook.com/share/1CbbKZ1Vud/?mibextid=wwXIfr",
+      "icon": "facebook"
+    },
+    {
+      "platform": "إنستغرام",
+      "url": "https://www.instagram.com/instructor_eslamahmed?igsh=bWFwZ2MyZG9sZjRi&utm_source=qr",
+      "icon": "instagram"
+    },
+  
+    {
+      "platform": "لينكد إن",
+      "url": "https://www.linkedin.com/in/eslam-ahmed157179",
+      "icon": "linkedin"
+    }
+  ],
+  "feedbackImages": [
+    "assets/image/feadback/1.png",
+    "assets/image/feadback/2.png",
+    "assets/image/feadback/3.png",
+    "assets/image/feadback/pictures_with_student.png"
+  ],
+  "courses": [
+    {
+      "id": "civil_autocad",
+      "title": "Civil Auto-cad",
+      "image": "assets/image/courses_picture/AUTOCAD.png",
+      "videoUrl": "https://youtube.com/shorts/Fhx_jZVMWj4",
+      "duration": "٣٣ ساعة",
+      "lectures": "١١ محاضرة (٣٩ فيديو)",
+      "description": "من اهم الكورسات التي لا غني عنها الي مهندس مدني. لأنه يعتبر هو اساس شغلنا سواء في مجال التصميم او المكتب الفني. كل اللوحات اللي بيتم تنفيذ المشروع علي ارض الواقع تخرج من هذا البرنامج. اذا كنت تريد ان تدخل مشروع تخرج خرسانه مسلحه او استراكشر او كنت شغال بمجال التصميم او مجال المكتب الفني يجب عليك اولاً ان تبدأ التعلم علي هذا البرنامج لأنه هو الأساس اللي هتبني عليه كل الخطوات القادمة.",
+      "targetAudience": [
+        "هذا الكورس للمهندسين طلبة هندسة قسم مدني فقط",
+        "يعد الكورس مناسب لمهندسين التنفيذ ومهندسين المكتب الفني",
+        "وحديثي التخرج والطالب",
+        "الكورس مناسب لمهندسين التصميم والمبتدئين",
+        "مناسب لطالب مشروع تخرج (خرسانة و مشروع استراكشر)"
+      ],
+      "drawings": [
+        "لوحة المحاور والأعمدة",
+        "لوحة الأساسات",
+        "لوحة قطاعات الأعمدة",
+        "لوحة قطاعات الأساسات",
+        "لوحة قطاعات الكمرات",
+        "لوحة قطاعات السلالم",
+        "لوحة السقف المصمت (سوليد سلاب)",
+        "لوحة السقف المسطح (فلات سلاب)",
+        "لوحة السقف الهوردي (هولو بلوك سلاب)",
+        "لوحة السقف ذات الكمرات المتقاطعه (بانلد سلاب)",
+        "تحويل لوحه من النظام المعماري الي النظام الانشائي"
+      ],
+      "projects": [
+        "مشروع فيلا سكنية",
+        "مشروع تغطيات Hinged Frame",
+        "مشروع تغطيات Radial Frame"
+      ],
+      "faqs": [
+        {
+          "question": "هل الكورس فيه شرح مانيوال؟",
+          "answer": "نعم بالفعل، الكورس فيه شرح بعض الأجزاء المانيوال الهامه جدا اللي هتساعدك في فهم أساسيات الرسم علي برنامج الاوتوكاد."
+        },
+        {
+          "question": "كم عدد ساعات الكورس؟",
+          "answer": "الكورس مدته 33 ساعه، عبارة عن 11 محاضرة و 39 فيديو شرح بنشرحه في شهر ونصف."
+        },
+        {
+          "question": "هل الكورس عبارة عن فيديوهات مسجله؟",
+          "answer": "نعم بالفعل، الكورس عبارة عن فيديوهات مسجله بجوده عاليه 1080."
+        },
+        {
+          "question": "كيف يتم المتابعة؟",
+          "answer": "بيتم اضافة المتدربين في جروب علي الواتساب، ويتم المتابعه اليومية من خلال تيم كامل من خدمة العملاء لمساعدتك بشكل مستمر، ومن خلال المحاضر ايضا علشان يجاوبك علي كل أسئلتك يوميا."
+        }
+      ],
+      "outcomes": [
+        "ستصبح مؤهل تماما لدخول مجال التصميم الانشائي",
+        "سيكون لديك الخبرة والمقدرة الكامله علي قراءة اللوحات المعمارية",
+        "سيكون لديك الخبرة والمقدرة الكامله علي عمل نظام انشائي متزن",
+        "سيكون لديك الخبرة والمقدرة الكامله علي رص الأعمدة في النظام الانشائي",
+        "سيكون لديك الخبرة والمقدرة الكامله علي وضع الكمرات في النظام الانشائي",
+        "سيكون لديك الخبرة والمقدرة الكامله علي اختيار نوع السقف المناسب",
+        "اذا كنت طالب سيساعدك الكورس علي اجتياز مشروع التخرج بجدارة وتفوق"
+      ],
+      "benefits": [
+        "سيتم اضافتك علي المنصه الخاصه بنا وفيها مميزات كثيرة",
+        "هتستلم كل الماتريال الخاصه بالشرح (مكتبة مشاريع + لوحات انشائية + كتب الشرح)",
+        "هتستلم شهادة باتمام الكورس بعد اجتيازك نسبة 80% من التاسكات",
+        "هنعلمك ازاي تسوق نفسك صح عن طريق عمل CV + Portfolio قوي",
+        "المتابعة اليومية ودي أهم نقطه، لأن بيتابع معاك المحاضر وخدمة العملاء يوميا علشان يحلو كل مشاكلك",
+        "بيطلع معاك المحاضر يوم في الأسبوع ميتنج علي زوم علشان يراجع معاك كل اللي تم خلال الاسبوع ويرد علي اسئلتك",
+        "بندي البرنامج علشان بعد Test بنطمن علي مستواك",
+        "بيتم تقييم التاسكات الخاصه بكل متدرب من خلال جروب الفيس بوك"
+      ],
+      "content": [
+        {
+          "lecture": "Lecture (1)",
+          "subject": "Introduction & Edit Options"
+        },
+        {
+          "lecture": "Lecture (2)",
+          "subject": "Column and Axis & Foundation"
+        },
+        {
+          "lecture": "Lecture (3)",
+          "subject": "Sections Of Column and Walls & Foundation"
+        },
+        {
+          "lecture": "Lecture (4)",
+          "subject": "Sections of Beams & Section of Stairs"
+        },
+        {
+          "lecture": "Lecture (5)",
+          "subject": "Solid Slabs & Flat Slabs"
+        },
+        {
+          "lecture": "Lecture (6)",
+          "subject": "Hollow Block & Paneled Beams"
+        },
+        {
+          "lecture": "Lecture (7)",
+          "subject": "Text Style & Dimension Style"
+        },
+        {
+          "lecture": "Lecture (8)",
+          "subject": "Statically System"
+        },
+        {
+          "lecture": "Lecture (9)",
+          "subject": "Project 1. (Villa)"
+        },
+        {
+          "lecture": "Lecture (10)",
+          "subject": "Project 2. (Rectangle Halls)"
+        },
+        {
+          "lecture": "Lecture (11)",
+          "subject": "Project 3. (Radial Halls)"
+        }
+      ]
+    },
+    {
+      "id": "csi_diploma",
+      "title": "CSI DIPLOMA",
+      "image": "assets/image/courses_picture/CSI_PRO_TRACK.png",
+      "videoUrl": "https://www.youtube.com/shorts/U0jInOO6npM",
+      "duration": "٩٢ ساعة",
+      "lectures": "٣٧ محاضرة (١٣٨ فيديو)",
+      "description": "دبلومة التصميم الإنشائي عبارة عن كورس احترافي متكامل للتصميم الإنشائي للمنشآت الخرسانية يشمل الشرح المانيوال والتطبيق العملي على تصميم العديد من المشاريع باستخدام برامج التصميم المختلفة وتعد هذه الدبلومة بدول الخليج والشرق الأوسط هي الأكثر انتشاراً.",
+      "targetAudience": [
+        "يعد هذا الكورس للمهندسين طلبة هندسة قسم مدني فقط",
+        "لا يشترط أي خبرة سابقة أو الالمام بأي برامج لأننا هنبدأ من الصفر",
+        "حديثي التخرج والطلاب",
+        "الكورس مناسب لمهندسين التصميم والمبتدئين",
+        "مناسب لطلاب مشروع تخرج (خرسانة و مشروع الأساسات)"
+      ],
+      "drawings": [
+        "الأعمدة المقيدة والغير مقيدة",
+        "الكمرات الساقطة والمدفونة والمقلوبة والدائرية والمتكسرة مع السلم",
+        "الـ Solid Slab",
+        "الـ Flat Slab",
+        "الـ Hollow Block Slab",
+        "الـ Paneled Beams Slab",
+        "السلالم بجميع أنواعها (Helical – two Flight – Three Flight)",
+        "القواعد بجميع أنواعها (Strip – Raft – Combined – Isolated)",
+        "الحوائط الساندة (Retaining walls)",
+        "حوايط القص (Shear walls)",
+        "الـ Core",
+        "أعمدة الواجهات (End gables)",
+        "عناصر الخزانات مثل (Shaft – Cone - Lower cone - Walls - Dome)",
+        "الكمرات التحويلية (Transfer Beam)",
+        "المنحدرات (Ramps)"
+      ],
+      "projects": [
+        "مشروع فيلا سكنية تحت تأثير الأحمال الرأسية فقط",
+        "مشروع برج سكني تحت تأثير (الزلازل + الرياح + الأحمال الرأسية)",
+        "مشروع مستشفى تحت تأثير (الزلازل + الرياح + الأحمال الرأسية)",
+        "مشروع تغطيات Hinged Frame تحت تأثير (M + N)",
+        "مشروع تغطيات Radial Frame تحت تأثير (M + N)",
+        "مشروع خزان مياه علوي (Elevated Tank)"
+      ],
+      "faqs": [
+        {
+          "question": "هل الدبلومة فيها شرح مانيوال؟",
+          "answer": "نعم بالفعل، الدبلومة فيها شرح بعض الأجزاء المانيوال الهامة جداً التي ستساعدك في فهم أساسيات الشغل على برامج التحليل الإنشائي."
+        },
+        {
+          "question": "كم عدد ساعات الدبلومة؟",
+          "answer": "الدبلومة مدتها بالكامل 92 ساعة، عبارة عن 37 محاضرة و 138 فيديو شرح بنشرحها في 3 شهور."
+        },
+        {
+          "question": "هل الدبلومة عبارة عن فيديوهات مسجلة؟",
+          "answer": "نعم بالفعل، الدبلومة عبارة عن فيديوهات مسجلة بجودة عالية 1080."
+        },
+        {
+          "question": "كيف يتم المتابعة؟",
+          "answer": "يتم إضافة المتدربين في جروب على الواتساب، ويتم المتابعة اليومية من خلال تيم كامل من خدمة العملاء لمساعدتك بشكل مستمر، ومن خلال المحاضر أيضاً للإجابة على كل أسئلتك يومياً."
+        }
+      ],
+      "outcomes": [
+        "ستصبح مؤهل تماماً للعمل كمهندس تصميم إنشائي بالمكاتب الاستشارية أو كمهندس تصميم إنشائي حر لحسابك الشخصي",
+        "سيكون لديك الخبرة والمقدرة الكاملة على إعداد تصميمات إنشائية بشكل احترافي وحتى إخراج اللوحات وطباعتها وإعداد النوتة الحسابية",
+        "ستصبح متمكناً من جميع البرامج المستخدمة في التصميم الإنشائي",
+        "إذا كنت طالباً سيساعدك الكورس على اجتياز مشروع التخرج بجدارة وتفوق (إذا كان خرسانة مسلحة)"
+      ],
+      "benefits": [
+        "هتستلم كل البرامج المستخدمة في الدبلومة بطريقة التسطيب",
+        "هتستلم كل الماتريال الخاصة بالشرح (مثل مكتبة مشاريع + شيتات الإكسيل + لوحات إنشائية + كتب الشرح)",
+        "هتستلم شهادة بإتمام الكورس بعد اجتيازك نسبة 80% من التاسكات",
+        "هنعلمك إزاي تسوق نفسك صح عن طريق عمل CV + Portfolio قوي",
+        "المتابعة اليومية ودي أهم نقطة، لأن بيتابع معاك المحاضر وخدمة العملاء يومياً علشان يحلوا كل مشاكلك",
+        "بيطلع معاك المحاضر يوم في الأسبوع ميتينج على زوم علشان يراجع معاك كل اللي تم خلال الأسبوع ويرد على أسئلتك",
+        "بنعمل Test بعد كل برنامج علشان نطمن على مستواك",
+        "بيتم تقييم التاسكات الخاصة بكل متدرب من خلال جروب الفيس بوك"
+      ],
+      "programs": [
+        "AUTOCAD",
+        "SAP2000",
+        "SAFE",
+        "ETABS",
+        "CSI COLUMN",
+        "SP COLUMN",
+        "EXCEL",
+        "Dtanks",
+        "Egyptian concrete design program CDP"
+      ],
+      "checks": [
+        "Check Deflection of All Slabs",
+        "Check Punching for Flat Slab and All footings",
+        "Check Shear Stress and Torsion for beams",
+        "Check Soil Pressure",
+        "Check Story Drift",
+        "Check Overturning",
+        "Check Sliding",
+        "Check center of mass and center of Rigidity",
+        "Check Displacement",
+        "Check Bearing Stress"
+      ],
+      "analysisMethods": [
+        "Equivalent Static Load Method",
+        "Response Spectrum Method"
+      ]
+    },
+    {
+      "id": "manual_design",
+      "title": "Manual Design",
+      "image": "assets/image/courses_picture/MANUAL_AND_SHOP_DRAWING.png",
+      "videoUrl": "https://youtube.com/shorts/9WAwD_BgX6s",
+      "duration": "٦٦ ساعة",
+      "lectures": "١١ محاضرة (١٤٦ فيديو)",
+      "description": "كورس التأسيس الإنشائي المانيوال هو كورس احترافي متكامل للتصميم الإنشائي المانيوال للعناصر الموجودة بالمبنى بالإضافة إلى تعلم أصول رسم وتفريد حديد التسليح بشكل مانيوال (شوب دروينج مانيوال). هدفنا الأساسي من الكورس هو تأسيس المهندس المدني عن طريق أنه يتعلم تصميم مانيوال.",
+      "targetAudience": [
+        "هذا الكورس للمهندسين طلبة هندسة قسم مدني فقط",
+        "يعد الكورس مناسب لمهندسين التنفيذ ومهندسين المكتب الفني",
+        "وحديثي التخرج والطلاب",
+        "الكورس مناسب لمهندسين التصميم والمبتدئين",
+        "مناسب لطلاب مشروع تخرج خرسانة ومشروع الأساسات"
+      ],
+      "drawings": [
+        "مراجعة تفصيلية علي منهج التحليل الإنشائي وطرق انتقال الأحمال",
+        "حساب القوى الداخلية والاتزان ومعادلاته للقطاعات المختلفة",
+        "تصميم الكمرات الخرسانية بمختلف أنواعها (الساقطة، المدفونة، المقلوبة، الدائرية، المتكسرة)",
+        "تفاصيل وتفريد حديد تسليح الكمرات وعمل Checks للقص (Shear) وعزم الالتواء (Torsion)",
+        "تصميم الأعمدة القصيرة والنحيفة، وحساب الأحمال ومعادلات الأعمدة القصيرة والحلزونية",
+        "تفاصيل تسليح الأعمدة ورص الأسياخ وحساب طول الإشاير وعمل Checks للإنبعاج (Buckling)",
+        "تصميم وتفريد تسليح الأسقف المصمتة (Solid Slabs) وتوزيع أحمالها وحساب سمكها",
+        "تصميم وتفريد تسليح الأسقف المسطحة (Flat Slabs) وتفاصيل Drop Panel و Column Head",
+        "حساب حديد التسليح الإضافي والكراسي والأوتار وعمل Check Punching للأسقف المسطحة",
+        "تصميم وتفريد تسليح الأسقف الهوردي (Hollow Block Slabs) وتفاصيل الأعصاب والـ Block",
+        "تصميم وتفريد تسليح الأسقف ذات الكمرات المتقاطعة (Paneled Beams Slabs)",
+        "تصميم وتفريد تسليح السلالم بجميع أنواعها (قلبتين، 3 قلبات، السلالم الحلزونية Helical)",
+        "تصميم القواعد المنفصلة (Isolated)، المشتركة (Combined)، والشريطية (Strip)",
+        "تصميم قواعد الجار والشدادات (Strap Footings) واللبشة المسلحة (Raft Foundations)",
+        "تصميم وتفريد حديد التسليح للسمالت والميدات والشدادات وعلاقتها بالقواعد والأعمدة",
+        "حساب أحمال الرياح والزلازل والطرق الديناميكية والاستاتيكية لتحليل المنشآت زلزالياً",
+        "تصميم وتفريد حديد حوائط القص (Shear Walls) والـ Core"
+      ],
+      "faqs": [
+        {
+          "question": "هل الكورس يعتمد على الشرح المانيوال؟",
+          "answer": "نعم بالفعل، الكورس مخصص بالكامل للشرح والتصميم المانيوال وتفريد حديد التسليح يدوياً لتأسيس المهندس المدني من الصفر."
+        },
+        {
+          "question": "كم عدد ساعات الكورس؟",
+          "answer": "الكورس مدته بالكامل 66 ساعة، عبارة عن 11 محاضرة و 146 فيديو شرح."
+        },
+        {
+          "question": "هل الكورس عبارة عن فيديوهات مسجلة؟",
+          "answer": "نعم بالفعل، الكورس عبارة عن فيديوهات مسجلة بجودة عالية 1080."
+        },
+        {
+          "question": "كيف يتم المتابعة؟",
+          "answer": "يتم إضافة المتدربين في جروب على الواتساب، ويتم المتابعة اليومية من خلال تيم كامل من خدمة العملاء لمساعدتك بشكل مستمر، ومن خلال المحاضر أيضاً للإجابة على كل أسئلتك يومياً."
+        }
+      ],
+      "outcomes": [
+        "ستصبح مؤهل تماماً للعمل كمهندس تصميم إنشائي بالمكاتب الاستشارية أو كمهندس تصميم إنشائي حر لحسابك الشخصي",
+        "سيكون لديك الخبرة والمقدرة الكاملة على إعداد تصميمات إنشائية بشكل احترافي وحتى إخراج اللوحات وطباعتها وإعداد النوتة الحسابية مانيوال",
+        "ستصبح متمكناً من فهم وتصميم كافة العناصر الإنشائية مانيوال وتفريد حديد التسليح مانيوال شوب دروينج",
+        "إذا كنت طالباً سيساعدك الكورس على اجتياز مشروع التخرج بجدارة وتفوق (إذا كان خرسانة مسلحة)"
+      ],
+      "benefits": [
+        "سيتم إضافتك على المنصة الخاصة بنا وفيها مميزات كثيرة",
+        "هتستلم كل الماتريال الخاصة بالشرح (مثل مكتبة مشاريع + شيتات الإكسيل + لوحات إنشائية + كتب الشرح)",
+        "هتستلم شهادة بإتمام الكورس بعد اجتيازك نسبة 80% من التاسكات",
+        "هنعلمك إزاي تسوق نفسك صح عن طريق عمل CV + Portfolio قوي",
+        "المتابعة اليومية ودي أهم نقطة، لأن بيتابع معاك المحاضر وخدمة العملاء يومياً علشان يحلوا كل مشاكلك",
+        "بيطلع معاك المحاضر يوم في الأسبوع ميتينج على زوم علشان يراجع معاك كل اللي تم خلال الأسبوع ويرد على أسئلتك",
+        "بنعمل Test بعد كل قسم علشان نطمن على مستواك",
+        "بيتم تقييم التاسكات الخاصة بكل متدرب من خلال جروب الفيس بوك"
+      ],
+      "checks": [
+        "Check Deflection of All Slabs",
+        "Check Punching for Flat Slab and All footings",
+        "Check Shear Stress and Torsion for beams",
+        "Check Overturning",
+        "Check Sliding",
+        "Check center of mass and center of Rigidity"
+      ],
+      "content": [
+        {
+          "lecture": "Lecture (1)",
+          "subject": "Structural Analysis Revision"
+        },
+        {
+          "lecture": "Lecture (2)",
+          "subject": "Introduction about Rc Manual"
+        },
+        {
+          "lecture": "Lecture (3)",
+          "subject": "Design and Shop Drawing Of beam"
+        },
+        {
+          "lecture": "Lecture (4)",
+          "subject": "Design and Shop Drawing Of Column"
+        },
+        {
+          "lecture": "Lecture (5)",
+          "subject": "Design and Shop Drawing Of Solid slab"
+        },
+        {
+          "lecture": "Lecture (6)",
+          "subject": "Design and Shop Drawing Of Flat slab"
+        },
+        {
+          "lecture": "Lecture (7)",
+          "subject": "Design and Shop Drawing Of Hollow Block"
+        },
+        {
+          "lecture": "Lecture (8)",
+          "subject": "Design and Shop Drawing Of Paneled beams"
+        },
+        {
+          "lecture": "Lecture (9)",
+          "subject": "Design and Shop Drawing Of Stairs"
+        },
+        {
+          "lecture": "Lecture (10)",
+          "subject": "Design and Shop Drawing Of Footings"
+        },
+        {
+          "lecture": "Lecture (11)",
+          "subject": "Introduction to Lateral Loads"
+        }
+      ]
+    }
+  ],
+  "books": [
+    {
+      "id": "system_structures",
+      "title": "6-System Structures",
+      "author": "د. عبد الرحمن مجاهد",
+      "description": "كتاب متخصص في أنظمة الهياكل الإنشائية",
+      "image": "assets/image/books_picture/1.JPG",
+      "driveLink": "https://drive.google.com/file/d/1QVtErN2jLiSk_64gvbg-UAUenj2-cT6J/view?usp=drive_link",
+      "category": "إنشائي"
+    },
+    {
+      "id": "forty_questions",
+      "title": "40 Questions In Structure Engineering",
+      "author": "إعداد وتجميع م/ كريم سيد جابر",
+      "description": "مجموعة من الأسئلة والمسائل فى الخرسانة المسلحة مع اجاباتها طبقًا للكود المصري للخرسانة",
+      "image": "assets/image/books_picture/2.JPG",
+      "driveLink": "https://docs.google.com/document/d/1QLRhXdO8XgLiJPfqRrR9v1iSYoDA9mHVeh2hu0ZEC18/edit?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "seventy_five_questions",
+      "title": "75 Common questions in ECP203-2018",
+      "author": "م/ كريم سيد جابر",
+      "description": "75 سؤالاً شائعاً في تصميم وتنفيذ المنشآت الخرسانية طبقاً للكود المصري للخرسانة",
+      "image": "assets/image/books_picture/3.JPG",
+      "driveLink": "https://drive.google.com/file/d/1ITt_nBEsXKXLAKnPswDPjMlrg04NM08R/view?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "ecp_203_2017",
+      "title": "ECP 203-2017",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "الكود المصري لتصميم وتنفيذ المنشآت الخرسانية",
+      "image": "assets/image/books_picture/4.JPG",
+      "driveLink": "https://drive.google.com/file/d/1EncCvyFyiRXgEaQlt5I1C3WYVKMyzO_s/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "Egyptian_code_203_2007",
+      "title": "الكود المصري 203-2007",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "الكود المصرى لتصميم وتنفيذ المنشات الخرسانيه كود رقم 203 - 2007",
+      "image": "assets/image/books_picture/5.JPG",
+      "driveLink": "https://drive.google.com/file/d/1O-Vc4aGID8D3SL1pbU5-SGgvxxIqrUxv/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "reinforcing_retaining_walls",
+      "title": "تسليح الجدران الخرسانية الساندة",
+      "author": "م/ ياسين محمد عبده",
+      "description": "سلسلة الوحدات التدريبية المتكاملة لمجموعة مهن بناء الهياكل - تسليح الجدران الخرسانية الساندة، وزارة التعليم الفني والتدريب المهني (قطاع المناهج والتعليم المستمر).",
+      "image": "assets/image/books_picture/6.JPG",
+      "driveLink": "https://drive.google.com/file/d/12ZLyqnyaFxnANe7EvOSopWhRhtpSgo2A/view?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "site_engineer_mission",
+      "title": "Site Engineer Mission",
+      "author": "غير معروف",
+      "description": "دليل مهندس الموقع في أعمال التنفيذ والإشراف الهندسي.",
+      "image": "assets/image/books_picture/7.JPG",
+      "driveLink": "https://drive.google.com/file/d/1dP8ZW-qZtl8Bzr2ua61U8NLotYH_B2T3/view?usp=sharing",
+      "category": "تنفيذ"
+    },
+    {
+      "id": "excavation_backfilling",
+      "title": "أعمال الحفر والردم",
+      "author": "م/ إسلام حمدي رزق البسطويسي",
+      "description": "كتاب هندسي متخصص يشرح أعمال الحفر والردم في المواقع والمنشآت.",
+      "image": "assets/image/books_picture/8.JPG",
+      "driveLink": "https://drive.google.com/file/d/1urAFcwKhnDqOKuO_VzH2KUBfbNlR5odt/view?usp=sharing",
+      "category": "تنفيذ"
+    },
+    {
+      "id": "egyptian_loads_code",
+      "title": "الكود المصري للأحمال 201-2008",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "الكود المصري لحساب الأحمال والقوى في الأعمال الإنشائية وأعمال المباني كود رقم 201 - 2008.",
+      "image": "assets/image/books_picture/9.JPG",
+      "driveLink": "https://drive.google.com/file/d/1-IRsIVHPJMvn4DIRaqVzngX5dcKjBBsH/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "types_buildings_slabs",
+      "title": "أنواع المباني والبلاطات الخرسانية",
+      "author": "غير معروف",
+      "description": "مقدمة عن العمارة والأنظمة الإنشائية المختلفة للبلاطات الخرسانية.",
+      "image": "assets/image/books_picture/10.JPG",
+      "driveLink": "https://drive.google.com/file/d/1f59ERJEUEyAyTQK8ceI8rQW0iab-OTuv/view?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "repair_strengthening_mansoura",
+      "title": "ترميم وتدعيم المنشآت - جامعة المنصورة",
+      "author": "اتحاد طلاب كلية الهندسة بجامعة المنصورة",
+      "description": "كتاب متخصص في طرق ترميم وتدعيم المنشآت الخرسانية من إعداد اتحاد طلاب كلية الهندسة بجامعة المنصورة.",
+      "image": "assets/image/books_picture/11.JPG",
+      "driveLink": "https://drive.google.com/file/d/1mafJ4VLdoBXrkeSZ2amz2ZTNarvZFTf1/view?usp=sharing",
+      "category": "إنشائي"
+    },
+    {
+      "id": "structural_details_guide",
+      "title": "دليل التفاصيل الإنشائية 203-2003",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "دليل التفاصيل الإنشائية الصادر عن اللجنة الدائمة للكود المصري لتصميم وتنفيذ المنشآت الخرسانية رقم 203 - 2003.",
+      "image": "assets/image/books_picture/12.JPG",
+      "driveLink": "https://drive.google.com/file/d/1kwQZ6u9HByqH6JV8MoT20oR4q7Ah49Tx/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "finishing_works_guide",
+      "title": "شرح أعمال التشطيبات للمباني الخرسانية",
+      "author": "غير معروف",
+      "description": "دليل عملي يشرح تفاصيل وخطوات أعمال التشطيبات المختلفة للمباني الخرسانية.",
+      "image": "assets/image/books_picture/13.JPG",
+      "driveLink": "https://drive.google.com/file/d/1_0Oo1BlDtfT7JcgsLXMQ-DCDTrejgT-1/view?usp=sharing",
+      "category": "تنفيذ"
+    },
+    {
+      "id": "unified_building_law",
+      "title": "قانون البناء الموحد 119 لسنة 2008",
+      "author": "وزارة الإسكان والمرافق والتنمية العمرانية",
+      "description": "اللائحة التنفيذية لقانون البناء الموحد الصادر بقانون رقم 119 لسنة 2008.",
+      "image": "assets/image/books_picture/14.JPG",
+      "driveLink": "https://drive.google.com/file/d/1yih9iwY89ly2IozbVIF2RtPVcY3YUNkR/view?usp=sharing",
+      "category": "كود هندسي"
+    },
+    {
+      "id": "foundation_engineering_agha",
+      "title": "مبادئ هندسة الأساسات للمهندس أحمد الآغا",
+      "author": "م/ أحمد الآغا",
+      "description": "كتاب أساسيات هندسة الأساسات مع مسائل محلولة وتطبيقات عملية للشرح.",
+      "image": "assets/image/books_picture/15.JPG",
+      "driveLink": "https://drive.google.com/file/d/12kCfoYJk_Hgyv0f5WldNFsaHfKQRQxDW/view?usp=sharing",
+      "category": "إنشائي"
+    }
+  ]
+}

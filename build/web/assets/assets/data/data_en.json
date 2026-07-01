@@ -1,0 +1,800 @@
+{
+  "personalInfo": {
+    "name": "Eng. Eslam Ahmed Office for Engineering Services & Training",
+    "title": "Civil Engineer | Structural Design Engineer",
+    "description": "Civil Engineer with 6+ years of experience in structural design, site supervision, and technical office engineering.",
+    "about": "A smart and energetic civil engineer with wide knowledge and experience in construction supervising, structural engineering, and technical office work. Passionate about delivering high-quality structural solutions and sharing knowledge through teaching engineering courses.",
+    "image": "assets/image/profile/Eslam_Ahmed.jpg",
+    "cv": "https://drive.google.com/file/d/1kZl3c4tSRP5alNUC5zK9WhxWrqfEjMqK/view?usp=sharing",
+    "github": "",
+    "linkedin": "",
+    "email": "eslamahmed157179@gmail.com",
+    "whatsappNumber": "+201061617649",
+    "phone": "+201061617649",
+    "location": "Shoubra, Cairo, Egypt",
+    "nationality": "Egyptian",
+    "militaryService": "Completed",
+    "dateOfBirth": "Sep 1, 1997",
+    "highlights": [
+      "Structural Design Engineer and Lecturer at ENSKIIPA",
+      "6 years of experience in the labor market and teaching",
+      "Designed numerous projects inside and outside Egypt",
+      "Trained 12,000 students and graduates over the past years",
+      "Founder and owner of Eslam Ahmed Office for Engineering Services"
+    ]
+  },
+  "services": [
+    {
+      "title": "Structural Design",
+      "description": "Designing structural systems for buildings including villas, high-rise buildings, hospitals, mosques, and industrial structures.",
+      "icon": "building"
+    },
+    {
+      "title": "Site Supervision",
+      "description": "Supervising construction activities, managing pipe racks, structures, and site excavation operations.",
+      "icon": "hardHat"
+    },
+    {
+      "title": "Technical Office Engineering",
+      "description": "Preparing shop drawings, quantity take-offs, and detailed drawings for beams, columns, slabs, and footings.",
+      "icon": "drafting"
+    },
+    {
+      "title": "Engineering Courses",
+      "description": "Lecturing in structural design, reinforced concrete, AutoCAD, and shop drawing courses.",
+      "icon": "chalkboardTeacher"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Villa",
+      "description": "Full structural design for residential villa including all structural elements and reinforcement details.",
+      "imageUrl": "assets/image/image_all_projects/Villa_Project.PNG",
+      "images": [
+        "assets/image/1-Villa_Project/Villa_Project_intro-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-1.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-2.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-4.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-5.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-6.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-7.PNG",
+        "assets/image/1-Villa_Project/Villa_Project_intro-3.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-8.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-9.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-10.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-11.PNG",
+        "assets/image/1-Villa_Project/Villa_Project-12.PNG",
+        "assets/image/image_all_projects/Villa_Project.PNG"
+      ],
+      "category": "Residential",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD",
+        "SAFE"
+      ],
+      "link": null
+    },
+    {
+      "title": "High Rise Building",
+      "description": "Full structural design including system selection, reinforcement layouts, and element design for all floors.",
+      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg",
+      "images": [
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-2.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-1.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-2.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building_intro-3.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-4.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-5.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-6.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-7.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-8.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-9.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-10.PNG",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-bui-1.jpeg",
+        "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg"
+      ],
+      "category": "Residential",
+      "technologies": [
+        "ETABS",
+        "AutoCAD",
+        "SAP 2000"
+      ],
+      "link": null
+    },
+    {
+      "title": "Elevated Tank",
+      "description": "Structural design and analysis for an elevated water tank.",
+      "imageUrl": "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG",
+      "images": [
+        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-2.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-1.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-2.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-3.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-4.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-5.PNG",
+        "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG"
+      ],
+      "category": "Infrastructure",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Rectangular Halls",
+      "description": "Full structural design for rectangular hall system including reinforcement layouts and structural element details.",
+      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+      "images": [
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-1.jpg",
+        "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+        "assets/image/4-Rectangular_Halls/Section Rft.PNG",
+        "assets/image/4-Rectangular_Halls/Sections.PNG",
+        "assets/image/4-Rectangular_Halls/Slab.PNG",
+        "assets/image/4-Rectangular_Halls/columns and axiss.PNG",
+        "assets/image/4-Rectangular_Halls/foundation.PNG"
+      ],
+      "category": "Commercial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Wedding Hall — Radial Frame System",
+      "description": "Structural design for wedding hall using radial frame system.",
+      "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
+      "images": [
+        "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-2.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-3.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-4.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-5.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-6.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-7.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-8.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-9.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG",
+        "assets/image/image_all_projects/IMG_0660.PNG",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-11.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-12.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-13.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-14.jpeg",
+        "assets/image/5-Rounded_Halls/Rounded_Halls-15.jpeg"
+      ],
+      "category": "Commercial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Factory — 2-Hinged Frame System",
+      "description": "Industrial factory structural design using 2-hinged frame system with full structural analysis.",
+      "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+      "images": [
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-2.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-1.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-2.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_Frame-3.PNG",
+        "assets/image/6-Heavy_Frame_Project/columns_and_axiss.PNG",
+        "assets/image/6-Heavy_Frame_Project/Slab.PNG",
+        "assets/image/6-Heavy_Frame_Project/foundation.PNG",
+        "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-1.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-2.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-3.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-4.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-5.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-6.jpeg",
+        "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-7.jpeg"
+      ],
+      "category": "Industrial",
+      "technologies": [
+        "SAP 2000",
+        "AutoCAD"
+      ],
+      "link": null
+    },
+    {
+      "title": "Mosque Project",
+      "description": "Complete structural design for mosque including dome and minaret structural systems.",
+      "imageUrl": "assets/image/image_all_projects/Mosque.PNG",
+      "images": [
+        "assets/image/7-Mosque/intro-3.PNG",
+        "assets/image/7-Mosque/intro-1.PNG",
+        "assets/image/7-Mosque/intro-2.PNG",
+        "assets/image/7-Mosque/3D_VIEW-1.PNG",
+        "assets/image/7-Mosque/3D_VIEW-2.PNG",
+        "assets/image/7-Mosque/3D_VIEW-3.PNG",
+        "assets/image/7-Mosque/3D_VIEW-4.PNG",
+        "assets/image/7-Mosque/arc_ground-1.PNG",
+        "assets/image/7-Mosque/arc_ground-2.PNG",
+        "assets/image/7-Mosque/arc_Typical.PNG",
+        "assets/image/7-Mosque/arc-4.PNG",
+        "assets/image/7-Mosque/mosque.PNG",
+        "assets/image/7-Mosque/columns_and_axiss.PNG",
+        "assets/image/7-Mosque/Mosque-1.PNG",
+        "assets/image/7-Mosque/Mosque-2.PNG",
+        "assets/image/7-Mosque/Mosque-3.PNG",
+        "assets/image/7-Mosque/Mosque-4.PNG",
+        "assets/image/7-Mosque/Slab-1.PNG",
+        "assets/image/7-Mosque/Slab-2.PNG",
+        "assets/image/7-Mosque/Sections-1.PNG",
+        "assets/image/7-Mosque/Sections-2.PNG",
+        "assets/image/7-Mosque/Foundation.PNG",
+        "assets/image/7-Mosque/Stairs.PNG",
+        "assets/image/7-Mosque/XY_Plan.PNG",
+        "assets/image/7-Mosque/Yz_Plan.PNG",
+        "assets/image/7-Mosque/special-1.PNG",
+        "assets/image/7-Mosque/special-2.PNG"
+      ],
+      "category": "Religious",
+      "technologies": [
+        "ETABS",
+        "AutoCAD"
+      ],
+      "link": null
+    }
+  ],
+  "downloadableProjects": [
+    {
+      "id": "hospital_1",
+      "title": "HOSPITAL-1",
+      "description": "Complete structural design project for a hospital (Model 1), including structural drawings and detailed reinforcement layouts.",
+      "image": "assets/image/projects_picture/1.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1OzAXg4fJkBieNjlZl79Y6-TTLBeekc4A?usp=sharing"
+    },
+    {
+      "id": "mall_2",
+      "title": "MALL-2",
+      "description": "Structural design project for a commercial center (Mall), showing systems for columns, voided slabs, and foundation designs.",
+      "image": "assets/image/projects_picture/2.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1HG689GW79HZeuPLXDq0sVLzQPRgiBlkO?usp=sharing"
+    },
+    {
+      "id": "tall_building",
+      "title": "Tall Building",
+      "description": "Structural design project for a high-rise tower with wind and seismic load analysis and lateral load-resisting system design.",
+      "image": "assets/image/projects_picture/3.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1137qX1Q_j-Xs20Ta13RmG_yc6S-W1VmC?usp=sharing"
+    },
+    {
+      "id": "admin_building_3",
+      "title": "Administrative Building - 3",
+      "description": "Complete structural design project for an administrative building, including reinforcement details and load distributions.",
+      "image": "assets/image/projects_picture/4.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/1Gjh2vIL3hK5To2_nHVwrU3GkasjqwlQI?usp=sharing"
+    },
+    {
+      "id": "full_hospital_project",
+      "title": "Complete Hospital Project",
+      "description": "Comprehensive structural design and analysis project for a hospital, including all details for slabs, columns, beams, and foundations.",
+      "image": "assets/image/projects_picture/5.JPG",
+      "driveLink": "https://drive.google.com/drive/folders/16khd4VgK6n4y7NXbP68vgDD0couP6oTN?usp=sharing"
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "Email",
+      "url": "mailto:eslamahmed157179@gmail.com",
+      "icon": "email"
+    },
+    {
+      "platform": "WhatsApp",
+      "url": "https://wa.me/201061617649",
+      "icon": "whatsapp"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/share/1CbbKZ1Vud/?mibextid=wwXIfr",
+      "icon": "facebook"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/instructor_eslamahmed?igsh=bWFwZ2MyZG9sZjRi&utm_source=qr",
+      "icon": "instagram"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/eslam-ahmed157179",
+      "icon": "linkedin"
+    }
+  ],
+  "feedbackImages": [
+    "assets/image/feadback/1.png",
+    "assets/image/feadback/2.png",
+    "assets/image/feadback/3.png",
+    "assets/image/feadback/pictures_with_student.png"
+  ],
+  "courses": [
+    {
+      "id": "civil_autocad",
+      "title": "Civil Auto-cad",
+      "image": "assets/image/courses_picture/AUTOCAD.png",
+      "videoUrl": "https://youtube.com/shorts/Fhx_jZVMWj4",
+      "duration": "33 Hours",
+      "lectures": "11 Lectures (39 videos)",
+      "description": "One of the most essential courses for any civil engineer. It is considered the foundation of our work in both design and technical office fields. All shop drawings that are executed on-site are produced from this software. If you want to enter a reinforced concrete or structural graduation project, or work in design or technical office fields, you must first start learning this software as it's the base upon which all your next steps are built.",
+      "targetAudience": [
+        "This course is exclusively for civil engineering students and engineers",
+        "The course is suitable for execution engineers and technical office engineers",
+        "Suitable for fresh graduates and students",
+        "The course is suitable for design engineers and beginners",
+        "Suitable for graduation project students (Concrete and Structural)"
+      ],
+      "drawings": [
+        "Axes and Columns Drawing",
+        "Foundations Drawing",
+        "Columns Sections Drawing",
+        "Foundations Sections Drawing",
+        "Beams Sections Drawing",
+        "Stairs Sections Drawing",
+        "Solid Slab Drawing",
+        "Flat Slab Drawing",
+        "Hollow Block Slab Drawing",
+        "Paneled Beams Slab Drawing",
+        "Converting Architectural System to Structural System"
+      ],
+      "projects": [
+        "Residential Villa Project",
+        "Hinged Frame Coverings Project",
+        "Radial Frame Coverings Project"
+      ],
+      "faqs": [
+        {
+          "question": "Does the course include manual explanations?",
+          "answer": "Yes indeed, the course includes very important manual explanations for some parts that will help you understand the basics of drafting on AutoCAD."
+        },
+        {
+          "question": "How many hours is the course?",
+          "answer": "The course duration is 33 hours, consisting of 11 lectures and 39 videos, explained over a month and a half."
+        },
+        {
+          "question": "Is the course a set of recorded videos?",
+          "answer": "Yes indeed, the course consists of high quality 1080p recorded videos."
+        },
+        {
+          "question": "How is the follow-up done?",
+          "answer": "Trainees are added to a WhatsApp group, and there is daily follow-up by a full customer service team to continuously assist you, as well as the instructor to answer all your questions daily."
+        }
+      ],
+      "outcomes": [
+        "You will be fully qualified to enter the structural design field",
+        "You will have the full experience and ability to read architectural drawings",
+        "You will have the full experience and ability to create a balanced structural system",
+        "You will have the full experience and ability to arrange columns in the structural system",
+        "You will have the full experience and ability to place beams in the structural system",
+        "You will have the full experience and ability to choose the appropriate slab type",
+        "If you are a student, the course will help you pass the graduation project with excellence"
+      ],
+      "benefits": [
+        "You will be added to our platform which has many advantages",
+        "You will receive all explanation materials (projects library + structural drawings + explanation books)",
+        "You will receive a certificate of course completion after passing 80% of the tasks",
+        "We will teach you how to market yourself correctly by creating a strong CV and Portfolio",
+        "Daily follow-up, which is the most important point, as the instructor and customer service follow up with you daily to solve all your problems",
+        "The instructor holds a Zoom meeting with you once a week to review everything done during the week and answer your questions",
+        "We provide the software to test and check your level",
+        "Tasks of each trainee are evaluated through the Facebook group"
+      ],
+      "content": [
+        {
+          "lecture": "Lecture (1)",
+          "subject": "Introduction & Edit Options"
+        },
+        {
+          "lecture": "Lecture (2)",
+          "subject": "Column and Axis & Foundation"
+        },
+        {
+          "lecture": "Lecture (3)",
+          "subject": "Sections Of Column and Walls & Foundation"
+        },
+        {
+          "lecture": "Lecture (4)",
+          "subject": "Sections of Beams & Section of Stairs"
+        },
+        {
+          "lecture": "Lecture (5)",
+          "subject": "Solid Slabs & Flat Slabs"
+        },
+        {
+          "lecture": "Lecture (6)",
+          "subject": "Hollow Block & Paneled Beams"
+        },
+        {
+          "lecture": "Lecture (7)",
+          "subject": "Text Style & Dimension Style"
+        },
+        {
+          "lecture": "Lecture (8)",
+          "subject": "Statically System"
+        },
+        {
+          "lecture": "Lecture (9)",
+          "subject": "Project 1. (Villa)"
+        },
+        {
+          "lecture": "Lecture (10)",
+          "subject": "Project 2. (Rectangle Halls)"
+        },
+        {
+          "lecture": "Lecture (11)",
+          "subject": "Project 3. (Radial Halls)"
+        }
+      ]
+    },
+    {
+      "id": "csi_diploma",
+      "title": "CSI DIPLOMA",
+      "image": "assets/image/courses_picture/CSI_PRO_TRACK.png",
+      "videoUrl": "https://www.youtube.com/shorts/U0jInOO6npM",
+      "duration": "92 Hours",
+      "lectures": "37 Lectures (138 videos)",
+      "description": "The Structural Design Diploma is a comprehensive professional course in structural design of concrete structures. It includes manual explanations and practical applications on designing multiple projects using various design programs. This diploma is widely popular and most common in the Gulf countries and the Middle East.",
+      "targetAudience": [
+        "This course is exclusively for civil engineering students and engineers",
+        "No prior experience or knowledge of any software is required as we start from scratch",
+        "Fresh graduates and students",
+        "The course is suitable for design engineers and beginners",
+        "Suitable for graduation project students (Concrete and Foundations)"
+      ],
+      "drawings": [
+        "Braced and unbraced columns",
+        "Dropped, hidden, inverted, circular, and broken beams with stairs",
+        "Solid Slab",
+        "Flat Slab",
+        "Hollow Block Slab",
+        "Paneled Beams Slab",
+        "Stairs of all types (Helical – two Flight – Three Flight)",
+        "Foundations of all types (Strip – Raft – Combined – Isolated)",
+        "Retaining walls",
+        "Shear walls",
+        "Core",
+        "End gables",
+        "Tank elements (Shaft – Cone - Lower cone - Walls - Dome)",
+        "Transfer Beam",
+        "Ramps"
+      ],
+      "projects": [
+        "Project 1: Residential Villa under gravity loads only",
+        "Project 2: Residential Tower under lateral loads (Earthquakes + Wind + Gravity)",
+        "Project 3: Hospital under lateral loads (Earthquakes + Wind + Gravity)",
+        "Project 4: Coverings - Hinged Frame under (M + N)",
+        "Project 5: Coverings - Radial Frame under (M + N)",
+        "Project 6: Elevated Water Tank"
+      ],
+      "faqs": [
+        {
+          "question": "Does the diploma include manual explanations?",
+          "answer": "Yes indeed, the diploma includes very important manual explanations for some parts that will help you understand the basics of drafting and analysis on structural software."
+        },
+        {
+          "question": "How many hours is the diploma?",
+          "answer": "The diploma duration is 92 hours, consisting of 37 lectures and 138 videos, explained over 3 months."
+        },
+        {
+          "question": "Is the diploma a set of recorded videos?",
+          "answer": "Yes indeed, the diploma consists of high quality 1080p recorded videos."
+        },
+        {
+          "question": "How is the follow-up done?",
+          "answer": "Trainees are added to a WhatsApp group, and there is daily follow-up by a full customer service team to continuously assist you, as well as the instructor to answer all your questions daily."
+        }
+      ],
+      "outcomes": [
+        "You will be fully qualified to work as a structural design engineer in consulting offices or as a freelancer",
+        "You will have the full experience and ability to prepare structural designs professionally up to drawing extraction, printing, and calculation note preparation",
+        "You will be proficient in all software used in structural design",
+        "If you are a student, the course will help you pass the graduation project (Reinforced Concrete) with excellence"
+      ],
+      "benefits": [
+        "You will receive all software used in the diploma with installation guides",
+        "You will receive all study materials (such as projects library + Excel sheets + structural drawings + explanation books)",
+        "You will receive a certificate of course completion after passing 80% of the tasks",
+        "We will teach you how to market yourself correctly by creating a strong CV and Portfolio",
+        "Daily follow-up, which is the most important point, as the instructor and customer service follow up with you daily to solve all your problems",
+        "The instructor holds a Zoom meeting with you once a week to review everything done during the week and answer your questions",
+        "We perform a test after each software to check your level",
+        "Tasks of each trainee are evaluated through the Facebook group"
+      ],
+      "programs": [
+        "AUTOCAD",
+        "SAP2000",
+        "SAFE",
+        "ETABS",
+        "CSI COLUMN",
+        "SP COLUMN",
+        "EXCEL",
+        "Dtanks",
+        "Egyptian concrete design program CDP"
+      ],
+      "checks": [
+        "Check Deflection of All Slabs",
+        "Check Punching for Flat Slab and All footings",
+        "Check Shear Stress and Torsion for beams",
+        "Check Soil Pressure",
+        "Check Story Drift",
+        "Check Overturning",
+        "Check Sliding",
+        "Check center of mass and center of Rigidity",
+        "Check Displacement",
+        "Check Bearing Stress"
+      ],
+      "analysisMethods": [
+        "Equivalent Static Load Method",
+        "Response Spectrum Method"
+      ]
+    },
+    {
+      "id": "manual_design",
+      "title": "Manual Design",
+      "image": "assets/image/courses_picture/MANUAL_AND_SHOP_DRAWING.png",
+      "videoUrl": "https://youtube.com/shorts/9WAwD_BgX6s",
+      "duration": "66 Hours",
+      "lectures": "11 Lectures (146 videos)",
+      "description": "The Manual Structural Foundation Course is a comprehensive professional course for manual structural design of building elements, in addition to learning the principles of manual detailing and drafting of reinforcement (manual shop drawing). Our main goal of the course is to establish the civil engineer by teaching manual design.",
+      "targetAudience": [
+        "This course is exclusively for civil engineering students and engineers",
+        "The course is suitable for execution and technical office engineers",
+        "Fresh graduates and students",
+        "The course is suitable for design engineers and beginners",
+        "Suitable for graduation project students (Concrete and Foundations)"
+      ],
+      "drawings": [
+        "Detailed review of structural analysis and load paths",
+        "Calculation of internal forces, equilibrium and its equations for different sections",
+        "Design of concrete beams of all types (Dropped, Hidden, Inverted, Circular, Broken)",
+        "Reinforcement detailing of beams and checks for Shear and Torsion",
+        "Design of short and slender columns, load calculation and short/spiral columns equations",
+        "Reinforcement detailing of columns, bar layout, starter bars length, and Buckling checks",
+        "Design and detailing of Solid Slabs, load distribution and thickness calculation",
+        "Design and detailing of Flat Slabs, and Drop Panel and Column Head details",
+        "Calculation of additional reinforcement, chairs, and Flat Slabs Punching check",
+        "Design and detailing of Hollow Block Slabs, ribs details, and block distribution",
+        "Design and detailing of Paneled Beams Slabs",
+        "Design and detailing of Stairs of all types (two flights, 3 flights, and Helical Stairs)",
+        "Design of Isolated, Combined, and Strip footings",
+        "Design of Strap footings (neighbor) and Raft Foundations",
+        "Design and detailing of semels, medas, strap beams, and their relations with columns/foundations",
+        "Calculation of wind and earthquake loads, static and dynamic analysis methods",
+        "Design and detailing of Shear Walls and Core"
+      ],
+      "faqs": [
+        {
+          "question": "Does the course rely on manual explanations?",
+          "answer": "Yes indeed, the course is completely dedicated to manual design and reinforcement detailing to establish the civil engineer from scratch."
+        },
+        {
+          "question": "How many hours is the course?",
+          "answer": "The course duration is 66 hours, consisting of 11 lectures and 146 videos."
+        },
+        {
+          "question": "Is the course a set of recorded videos?",
+          "answer": "Yes indeed, the course consists of high quality 1080p recorded videos."
+        },
+        {
+          "question": "How is the follow-up done?",
+          "answer": "Trainees are added to a WhatsApp group, and there is daily follow-up by a full customer service team to continuously assist you, as well as the instructor to answer all your questions daily."
+        }
+      ],
+      "outcomes": [
+        "You will be fully qualified to work as a structural design engineer in consulting offices or as a freelancer",
+        "You will have the full experience and ability to prepare structural designs professionally and produce manual shop drawings and calculation notes",
+        "You will be proficient in designing all structural elements manually and detailing reinforcement",
+        "If you are a student, the course will help you pass the graduation project (Reinforced Concrete) with excellence"
+      ],
+      "benefits": [
+        "You will be added to our platform which has many advantages",
+        "You will receive all study materials (such as projects library + Excel sheets + structural drawings + explanation books)",
+        "You will receive a certificate of course completion after passing 80% of the tasks",
+        "We will teach you how to market yourself correctly by creating a strong CV and Portfolio",
+        "Daily follow-up, which is the most important point, as the instructor and customer service follow up with you daily to solve all your problems",
+        "The instructor holds a Zoom meeting with you once a week to review everything done during the week and answer your questions",
+        "We perform a test after each section to check your level",
+        "Tasks of each trainee are evaluated through the Facebook group"
+      ],
+      "checks": [
+        "Check Deflection of All Slabs",
+        "Check Punching for Flat Slab and All footings",
+        "Check Shear Stress and Torsion for beams",
+        "Check Overturning",
+        "Check Sliding",
+        "Check center of mass and center of Rigidity"
+      ],
+      "content": [
+        {
+          "lecture": "Lecture (1)",
+          "subject": "Structural Analysis Revision"
+        },
+        {
+          "lecture": "Lecture (2)",
+          "subject": "Introduction about Rc Manual"
+        },
+        {
+          "lecture": "Lecture (3)",
+          "subject": "Design and Shop Drawing Of beam"
+        },
+        {
+          "lecture": "Lecture (4)",
+          "subject": "Design and Shop Drawing Of Column"
+        },
+        {
+          "lecture": "Lecture (5)",
+          "subject": "Design and Shop Drawing Of Solid slab"
+        },
+        {
+          "lecture": "Lecture (6)",
+          "subject": "Design and Shop Drawing Of Flat slab"
+        },
+        {
+          "lecture": "Lecture (7)",
+          "subject": "Design and Shop Drawing Of Hollow Block"
+        },
+        {
+          "lecture": "Lecture (8)",
+          "subject": "Design and Shop Drawing Of Paneled beams"
+        },
+        {
+          "lecture": "Lecture (9)",
+          "subject": "Design and Shop Drawing Of Stairs"
+        },
+        {
+          "lecture": "Lecture (10)",
+          "subject": "Design and Shop Drawing Of Footings"
+        },
+        {
+          "lecture": "Lecture (11)",
+          "subject": "Introduction to Lateral Loads"
+        }
+      ]
+    }
+  ],
+  "books": [
+    {
+      "id": "system_structures",
+      "title": "6-System Structures",
+      "author": "Dr. Abd El-Rahman Mojahed",
+      "description": "A specialized book on structural systems",
+      "image": "assets/image/books_picture/1.JPG",
+      "driveLink": "https://drive.google.com/file/d/1QVtErN2jLiSk_64gvbg-UAUenj2-cT6J/view?usp=drive_link",
+      "category": "Structural"
+    },
+    {
+      "id": "forty_questions",
+      "title": "40 Questions In Structure Engineering",
+      "author": "Prepared & Compiled by Eng. Karim Sayed Jaber",
+      "description": "A collection of questions and problems in reinforced concrete with answers according to the Egyptian Code for Concrete.",
+      "image": "assets/image/books_picture/2.JPG",
+      "driveLink": "https://docs.google.com/document/d/1QLRhXdO8XgLiJPfqRrR9v1iSYoDA9mHVeh2hu0ZEC18/edit?usp=sharing",
+      "category": "Structural"
+    },
+    {
+      "id": "seventy_five_questions",
+      "title": "75 Common questions in ECP203-2018",
+      "author": "Eng. Karim Sayed Jaber",
+      "description": "75 common questions in structural design and execution of concrete buildings according to the Egyptian Code.",
+      "image": "assets/image/books_picture/3.JPG",
+      "driveLink": "https://drive.google.com/file/d/1ITt_nBEsXKXLAKnPswDPjMlrg04NM08R/view?usp=sharing",
+      "category": "Structural"
+    },
+    {
+      "id": "ecp_203_2017",
+      "title": "ECP 203-2017",
+      "author": "Ministry of Housing, Utilities and Urban Development",
+      "description": "The Egyptian Code for Design and Execution of Concrete Structures",
+      "image": "assets/image/books_picture/4.JPG",
+      "driveLink": "https://drive.google.com/file/d/1EncCvyFyiRXgEaQlt5I1C3WYVKMyzO_s/view?usp=sharing",
+      "category": "Engineering Code"
+    },
+    {
+      "id": "Egyptian_code_203_2007",
+      "title": "Egyptian Code 203-2007",
+      "author": "Ministry of Housing, Utilities and Urban Development",
+      "description": "The Egyptian Code for Design and Execution of Concrete Structures, Code No. 203 - 2007",
+      "image": "assets/image/books_picture/5.JPG",
+      "driveLink": "https://drive.google.com/file/d/1O-Vc4aGID8D3SL1pbU5-SGgvxxIqrUxv/view?usp=sharing",
+      "category": "Engineering Code"
+    },
+    {
+      "id": "reinforcing_retaining_walls",
+      "title": "Reinforcement of Retaining Concrete Walls",
+      "author": "Eng. Yasseen Mohamed Abdo",
+      "description": "Integrated training units series for structure building group - Reinforcement of Retaining Concrete Walls, Ministry of Technical Education and Vocational Training (Curricula and Continuing Education Sector).",
+      "image": "assets/image/books_picture/6.JPG",
+      "driveLink": "https://drive.google.com/file/d/12ZLyqnyaFxnANe7EvOSopWhRhtpSgo2A/view?usp=sharing",
+      "category": "Structural"
+    },
+    {
+      "id": "site_engineer_mission",
+      "title": "Site Engineer Mission",
+      "author": "Unknown",
+      "description": "A comprehensive guide for the site engineer in execution and site supervision works.",
+      "image": "assets/image/books_picture/7.JPG",
+      "driveLink": "https://drive.google.com/file/d/1dP8ZW-qZtl8Bzr2ua61U8NLotYH_B2T3/view?usp=sharing",
+      "category": "Execution"
+    },
+    {
+      "id": "excavation_backfilling",
+      "title": "Excavation and Backfilling Works",
+      "author": "Eng. Eslam Hamdy Rezq El-Bastawisy",
+      "description": "Specialized engineering book explaining excavation and backfilling works on construction sites.",
+      "image": "assets/image/books_picture/8.JPG",
+      "driveLink": "https://drive.google.com/file/d/1urAFcwKhnDqOKuO_VzH2KUBfbNlR5odt/view?usp=sharing",
+      "category": "Execution"
+    },
+    {
+      "id": "egyptian_loads_code",
+      "title": "Egyptian Loads Code 201-2008",
+      "author": "Ministry of Housing, Utilities and Urban Development",
+      "description": "The Egyptian Code for Calculating Loads and Forces in Structural and Building Works, Code No. 201 - 2008.",
+      "image": "assets/image/books_picture/9.JPG",
+      "driveLink": "https://drive.google.com/file/d/1-IRsIVHPJMvn4DIRaqVzngX5dcKjBBsH/view?usp=sharing",
+      "category": "Engineering Code"
+    },
+    {
+      "id": "types_buildings_slabs",
+      "title": "Types of Buildings and Concrete Slabs",
+      "author": "Unknown",
+      "description": "An introduction to architecture and the different structural systems of concrete slabs.",
+      "image": "assets/image/books_picture/10.JPG",
+      "driveLink": "https://drive.google.com/file/d/1f59ERJEUEyAyTQK8ceI8rQW0iab-OTuv/view?usp=sharing",
+      "category": "Structural"
+    },
+    {
+      "id": "repair_strengthening_mansoura",
+      "title": "Repair and Strengthening of Structures - Mansoura University",
+      "author": "Students Union of Faculty of Engineering, Mansoura University",
+      "description": "A specialized book on repair and strengthening methods for concrete structures, prepared by the Students Union of Faculty of Engineering, Mansoura University.",
+      "image": "assets/image/books_picture/11.JPG",
+      "driveLink": "https://drive.google.com/file/d/1mafJ4VLdoBXrkeSZ2amz2ZTNarvZFTf1/view?usp=sharing",
+      "category": "Structural"
+    },
+    {
+      "id": "structural_details_guide",
+      "title": "Structural Details Guide 203-2003",
+      "author": "Ministry of Housing, Utilities and Urban Development",
+      "description": "The Structural Details Guide issued by the Permanent Committee for the Egyptian Code for Design and Execution of Concrete Structures No. 203 - 2003.",
+      "image": "assets/image/books_picture/12.JPG",
+      "driveLink": "https://drive.google.com/file/d/1kwQZ6u9HByqH6JV8MoT20oR4q7Ah49Tx/view?usp=sharing",
+      "category": "Engineering Code"
+    },
+    {
+      "id": "finishing_works_guide",
+      "title": "Explanation of Finishing Works for Concrete Buildings",
+      "author": "Unknown",
+      "description": "A practical guide explaining the details and steps of various finishing works for concrete buildings.",
+      "image": "assets/image/books_picture/13.JPG",
+      "driveLink": "https://drive.google.com/file/d/1_0Oo1BlDtfT7JcgsLXMQ-DCDTrejgT-1/view?usp=sharing",
+      "category": "Execution"
+    },
+    {
+      "id": "unified_building_law",
+      "title": "Unified Building Law 119 of 2008",
+      "author": "Ministry of Housing, Utilities and Urban Development",
+      "description": "The Executive Regulations of the Unified Building Law, issued by Law No. 119 of 2008.",
+      "image": "assets/image/books_picture/14.JPG",
+      "driveLink": "https://drive.google.com/file/d/1yih9iwY89ly2IozbVIF2RtPVcY3YUNkR/view?usp=sharing",
+      "category": "Engineering Code"
+    },
+    {
+      "id": "foundation_engineering_agha",
+      "title": "Principles of Foundation Engineering by Eng. Ahmed Al-Agha",
+      "author": "Eng. Ahmed Al-Agha",
+      "description": "Fundamentals of Foundation Engineering with solved problems and practical explanation applications.",
+      "image": "assets/image/books_picture/15.JPG",
+      "driveLink": "https://drive.google.com/file/d/12kCfoYJk_Hgyv0f5WldNFsaHfKQRQxDW/view?usp=sharing",
+      "category": "Structural"
+    }
+  ]
+}

@@ -53,7 +53,7 @@ class _SplashPageState extends State<SplashPage> {
     // On web: the HTML splash covers this, so the user only sees one splash.
     // On mobile (if ever used): this provides a native splash experience.
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: const Color(0xFF0A0E1A),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

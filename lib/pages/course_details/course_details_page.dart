@@ -111,8 +111,8 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
           // ── Hero AppBar ─────────────────────────────────────────────────────
           SliverAppBar(
             expandedHeight: isMobile
-                ? (hasVideo ? 500 : 440)
-                : (hasVideo ? 440 : 360),
+                ? (hasVideo ? 380 : 440)
+                : (hasVideo ? 340 : 360),
             pinned: true,
             backgroundColor: const Color(0xFF0a0a18),
             elevation: 0,

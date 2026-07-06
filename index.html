@@ -261,12 +261,9 @@
     console.log('Flutter app loaded');
   });
 
-  // هنا بنجبر فلاتر يستخدم الـ html renderer بدلاً من canvaskit
-  _flutter.loader.loadEntrypoint({
+  _flutter.loader.load({
     onEntrypointLoaded: function(engineInitializer) {
-      engineInitializer.initializeEngine({
-        renderer: "html" 
-      }).then(function(appRunner) {
+      engineInitializer.initializeEngine().then(function(appRunner) {
         appRunner.runApp();
       });
     }

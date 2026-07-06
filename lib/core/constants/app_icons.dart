@@ -2,48 +2,86 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AppIcons {
-  static final Map<String, IconData> iconMap = {
-    'briefcase': Icons.work_outline,
-    'certificate': Icons.workspace_premium_outlined,
-    'building': Icons.business_outlined,
-    'layerGroup': Icons.layers_outlined,
-    'hardHat': Icons.engineering_outlined,
-    'drafting': Icons.architecture_outlined,
-    'chalkboardTeacher': Icons.school_outlined,
-    'graduationCap': Icons.school_outlined,
-    'fileAlt': Icons.description_outlined,
-    'shield': Icons.shield_outlined,
-    'columns': Icons.view_column_outlined,
-    'code': Icons.code_outlined,
-    'fileExcel': Icons.table_chart_outlined,
-    'presentation': Icons.slideshow_outlined,
-    'fileWord': Icons.article_outlined,
-    'laptop': Icons.laptop_outlined,
-    'email': Icons.mail_outline,
-    'whatsapp': FontAwesomeIcons.whatsapp.data,
-    'facebook': FontAwesomeIcons.facebook.data,
-    'instagram': FontAwesomeIcons.instagram.data,
-    'mobileScreen': Icons.smartphone_outlined,
-    'clockRotateLeft': Icons.history_outlined,
-    'database': Icons.storage_outlined,
-    'mobileScreenButton': Icons.smartphone_outlined,
-    'server': Icons.dns_outlined,
-    'palette': Icons.palette_outlined,
-    'bolt': Icons.flash_on_outlined,
-    'flutter': FontAwesomeIcons.flutter.data,
-    'atom': Icons.science_outlined,
-    'link': Icons.link_outlined,
-    'github': FontAwesomeIcons.github.data,
-    'store': Icons.store_outlined,
-    'brain': Icons.psychology_outlined,
-    'checkDouble': Icons.done_all_outlined,
-    'gaugeHigh': Icons.speed_outlined,
-    'mobileButton': Icons.phone_android_outlined,
-    'laptopCode': Icons.developer_mode_outlined,
-    'linkedin': FontAwesomeIcons.linkedin.data,
-  };
-
   static IconData getIcon(String name) {
-    return iconMap[name] ?? Icons.help_outline;
+    switch (name) {
+      case 'briefcase':
+        return Icons.work_outline;
+      case 'certificate':
+        return Icons.workspace_premium_outlined;
+      case 'building':
+        return Icons.business_outlined;
+      case 'layerGroup':
+        return Icons.layers_outlined;
+      case 'hardHat':
+        return Icons.engineering_outlined;
+      case 'drafting':
+        return Icons.architecture_outlined;
+      case 'chalkboardTeacher':
+        return Icons.school_outlined;
+      case 'graduationCap':
+        return Icons.school_outlined;
+      case 'fileAlt':
+        return Icons.description_outlined;
+      case 'shield':
+        return Icons.shield_outlined;
+      case 'columns':
+        return Icons.view_column_outlined;
+      case 'code':
+        return Icons.code_outlined;
+      case 'fileExcel':
+        return Icons.table_chart_outlined;
+      case 'presentation':
+        return Icons.slideshow_outlined;
+      case 'fileWord':
+        return Icons.article_outlined;
+      case 'laptop':
+        return Icons.laptop_outlined;
+      case 'email':
+        return Icons.mail_outline;
+      case 'whatsapp':
+        return FontAwesomeIcons.whatsapp.data;
+      case 'facebook':
+        return FontAwesomeIcons.facebook.data;
+      case 'instagram':
+        return FontAwesomeIcons.instagram.data;
+      case 'mobileScreen':
+        return Icons.smartphone_outlined;
+      case 'clockRotateLeft':
+        return Icons.history_outlined;
+      case 'database':
+        return Icons.storage_outlined;
+      case 'mobileScreenButton':
+        return Icons.smartphone_outlined;
+      case 'server':
+        return Icons.dns_outlined;
+      case 'palette':
+        return Icons.palette_outlined;
+      case 'bolt':
+        return Icons.flash_on_outlined;
+      case 'flutter':
+        return FontAwesomeIcons.flutter.data;
+      case 'atom':
+        return Icons.science_outlined;
+      case 'link':
+        return Icons.link_outlined;
+      case 'github':
+        return FontAwesomeIcons.github.data;
+      case 'store':
+        return Icons.store_outlined;
+      case 'brain':
+        return Icons.psychology_outlined;
+      case 'checkDouble':
+        return Icons.done_all_outlined;
+      case 'gaugeHigh':
+        return Icons.speed_outlined;
+      case 'mobileButton':
+        return Icons.phone_android_outlined;
+      case 'laptopCode':
+        return Icons.developer_mode_outlined;
+      case 'linkedin':
+        return FontAwesomeIcons.linkedin.data;
+      default:
+        return Icons.help_outline;
+    }
   }
 }

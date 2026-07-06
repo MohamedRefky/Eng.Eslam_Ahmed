@@ -7,11 +7,19 @@ class AppConstants {
   static String get devName => _info['name'] ?? 'Eslam Ahmed';
   static String get devShortName {
     final name = devName;
-    if (name.contains(' للخدمات')) {
-      return name.split(' للخدمات').first;
+    if (name.contains('للخدمات')) {
+      return name.split('للخدمات').first.trim();
     }
-    if (name.contains(' Office')) {
-      return name.split(' Office').first;
+    if (name.contains('الخدمات')) {
+      return name.split('الخدمات').first.trim();
+    }
+    if (name.contains('Office')) {
+      return name.split('Office').first.trim();
+    }
+    // Fallback if the string doesn't contain the expected split keywords
+    final words = name.split(' ');
+    if (words.length > 4) {
+      return words.take(4).join(' ').trim();
     }
     return name;
   }

@@ -133,18 +133,19 @@ class _HomePageState extends State<HomePage> {
                   final screenWidth = MediaQuery.of(context).size.width;
                   final isArabic = Localizations.localeOf(context).languageCode == 'ar';
                   
-                  // Use a shortened version of the name on mobile/tablet to ensure it fits perfectly on a single line
-                  final String nameToShow = isMobileOrTablet 
+                  // Use screen width in addition to ResponsiveBreakpoints to safely detect mobile/tablet viewports
+                  final bool isSmallScreen = isMobileOrTablet || screenWidth < 960;
+
+                  // Use the shortened version of the name on small screens to fit perfectly in a single line
+                  final String nameToShow = isSmallScreen 
                       ? AppConstants.devShortName 
                       : AppConstants.devName;
 
-                  // Dynamic font size based on screen width to prevent ellipsis/overflow
-                  final double fontSize = isMobileOrTablet
-                      ? (screenWidth * 0.045).clamp(14.0, 18.0)
-                      : 22.0;
+                  // Use a clean, small font size on mobile/tablet to ensure it looks elegant
+                  final double fontSize = isSmallScreen ? 14.5 : 22.0;
 
                   // Dynamic max width to make the text as large as possible without overflowing
-                  final double maxTitleWidth = isMobileOrTablet
+                  final double maxTitleWidth = isSmallScreen
                       ? (screenWidth - 120).clamp(180.0, 600.0)
                       : (screenWidth - 680).clamp(250.0, 600.0);
 

@@ -39,7 +39,7 @@
   <!-- Google Font for splash -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Zain:wght@300;400;700;800;900&display=swap"
     rel="stylesheet">
 
   <style>
@@ -275,6 +275,34 @@
   </div>
 
   <script>
+    // التحقق من دعم WebGL لتفادي شاشة التحميل اللانهائية في متصفحات داخل التطبيقات مثل فيسبوك
+    function checkWebGLSupport() {
+      try {
+        var canvas = document.createElement('canvas');
+        return !!(window.WebGLRenderingContext && 
+          (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+      } catch (e) {
+        return false;
+      }
+    }
+
+    if (!checkWebGLSupport()) {
+      var progress = document.querySelector('.splash-progress');
+      if (progress) progress.style.display = 'none';
+      var tagline = document.querySelector('.splash-tagline');
+      if (tagline) {
+        tagline.style.background = 'none';
+        tagline.style.webkitTextFillColor = '#FF5252';
+        tagline.style.color = '#FF5252';
+        tagline.style.fontSize = '14px';
+        tagline.style.textAlign = 'center';
+        tagline.style.padding = '0 20px';
+        tagline.style.textTransform = 'none';
+        tagline.style.letterSpacing = 'normal';
+        tagline.innerHTML = 'متصفحك الداخلي قد لا يدعم الرسوميات المطلوبة.<br>يرجى فتح الرابط في متصفح خارجي (Chrome أو Safari) لتصفح الموقع.';
+      }
+    }
+
     window.addEventListener('flutter-first-frame', function () {
       console.log('Flutter app loaded');
       hideSplash(); // استدعاء دالة إخفاء الـ splash فور تحميل فلاتر

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import '../theme/app_colors.dart';
 import '../constants/app_constants.dart';
 import '../utils/app_localizations.dart';
@@ -10,6 +11,12 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = ResponsiveBreakpoints.of(context).isMobile;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final double fontSize = isMobile
+        ? (screenWidth * 0.038).clamp(12.0, 15.0)
+        : 18.0;
+
     return Drawer(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       child: ListView(
@@ -29,7 +36,7 @@ class AppDrawer extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                      fontSize: fontSize,
                       height: 1.3,
                     ),
               ),

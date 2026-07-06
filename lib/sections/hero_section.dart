@@ -61,7 +61,6 @@ class HeroSection extends StatelessWidget {
     );
   }
 }
-
 class _HeroText extends StatelessWidget {
   final VoidCallback? onViewProjects;
   final VoidCallback? onContactMe;
@@ -76,6 +75,10 @@ class _HeroText extends StatelessWidget {
     final align = isMobile
         ? CrossAxisAlignment.center
         : CrossAxisAlignment.start;
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final double nameFontSize = isMobile
+        ? (screenWidth * 0.085).clamp(32.0, 42.0)
+        : 54.0;
 
     return Column(
       crossAxisAlignment: align,
@@ -93,7 +96,7 @@ class _HeroText extends StatelessWidget {
         Text(
               AppConstants.devName,
               style: textTheme.displayLarge?.copyWith(
-                fontSize: isMobile ? 26 : 40,
+                fontSize: nameFontSize,
                 height: 1.25,
               ),
               textAlign: isMobile ? TextAlign.center : TextAlign.start,

@@ -133,6 +133,11 @@ class _HomePageState extends State<HomePage> {
                   final screenWidth = MediaQuery.of(context).size.width;
                   final isArabic = Localizations.localeOf(context).languageCode == 'ar';
                   
+                  // Dynamic font size based on screen width to prevent ellipsis/overflow
+                  final double fontSize = isMobileOrTablet
+                      ? (screenWidth * 0.045).clamp(13.0, 16.0)
+                      : 22.0;
+
                   // Dynamic max width to make the text as large as possible without overflowing
                   final double maxTitleWidth = isMobileOrTablet
                       ? (screenWidth - 120).clamp(180.0, 600.0)
@@ -143,13 +148,12 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                       AppConstants.devName,
                       maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
                       textAlign: isArabic ? TextAlign.right : TextAlign.left,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
-                        fontSize: isMobileOrTablet ? 19 : 25,
-                        height: 1.25,
-                        letterSpacing: isArabic ? 0.0 : 1.0,
+                        fontSize: fontSize,
+                        height: 1.2,
+                        letterSpacing: isArabic ? 0.0 : 0.5,
                       ),
                     ),
                   );

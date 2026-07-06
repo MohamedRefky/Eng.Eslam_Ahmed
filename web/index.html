@@ -256,7 +256,22 @@
     </div>
   </div>
 
-  <script src="flutter_bootstrap.js" async></script>
+  <script>
+  window.addEventListener('flutter-first-frame', function () {
+    console.log('Flutter app loaded');
+  });
+
+  // هنا بنجبر فلاتر يستخدم الـ html renderer بدلاً من canvaskit
+  _flutter.loader.loadEntrypoint({
+    onEntrypointLoaded: function(engineInitializer) {
+      engineInitializer.initializeEngine({
+        renderer: "html" 
+      }).then(function(appRunner) {
+        appRunner.runApp();
+      });
+    }
+  });
+</script>
   <script>
     // Called from Flutter via dart:js_interop to dismiss the splash
     function hideSplash() {

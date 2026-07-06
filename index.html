@@ -280,15 +280,6 @@
       hideSplash(); // استدعاء دالة إخفاء الـ splash فور تحميل فلاتر
     });
 
-    _flutter.loader.load({
-      onEntrypointLoaded: function (engineInitializer) {
-        engineInitializer.initializeEngine().then(function (appRunner) {
-          appRunner.runApp();
-        });
-      }
-    });
-  </script>
-  <script>
     // Called from Flutter via dart:js_interop to dismiss the splash
     function hideSplash() {
       var splash = document.getElementById('splash');
@@ -300,6 +291,7 @@
       }
     }
   </script>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 
 </html>

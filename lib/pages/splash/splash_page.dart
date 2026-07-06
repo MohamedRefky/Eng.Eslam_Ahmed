@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import '../../core/constants/app_constants.dart';
 import '../../core/data/office_data.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/splash_service.dart';
@@ -96,15 +95,21 @@ class _SplashPageState extends State<SplashPage> {
             const SizedBox(height: 28),
 
             // Name
-            Text(
-                  AppConstants.devName.toUpperCase(),
-                  style: const TextStyle(
+            Builder(
+              builder: (context) {
+                final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+                return Text(
+                  isArabic ? 'م/ إسلام أحمد' : 'ENG. ESLAM AHMED',
+                  style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 6,
+                    letterSpacing: isArabic ? 0.0 : 4.0,
+                    fontFamily: isArabic ? 'Zain' : null,
                   ),
-                )
+                );
+              },
+            )
                 .animate(delay: 200.ms)
                 .fadeIn(duration: 600.ms)
                 .slideY(begin: 0.4, end: 0),

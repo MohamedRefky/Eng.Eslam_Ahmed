@@ -90,18 +90,18 @@ class _HeroText extends StatelessWidget {
         ).animate().fadeIn(duration: 500.ms).slideY(begin: 0.5, end: 0),
         const SizedBox(height: 8),
         FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                AppConstants.devName,
-                style: textTheme.displayLarge?.copyWith(
-                  fontSize: isMobile ? 40 : 72,
-                  height: 1.1,
-                ),
-                textAlign: isMobile
-                    ? TextAlign.center
-                    : TextAlign.start,
-              ),
-            )
+          fit: BoxFit.scaleDown,
+          child: Text(
+            AppConstants.devName,
+            style: textTheme.displayLarge?.copyWith(
+              fontSize: isMobile ? 40 : 72,
+              height: 1.1,
+            ),
+            textAlign: isMobile
+                ? TextAlign.center
+                : TextAlign.start,
+          ),
+        )
             .animate()
             .fadeIn(delay: 200.ms, duration: 600.ms)
             .slideX(begin: isArabic ? 0.2 : -0.2, end: 0),

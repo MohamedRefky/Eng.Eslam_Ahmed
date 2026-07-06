@@ -128,22 +128,32 @@ class _HomePageState extends State<HomePage> {
                 context,
               ).scaffoldBackgroundColor.withValues(alpha: 0.8),
               elevation: 0,
-              title: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 250),
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  alignment:
-                      Localizations.localeOf(context).languageCode == 'ar'
-                      ? Alignment.centerRight
-                      : Alignment.centerLeft,
-                  child: Text(
-                    AppConstants.devName,
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2.0,
+              title: LayoutBuilder(
+                builder: (context, constraints) {
+                  final screenWidth = MediaQuery.of(context).size.width;
+                  final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+                  
+                  // Dynamic max width to make the text as large as possible without overflowing
+                  final double maxTitleWidth = isMobileOrTablet
+                      ? (screenWidth - 120).clamp(180.0, 600.0)
+                      : (screenWidth - 680).clamp(250.0, 600.0);
+
+                  return ConstrainedBox(
+                    constraints: BoxConstraints(maxWidth: maxTitleWidth),
+                    child: Text(
+                      AppConstants.devName,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: isArabic ? TextAlign.right : TextAlign.left,
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: isMobileOrTablet ? 19 : 25,
+                        height: 1.25,
+                        letterSpacing: isArabic ? 0.0 : 1.0,
+                      ),
                     ),
-                  ),
-                ),
+                  );
+                },
               ),
               actions: [
                 Center(

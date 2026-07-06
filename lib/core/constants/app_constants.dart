@@ -5,6 +5,16 @@ class AppConstants {
       OfficeData.data['personalInfo'] ?? {};
 
   static String get devName => _info['name'] ?? 'Eslam Ahmed';
+  static String get devShortName {
+    final name = devName;
+    if (name.contains(' للخدمات')) {
+      return name.split(' للخدمات').first;
+    }
+    if (name.contains(' Office')) {
+      return name.split(' Office').first;
+    }
+    return name;
+  }
   static String get devTitle => _info['title'] ?? 'Civil Engineer | Structural Design Engineer';
   static String get devDescription =>
       _info['description'] ??

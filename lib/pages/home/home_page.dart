@@ -133,9 +133,14 @@ class _HomePageState extends State<HomePage> {
                   final screenWidth = MediaQuery.of(context).size.width;
                   final isArabic = Localizations.localeOf(context).languageCode == 'ar';
                   
+                  // Use a shortened version of the name on mobile/tablet to ensure it fits perfectly on a single line
+                  final String nameToShow = isMobileOrTablet 
+                      ? AppConstants.devShortName 
+                      : AppConstants.devName;
+
                   // Dynamic font size based on screen width to prevent ellipsis/overflow
                   final double fontSize = isMobileOrTablet
-                      ? (screenWidth * 0.045).clamp(13.0, 16.0)
+                      ? (screenWidth * 0.045).clamp(14.0, 18.0)
                       : 22.0;
 
                   // Dynamic max width to make the text as large as possible without overflowing
@@ -145,15 +150,19 @@ class _HomePageState extends State<HomePage> {
 
                   return ConstrainedBox(
                     constraints: BoxConstraints(maxWidth: maxTitleWidth),
-                    child: Text(
-                      AppConstants.devName,
-                      maxLines: 2,
-                      textAlign: isArabic ? TextAlign.right : TextAlign.left,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        fontSize: fontSize,
-                        height: 1.2,
-                        letterSpacing: isArabic ? 0.0 : 0.5,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: isArabic ? Alignment.centerRight : Alignment.centerLeft,
+                      child: Text(
+                        nameToShow,
+                        maxLines: 1,
+                        textAlign: isArabic ? TextAlign.right : TextAlign.left,
+                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: fontSize,
+                          height: 1.2,
+                          letterSpacing: isArabic ? 0.0 : 0.5,
+                        ),
                       ),
                     ),
                   );

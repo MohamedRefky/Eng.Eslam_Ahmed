@@ -280,11 +280,9 @@
       hideSplash(); // استدعاء دالة إخفاء الـ splash فور تحميل فلاتر
     });
 
-    _flutter.loader.loadEntrypoint({
+    _flutter.loader.load({
       onEntrypointLoaded: function (engineInitializer) {
-        engineInitializer.initializeEngine({
-          renderer: "html" // إجبار الـ renderer على html عشان يفتح على الموبايلات الضعيفة
-        }).then(function (appRunner) {
+        engineInitializer.initializeEngine().then(function (appRunner) {
           appRunner.runApp();
         });
       }

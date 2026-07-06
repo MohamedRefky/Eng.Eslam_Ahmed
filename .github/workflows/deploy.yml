@@ -21,7 +21,7 @@ jobs:
           channel: 'stable'
 
       - run: flutter pub get
-      - run: flutter build web --release --no-tree-shake-icons --base-href "/Eslam-Ahmed-Portfolio/"
+      - run: flutter build web --release --no-tree-shake-icons --base-href "/"
 
       - uses: peaceiris/actions-gh-pages@v4
         with:

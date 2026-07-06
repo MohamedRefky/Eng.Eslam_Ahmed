@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -19,7 +20,7 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Eng Eslam Ahmed - Civil Engineer & Structural Design Engineer">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
   <!-- Suppress deprecated unload event warning from Flutter web engine -->
   <meta http-equiv="Permissions-Policy" content="unload=()">
 
@@ -30,7 +31,7 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="Eslam_Ahmed.jpg"/>
+  <link rel="icon" type="image/jpeg" href="Eslam_Ahmed.jpg" />
 
   <title>Eng Eslam Ahmed</title>
   <link rel="manifest" href="manifest.json">
@@ -38,7 +39,8 @@
   <!-- Google Font for splash -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet">
 
   <style>
     * {
@@ -94,19 +96,19 @@
       position: absolute;
       inset: -4px;
       border-radius: 50%;
-      background: conic-gradient(
-        from 0deg,
-        #00DCFF,
-        #0066FF,
-        #00FF7F,
-        #0066FF,
-        #00DCFF
-      );
+      background: conic-gradient(from 0deg,
+          #00DCFF,
+          #0066FF,
+          #00FF7F,
+          #0066FF,
+          #00DCFF);
       animation: ringRotate 3s linear infinite;
     }
 
     @keyframes ringRotate {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     .splash-avatar-ring::after {
@@ -137,8 +139,15 @@
     }
 
     @keyframes glowPulse {
-      from { opacity: 0.5; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1.05); }
+      from {
+        opacity: 0.5;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1.05);
+      }
     }
 
     /* Name text */
@@ -199,9 +208,19 @@
     }
 
     @keyframes progressSlide {
-      0% { transform: translateX(-100%); width: 30%; }
-      50% { width: 60%; }
-      100% { transform: translateX(400%); width: 30%; }
+      0% {
+        transform: translateX(-100%);
+        width: 30%;
+      }
+
+      50% {
+        width: 60%;
+      }
+
+      100% {
+        transform: translateX(400%);
+        width: 30%;
+      }
     }
 
     /* Mobile adjustments */
@@ -210,10 +229,12 @@
         width: 110px;
         height: 110px;
       }
+
       .splash-name {
         font-size: 18px;
         letter-spacing: 4px;
       }
+
       .splash-tagline {
         font-size: 10px;
         letter-spacing: 2px;
@@ -237,17 +258,14 @@
     };
   </script>
 </head>
+
 <body>
   <!-- Splash Screen (visible while Flutter loads) -->
   <div id="splash">
     <div class="splash-avatar-wrapper">
       <div class="splash-avatar-glow"></div>
       <div class="splash-avatar-ring"></div>
-      <img
-        class="splash-avatar-img"
-        src="Eslam_Ahmed.jpg"
-        alt="Eslam Ahmed"
-      />
+      <img class="splash-avatar-img" src="Eslam_Ahmed.jpg" alt="Eslam Ahmed" />
     </div>
     <div class="splash-name">Eng Eslam Ahmed</div>
     <div class="splash-tagline">Structural Design Engineer</div>
@@ -257,29 +275,33 @@
   </div>
 
   <script>
-  window.addEventListener('flutter-first-frame', function () {
-    console.log('Flutter app loaded');
-  });
+    window.addEventListener('flutter-first-frame', function () {
+      console.log('Flutter app loaded');
+      hideSplash(); // استدعاء دالة إخفاء الـ splash فور تحميل فلاتر
+    });
 
-  _flutter.loader.load({
-    onEntrypointLoaded: function(engineInitializer) {
-      engineInitializer.initializeEngine().then(function(appRunner) {
-        appRunner.runApp();
-      });
-    }
-  });
-</script>
+    _flutter.loader.loadEntrypoint({
+      onEntrypointLoaded: function (engineInitializer) {
+        engineInitializer.initializeEngine({
+          renderer: "html" // إجبار الـ renderer على html عشان يفتح على الموبايلات الضعيفة
+        }).then(function (appRunner) {
+          appRunner.runApp();
+        });
+      }
+    });
+  </script>
   <script>
     // Called from Flutter via dart:js_interop to dismiss the splash
     function hideSplash() {
       var splash = document.getElementById('splash');
       if (splash) {
         splash.classList.add('fade-out');
-        setTimeout(function() {
+        setTimeout(function () {
           splash.remove();
         }, 700);
       }
     }
   </script>
 </body>
+
 </html>

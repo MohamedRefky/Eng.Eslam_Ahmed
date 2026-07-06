@@ -3,6 +3,43 @@
 
 <head>
   <!--
+    ============================================================
+    كود الخروج التلقائي من المتصفح الداخلي لفيسبوك/انستجرام/ماسنجر
+    لازم يفضل أول حاجة جوه <head> عشان يشتغل قبل أي حاجة تانية
+    ============================================================
+  -->
+  <script>
+  (function () {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    var isInApp = /FBAN|FBAV|Instagram|Messenger/i.test(ua);
+    if (!isInApp) return;
+
+    var isAndroid = /Android/i.test(ua);
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    var currentUrl = window.location.href;
+
+    if (isAndroid) {
+      // يفتح كروم مباشرة وأوتوماتيك من غير ما المستخدم يعمل حاجة
+      var urlNoScheme = currentUrl.replace(/^https?:\/\//, '');
+      window.location.href = 'intent://' + urlNoScheme +
+        '#Intent;scheme=https;package=com.android.chrome;end';
+    } else if (isIOS) {
+      // آبل بتمنع الفتح التلقائي لسفاري، فبنوقف تحميل الصفحة ونعرض زرار واضح
+      document.documentElement.innerHTML =
+        '<div style="position:fixed;inset:0;background:#0A0E1A;z-index:99999;' +
+        'display:flex;flex-direction:column;align-items:center;justify-content:center;' +
+        'font-family:sans-serif;text-align:center;padding:24px;gap:18px;color:#fff;">' +
+        '<p style="font-size:18px;line-height:1.6;">لعرض الموقع بشكل صحيح<br>افتحه في Safari</p>' +
+        '<a href="' + currentUrl + '" target="_blank" ' +
+        'style="background:#00DCFF;color:#0A0E1A;padding:14px 32px;border-radius:10px;' +
+        'text-decoration:none;font-size:16px;font-weight:700;">افتح في Safari</a>' +
+        '</div>';
+      throw new Error('Stopped page load: redirecting out of in-app browser (iOS)');
+    }
+  })();
+  </script>
+
+  <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
 

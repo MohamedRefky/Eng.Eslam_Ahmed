@@ -285,6 +285,27 @@
       "description": "Comprehensive structural design and analysis project for a hospital, including all details for slabs, columns, beams, and foundations.",
       "image": "assets/image/projects_picture/5.JPG",
       "driveLink": "https://drive.google.com/drive/folders/16khd4VgK6n4y7NXbP68vgDD0couP6oTN?usp=sharing"
+    },
+    {
+      "id": "arch_mosque_1",
+      "title": "Architectural Drawings - Mosque 1",
+      "description": "Complete architectural drawings for a mosque project, including floor plans, elevations, sections, and detailed views.",
+      "image": "assets/image/projects_picture/6.JPG",
+      "driveLink": ""
+    },
+    {
+      "id": "arch_residential_building_1",
+      "title": "Architectural Drawings - Residential Building 1",
+      "description": "Comprehensive architectural plans for a residential building, including floor distribution, functional layouts, and exterior elevations.",
+      "image": "assets/image/projects_picture/7.JPG",
+      "driveLink": ""
+    },
+    {
+      "id": "arch_residential_villa_1",
+      "title": "Architectural Drawings - Residential Villa 1",
+      "description": "Full architectural design drawings for a residential villa, covering all floor plans, elevations, and structural-architectural coordination.",
+      "image": "assets/image/projects_picture/8.JPG",
+      "driveLink": ""
     }
   ],
   "socialLinks": [

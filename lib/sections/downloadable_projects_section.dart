@@ -87,6 +87,21 @@ class __DownloadableProjectCardState extends State<_DownloadableProjectCard> {
 
   Future<void> _openDriveLink() async {
     final urlStr = widget.project['driveLink'] ?? '';
+    if (urlStr.isEmpty || urlStr == '#') {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              Localizations.localeOf(context).languageCode == 'ar'
+                  ? 'سيتم إضافة رابط التحميل قريباً'
+                  : 'Download link will be available soon',
+            ),
+            duration: const Duration(seconds: 2),
+          ),
+        );
+      }
+      return;
+    }
     final Uri url = Uri.parse(urlStr);
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       debugPrint('Could not launch drive link: $urlStr');

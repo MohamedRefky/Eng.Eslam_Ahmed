@@ -49,7 +49,7 @@
     {
       "title": "فيلا سكنية",
       "description": "تصميم إنشائي كامل لفيلا سكنية تشمل جميع العناصر الإنشائية وتفاصيل التسليح.",
-      "imageUrl": "assets/image/image_all_projects/Villa_Project.PNG",
+      "imageUrl": "assets/image/image_all_projects/Villa_Project.jpg",
       "images": [
         "assets/image/1-Villa_Project/Villa_Project_intro-1.PNG",
         "assets/image/1-Villa_Project/Villa_Project_intro-2.PNG",
@@ -66,7 +66,7 @@
         "assets/image/1-Villa_Project/Villa_Project-10.PNG",
         "assets/image/1-Villa_Project/Villa_Project-11.PNG",
         "assets/image/1-Villa_Project/Villa_Project-12.PNG",
-        "assets/image/image_all_projects/Villa_Project.PNG"
+        "assets/image/image_all_projects/Villa_Project.jpg"
       ],
       "category": "سكني",
       "technologies": [
@@ -79,8 +79,9 @@
     {
       "title": "برج سكني شاهق",
       "description": "تصميم إنشائي كامل يشمل اختيار النظام الإنشائي، ومخططات التسليح، وتصميم العناصر الإنشائية لجميع الأدوار.",
-      "imageUrl": "assets/image/2-High_Rise_Building/High_Rise_Building-bui-2.jpg",
+      "imageUrl": "assets/image/image_all_projects/High_Rise_Building.png",
       "images": [
+        "assets/image/image_all_projects/High_Rise_Building.png",
         "assets/image/2-High_Rise_Building/High_Rise_Building_intro-2.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-1.PNG",
@@ -108,8 +109,9 @@
     {
       "title": "خزان مياه علوي",
       "description": "تحليل وتصميم إنشائي لخزان مياه علوي.",
-      "imageUrl": "assets/image/3-Elevated_Tank/Elevated_Tank-Capture.PNG",
+      "imageUrl": "assets/image/image_all_projects/IMG_0666.png",
       "images": [
+        "assets/image/image_all_projects/IMG_0666.png",
         "assets/image/3-Elevated_Tank/Elevated_Tank_intro-2.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank-1.PNG",
@@ -129,8 +131,9 @@
     {
       "title": "صالات مستطيلة",
       "description": "تصميم إنشائي كامل لنظام صالة مستطيلة بما في ذلك مخططات التسليح وتفاصيل العناصر الإنشائية.",
-      "imageUrl": "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
+      "imageUrl": "assets/image/image_all_projects/Rectangular_Halls.png",
       "images": [
+        "assets/image/image_all_projects/Rectangular_Halls.png",
         "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
         "assets/image/4-Rectangular_Halls/Rectangular_Halls-1.jpg",
         "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
@@ -150,7 +153,7 @@
     {
       "title": "قاعة أفراح — نظام إطارات دائرية",
       "description": "تصميم إنشائي لقاعة أفراح باستخدام نظام الإطارات الدائرية.",
-      "imageUrl": "assets/image/image_all_projects/IMG_0660.PNG",
+      "imageUrl": "assets/image/image_all_projects/IMG_0660.png",
       "images": [
         "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
         "assets/image/5-Rounded_Halls/Rounded_Halls-2.PNG",
@@ -162,7 +165,7 @@
         "assets/image/5-Rounded_Halls/Rounded_Halls-8.PNG",
         "assets/image/5-Rounded_Halls/Rounded_Halls-9.PNG",
         "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG",
-        "assets/image/image_all_projects/IMG_0660.PNG",
+        "assets/image/image_all_projects/IMG_0660.png",
         "assets/image/5-Rounded_Halls/Rounded_Halls-11.jpeg",
         "assets/image/5-Rounded_Halls/Rounded_Halls-12.jpeg",
         "assets/image/5-Rounded_Halls/Rounded_Halls-13.jpeg",
@@ -179,7 +182,7 @@
     {
       "title": "مصنع — نظام إطارات مفصلية ثنائية",
       "description": "تصميم إنشائي لمصنع صناعي باستخدام نظام إطارات مفصلية ثنائية مع التحليل الإنشائي الكامل.",
-      "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+      "imageUrl": "assets/image/image_all_projects/Heavy_Frame_Project.jpg",
       "images": [
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-1.jpeg",
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_intro-2.jpeg",
@@ -189,7 +192,7 @@
         "assets/image/6-Heavy_Frame_Project/columns_and_axiss.PNG",
         "assets/image/6-Heavy_Frame_Project/Slab.PNG",
         "assets/image/6-Heavy_Frame_Project/foundation.PNG",
-        "assets/image/image_all_projects/Heavy_Frame_Project.PNG",
+        "assets/image/image_all_projects/Heavy_Frame_Project.jpg",
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-1.jpeg",
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-2.jpeg",
         "assets/image/6-Heavy_Frame_Project/Heavy_Frame_Project_3D-3.jpeg",
@@ -208,8 +211,9 @@
     {
       "title": "مشروع مسجد",
       "description": "تصميم إنشائي كامل لمسجد يشمل الأنظمة الإنشائية للقبة والمئذنة.",
-      "imageUrl": "assets/image/image_all_projects/Mosque.PNG",
+      "imageUrl": "assets/image/image_all_projects/Mosque.png",
       "images": [
+        "assets/image/image_all_projects/Mosque.png",
         "assets/image/7-Mosque/intro-3.PNG",
         "assets/image/7-Mosque/intro-1.PNG",
         "assets/image/7-Mosque/intro-2.PNG",

@@ -14,7 +14,6 @@ void main() {
   runApp(const EngEslamAhmedApp());
 }
 
-
 class EngEslamAhmedApp extends StatelessWidget {
   const EngEslamAhmedApp({super.key});
 

@@ -80,8 +80,8 @@ class ContactSection extends StatelessWidget {
 
                 return _ContactCard(
                   width: cardWidth,
-                  icon: Icon(
-                    AppIcons.getIcon(link['icon'] ?? ''),
+                  icon: AppIcons.getIconWidget(
+                    link['icon'] ?? '',
                     size: 28,
                     color: AppColors.secondary,
                   ),

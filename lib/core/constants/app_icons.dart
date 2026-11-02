@@ -2,6 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AppIcons {
+  /// Retained constants to guarantee Flutter's release tree-shaker keeps all these brand & solid glyphs
+  static const List<dynamic> retainedIcons = [
+    FontAwesomeIcons.facebook,
+    FontAwesomeIcons.instagram,
+    FontAwesomeIcons.linkedin,
+    FontAwesomeIcons.whatsapp,
+    FontAwesomeIcons.github,
+    FontAwesomeIcons.googleDrive,
+    FontAwesomeIcons.phone,
+    FontAwesomeIcons.paperPlane,
+  ];
+
+  static Widget getIconWidget(String name, {double size = 28, Color? color}) {
+    switch (name) {
+      case 'whatsapp':
+        return FaIcon(FontAwesomeIcons.whatsapp, size: size, color: color);
+      case 'facebook':
+        return FaIcon(FontAwesomeIcons.facebook, size: size, color: color);
+      case 'instagram':
+        return FaIcon(FontAwesomeIcons.instagram, size: size, color: color);
+      case 'linkedin':
+        return FaIcon(FontAwesomeIcons.linkedin, size: size, color: color);
+      case 'github':
+        return FaIcon(FontAwesomeIcons.github, size: size, color: color);
+      case 'phone':
+        return FaIcon(FontAwesomeIcons.phone, size: size, color: color);
+      case 'email':
+        return Icon(Icons.mail_outline, size: size, color: color);
+      default:
+        return Icon(getIcon(name), size: size, color: color);
+    }
+  }
+
   static IconData getIcon(String name) {
     switch (name) {
       case 'briefcase':

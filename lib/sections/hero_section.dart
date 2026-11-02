@@ -234,8 +234,12 @@ class _DevImage extends StatelessWidget {
                 ],
               ),
               padding: const EdgeInsets.all(8), // Border width
-              child: CircleAvatar(
-                backgroundImage: AssetImage(AppConstants.devImagePath),
+              child: ClipOval(
+                child: Image.asset(
+                  AppConstants.devImagePath,
+                  fit: BoxFit.cover,
+                  alignment: Alignment.topCenter,
+                ),
               ),
             ),
           ),

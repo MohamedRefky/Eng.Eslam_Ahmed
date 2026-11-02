@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import '../../core/constants/app_constants.dart';
 import '../../core/data/office_data.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/splash_service.dart';
@@ -75,11 +76,11 @@ class _SplashPageState extends State<SplashPage> {
                       ),
                     ],
                   ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(70),
+                  child: ClipOval(
                     child: Image.asset(
-                      'assets/image/profile/Eslam_Ahmed.jpg',
+                      AppConstants.devImagePath,
                       fit: BoxFit.cover,
+                      alignment: Alignment.topCenter,
                     ),
                   ),
                 )

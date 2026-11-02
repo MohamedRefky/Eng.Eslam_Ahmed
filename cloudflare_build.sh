@@ -18,3 +18,4 @@ echo ">>> Building Web..."
 flutter build web --release --no-tree-shake-icons --base-href "/"
 
 echo ">>> Build completed successfully in build/web!"
+

@@ -135,6 +135,7 @@ class _ProjectCardState extends State<ProjectCard> {
                           ? Image.network(
                               widget.imageUrl,
                               fit: BoxFit.cover,
+                              cacheWidth: 800,
                               errorBuilder: (context, error, stackTrace) =>
                                   const Center(
                                     child: Icon(
@@ -147,6 +148,7 @@ class _ProjectCardState extends State<ProjectCard> {
                           : Image.asset(
                               widget.imageUrl,
                               fit: BoxFit.cover,
+                              cacheWidth: 800,
                               errorBuilder: (context, error, stackTrace) =>
                                   const Center(
                                     child: Icon(

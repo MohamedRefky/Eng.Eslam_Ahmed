@@ -79,9 +79,9 @@
     {
       "title": "برج سكني شاهق",
       "description": "تصميم إنشائي كامل يشمل اختيار النظام الإنشائي، ومخططات التسليح، وتصميم العناصر الإنشائية لجميع الأدوار.",
-      "imageUrl": "assets/image/image_all_projects/High_Rise_Building.png",
+      "imageUrl": "assets/image/image_all_projects/High_Rise_Building.jpg",
       "images": [
-        "assets/image/image_all_projects/High_Rise_Building.png",
+        "assets/image/image_all_projects/High_Rise_Building.jpg",
         "assets/image/2-High_Rise_Building/High_Rise_Building_intro-2.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building_intro-1.PNG",
         "assets/image/2-High_Rise_Building/High_Rise_Building-1.PNG",
@@ -109,9 +109,9 @@
     {
       "title": "خزان مياه علوي",
       "description": "تحليل وتصميم إنشائي لخزان مياه علوي.",
-      "imageUrl": "assets/image/image_all_projects/IMG_0666.png",
+      "imageUrl": "assets/image/image_all_projects/IMG_0666.jpg",
       "images": [
-        "assets/image/image_all_projects/IMG_0666.png",
+        "assets/image/image_all_projects/IMG_0666.jpg",
         "assets/image/3-Elevated_Tank/Elevated_Tank_intro-2.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank_intro-1.PNG",
         "assets/image/3-Elevated_Tank/Elevated_Tank-1.PNG",
@@ -131,9 +131,9 @@
     {
       "title": "صالات مستطيلة",
       "description": "تصميم إنشائي كامل لنظام صالة مستطيلة بما في ذلك مخططات التسليح وتفاصيل العناصر الإنشائية.",
-      "imageUrl": "assets/image/image_all_projects/Rectangular_Halls.png",
+      "imageUrl": "assets/image/image_all_projects/Rectangular_Halls.jpg",
       "images": [
-        "assets/image/image_all_projects/Rectangular_Halls.png",
+        "assets/image/image_all_projects/Rectangular_Halls.jpg",
         "assets/image/4-Rectangular_Halls/Rectangular_Halls_intro-2.PNG",
         "assets/image/4-Rectangular_Halls/Rectangular_Halls-1.jpg",
         "assets/image/4-Rectangular_Halls/Rectangular_Halls-2.jpeg",
@@ -153,7 +153,7 @@
     {
       "title": "قاعة أفراح — نظام إطارات دائرية",
       "description": "تصميم إنشائي لقاعة أفراح باستخدام نظام الإطارات الدائرية.",
-      "imageUrl": "assets/image/image_all_projects/IMG_0660.png",
+      "imageUrl": "assets/image/image_all_projects/IMG_0660.jpg",
       "images": [
         "assets/image/5-Rounded_Halls/Rounded_Halls-1.PNG",
         "assets/image/5-Rounded_Halls/Rounded_Halls-2.PNG",
@@ -165,7 +165,7 @@
         "assets/image/5-Rounded_Halls/Rounded_Halls-8.PNG",
         "assets/image/5-Rounded_Halls/Rounded_Halls-9.PNG",
         "assets/image/5-Rounded_Halls/Rounded_Halls-10.PNG",
-        "assets/image/image_all_projects/IMG_0660.png",
+        "assets/image/image_all_projects/IMG_0660.jpg",
         "assets/image/5-Rounded_Halls/Rounded_Halls-11.jpeg",
         "assets/image/5-Rounded_Halls/Rounded_Halls-12.jpeg",
         "assets/image/5-Rounded_Halls/Rounded_Halls-13.jpeg",
@@ -211,9 +211,9 @@
     {
       "title": "مشروع مسجد",
       "description": "تصميم إنشائي كامل لمسجد يشمل الأنظمة الإنشائية للقبة والمئذنة.",
-      "imageUrl": "assets/image/image_all_projects/Mosque.png",
+      "imageUrl": "assets/image/image_all_projects/Mosque.jpg",
       "images": [
-        "assets/image/image_all_projects/Mosque.png",
+        "assets/image/image_all_projects/Mosque.jpg",
         "assets/image/7-Mosque/intro-3.PNG",
         "assets/image/7-Mosque/intro-1.PNG",
         "assets/image/7-Mosque/intro-2.PNG",

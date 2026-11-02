@@ -126,7 +126,7 @@ class _CourseCardState extends State<_CourseCard> {
                               !imagePath.contains('placeholder')
                           ? Image.asset(
                               imagePath,
-                              fit: BoxFit.fill,
+                              fit: BoxFit.cover,
                               width: double.infinity,
                               errorBuilder: (context, error, stackTrace) =>
                                   const Center(

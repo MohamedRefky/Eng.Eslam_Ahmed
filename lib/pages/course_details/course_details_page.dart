@@ -625,12 +625,33 @@ class _CourseHeroMeta extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 14),
-        // Duration and Lectures Wrap
+        // Videos, Duration and Lectures Wrap
         Wrap(
           spacing: 16,
           runSpacing: 8,
           alignment: isMobile ? WrapAlignment.center : WrapAlignment.start,
           children: [
+            if (courseData['videos'] != null &&
+                (courseData['videos'] as String).isNotEmpty)
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.play_circle_fill_rounded,
+                    color: AppColors.secondary,
+                    size: 16,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    courseData['videos'],
+                    style: TextStyle(
+                      color: Colors.white.withValues(alpha: 0.75),
+                      fontSize: 13.5,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
             if (courseData['duration'] != null &&
                 (courseData['duration'] as String).isNotEmpty)
               Row(
@@ -658,8 +679,8 @@ class _CourseHeroMeta extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Icon(
-                    Icons.play_circle_outline_rounded,
-                    color: AppColors.secondary,
+                    Icons.menu_book_rounded,
+                    color: AppColors.accent,
                     size: 16,
                   ),
                   const SizedBox(width: 6),

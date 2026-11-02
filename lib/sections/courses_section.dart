@@ -260,18 +260,29 @@ class _CourseCardState extends State<_CourseCard> {
                       ),
                       const SizedBox(height: 20),
 
-                      // Technical stats
-                      Row(
+                      // Technical stats: Video, Hour, Lecture
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
                         children: [
-                          _StatChip(
-                            icon: Icons.access_time_filled_rounded,
-                            label: widget.course['duration'] ?? '',
-                          ),
-                          const SizedBox(width: 12),
-                          _StatChip(
-                            icon: Icons.video_library_rounded,
-                            label: widget.course['lectures'] ?? '',
-                          ),
+                          if (widget.course['videos'] != null &&
+                              (widget.course['videos'] as String).isNotEmpty)
+                            _StatChip(
+                              icon: Icons.play_circle_filled_rounded,
+                              label: widget.course['videos'] ?? '',
+                            ),
+                          if (widget.course['duration'] != null &&
+                              (widget.course['duration'] as String).isNotEmpty)
+                            _StatChip(
+                              icon: Icons.access_time_filled_rounded,
+                              label: widget.course['duration'] ?? '',
+                            ),
+                          if (widget.course['lectures'] != null &&
+                              (widget.course['lectures'] as String).isNotEmpty)
+                            _StatChip(
+                              icon: Icons.menu_book_rounded,
+                              label: widget.course['lectures'] ?? '',
+                            ),
                         ],
                       ),
                       const SizedBox(height: 24),
